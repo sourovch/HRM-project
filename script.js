@@ -1,13 +1,14 @@
+import { MainSec } from "./components/mainSec.js";
+customElements.define('main-sec', MainSec);
+
 const dd = document.querySelectorAll(".dropdown");
-const menuToggle = document.getElementById("menu-toggle");
 const menuBar = document.getElementById('menubar');
 const pageContents = document.getElementById('page-contents');
 const navCloser = document.querySelector('.nav-closer')
+const menuToggle = document.getElementById("menu-toggle");
 
 dd.forEach((i) => {
-  i.onclick = (e) => {
-    e.preventDefault();
-
+  i.onclick = () => {
     i.classList.toggle("open");
   };
 });
