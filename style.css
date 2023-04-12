@@ -7,6 +7,9 @@
 body {
   width: 100vw;
   font-family: sans-serif;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
 }
 
 :root {
@@ -196,18 +199,18 @@ body {
 }
 
 .nav-closer {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    display: none;
-    z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: none;
+  z-index: -1;
 }
 
 .nav-closer.active {
-    display: block;
-    z-index: 0;
+  display: block;
+  z-index: 0;
 }
 
 /* navbar style end */
@@ -255,5 +258,15 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

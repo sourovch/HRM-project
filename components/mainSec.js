@@ -61,7 +61,7 @@ function getTemplet(path) {
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a href="#">
+          <a>
             <div class="dd-icon"><i class="fas fa-chevron-down"></i></div>
             <div class="menu-icon"><i class="fas fa-key"></i></div>
             <span>Permission</span>
