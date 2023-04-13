@@ -401,8 +401,8 @@ body {
 }
 
 .table-heading {
-  padding: .8em 0;
-  margin-bottom: .8em;
+  padding-bottom: .9em;
+  margin-bottom: .9em;
   border-bottom: 1px solid rgb(var(--color-d), .2);
 }
 

@@ -29,79 +29,79 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="${path}pages/organization.html">
+            <a href="${path}pages/settings/organization.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Organization</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/branch.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Branch</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/project.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Project</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/department.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Department</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/section.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Section</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/area.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Area</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/division.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Divition</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/district.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>District</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/trt-area.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>TRT Area</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/shift.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Shift</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/module.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Module</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/menu.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Menu</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/settings/option.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Options</span>
             </a>
