@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../style.css" />
     <link
@@ -13,44 +13,60 @@
       crossorigin="anonymous"
     />
     <script src="../script.js" defer type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main-sec path="../">
-        <div class="content-container">
-            <h1 class="main-heading">Company</h1>
-            <div class="table-wrapper">
-                <div class="list-icon"></div>
-                <h3 class="table-heading">Company List</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>SL</th>
-                            <th>Small Logo</th>
-                            <th>Large Logo</th>
-                            <th>Company Name</th>
-                            <th>Contact</th>
-                            <th>Backend Title</th>
-                            <th>Currency</th>
-                            <th>Language</th>
-                            <th>Options</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1.</th>
-                            <th>img</th>
-                            <th>img</th>
-                            <th>My Group</th>
-                            <th>Head Office: 0202020, 191991191, somthing@gmail.com</th>
-                            <th>Technostar</th>
-                            <th>Bdt Taka</th>
-                            <th>en</th>
-                            <th><button>O</button></th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="content-container">
+        <h1 class="main-heading">Company</h1>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Company List
+          </h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th>Small Logo</th>
+                  <th>Large Logo</th>
+                  <th style="width: 20%;">Company Name</th>
+                  <th style="width: 20%;">Contact</th>
+                  <th>Backend Title</th>
+                  <th>Currency</th>
+                  <th>Language</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <img src="../recorces/images/dummy-logo.png" alt="logo" />
+                  </td>
+                  <td>
+                    <img src="../recorces/images/dummy-logo.png" alt="logo" />
+                  </td>
+                  <td>My Group</td>
+                  <td>
+                    <div class="addr-titl">Head Office:</div>
+                    <div class="addr">0202020, 191991191,</div>
+                    <div class="com-email">somthing@gmail.com</div>
+                  </td>
+                  <td>Technostar</td>
+                  <td>Bdt Taka</td>
+                  <td>en</td>
+                  <td class="td-options">
+                    <a href="./company-info.html" class="company-info"
+                      ><i class="fas fa-pen-square"></i>
+                      <!-- company info url -->
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </main-sec>
-</body>
+  </body>
 </html>
