@@ -16,7 +16,61 @@
   </head>
   <body class="fade-in">
     <main-sec>
-      <h1>This is Dashbord</h1>
+      <div class="content-container">
+        <h1 class="main-heading">Dashboard</h1>
+        <div class="dashboard-info">
+          <div class="card card-p">
+            <div class="back-icon"><i class="far fa-address-card"></i></div>
+            <div class="count">82</div>
+            <div class="name">Stuff & Employee</div>
+            <a href="#" class="details"><i class="fas fa-info-circle"></i> Details</a>
+          </div>
+          <div class="card card-s">
+            <div class="card-icon"><i class="fas fa-user-alt"></i></div>
+            <div class="card-contents">
+              <div class="card-top-text">Present</div>
+              <div class="count">0</div>
+              <progress max="100" value="66" id="present-progress"></progress>
+              <label for="present-progress">Today's Present</label>
+            </div>
+          </div>
+          <div class="card card-t">
+            <div class="card-icon"><i class="fas fa-user-alt-slash"></i></div>
+            <div class="card-contents">
+              <div class="card-top-text">Absent</div>
+              <div class="count">82</div>
+              <progress max="100" value="66" id="Absent-progress"></progress>
+              <label for="Absent-progress">Today's Absent</label>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-info">
+          <div class="card card-p">
+            <div class="back-icon"><i class="far fa-address-card"></i></div>
+            <div class="count">0</div>
+            <div class="name">Today's OD</div>
+            <a href="#" class="details"><i class="fas fa-info-circle"></i> Details</a>
+          </div>
+          <div class="card card-s">
+            <div class="card-icon"><i class="fas fa-user-alt"></i></div>
+            <div class="card-contents">
+              <div class="card-top-text">Late</div>
+              <div class="count">0</div>
+              <progress max="100" value="66" id="late-progress"></progress>
+              <label for="late-progress">Today's Late</label>
+            </div>
+          </div>
+          <div class="card card-t">
+            <div class="card-icon"><i class="fas fa-user-alt-slash"></i></div>
+            <div class="card-contents">
+              <div class="card-top-text">Leave</div>
+              <div class="count">82</div>
+              <progress max="100" value="66" id="leave-progress"></progress>
+              <label for="leave-progress">Today's Leave</label>
+            </div>
+          </div>
+        </div>
+      </div>
     </main-sec>
   </body>
 </html>

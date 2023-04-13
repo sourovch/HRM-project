@@ -6,7 +6,9 @@
 
 body {
   width: 100vw;
-  font-family: sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
   animation-name: fadeIn;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
@@ -14,12 +16,13 @@ body {
 
 :root {
   --color-p: 0, 123, 255;
+  --color-p-s: 0, 110, 229;
   --color-s: 182, 184, 186;
   --color-g: 49, 196, 82;
   --color-r: 227, 92, 105;
   --color-d: 52, 58, 64;
 
-  --fs-h-p: auto;
+  --fs-h-p: 1.8rem;
   --fs-h-s: auto;
   --fs-p: 0.9rem;
   --fs-s: auto;
@@ -246,6 +249,140 @@ body {
   padding: 0.5em;
   background-color: transparent;
   cursor: pointer;
+}
+
+.content-container {
+  padding: 1em;
+}
+
+.main-heading {
+  font-size: var(--fs-h-p);
+  padding: 0.4em 0;
+}
+
+.dashboard-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+}
+
+.dashboard-info:not(:last-child) {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.499);
+}
+
+.card {
+  padding: 1em;
+  margin: 0.5em;
+  color: white;
+  min-height: 140px;
+}
+
+.card-p {
+  background-color: rgb(var(--color-p));
+  position: relative;
+}
+
+.card-p .count {
+  font-size: calc(var(--fs-h-p) - 0.2rem);
+  font-weight: bold;
+}
+
+.card-p .name {
+  font-size: var(--fs-p);
+}
+
+.card-p .details {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  padding: 0.6em;
+  background-color: rgb(var(--color-p-s));
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.back-icon {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  color: black;
+  opacity: 0.2;
+}
+
+.back-icon > i {
+  transform-origin: top right;
+  scale: 5;
+  transition: 0.5s scale;
+}
+
+.card-p:hover .back-icon > i {
+  scale: 6;
+}
+
+.card-s,
+.card-t {
+  display: flex;
+}
+
+.card-s {
+  background-color: rgb(var(--color-g));
+}
+
+.card-t {
+  background-color: rgb(var(--color-r));
+}
+
+.card-s .count,
+.card-t .count {
+  font-size: calc(var(--fs-p) + .2rem);
+  font-weight: bold;
+}
+
+.card-icon {
+  font-size: calc(var(--fs-h-p) + 0.5rem);
+  display: grid;
+  place-content: center;
+  padding: 0 0.6em;
+}
+
+.card-contents {
+  flex-grow: 1;
+}
+
+.card-top-text {
+  font-size: calc(var(--fs-p) + .2rem);
+  opacity: .8;
+}
+
+.card progress {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  height: 5px;
+  border-radius: 2px;
+  border: none;
+  width: 95%;
+  margin: 0.8em 0;
+  background-color: rgba(255, 255, 255, 0.335);
+}
+
+.card progress::-webkit-progress-value {
+  background-color: white;
+}
+
+.card progress::-moz-progress-bar {
+  background-color: white;
+}
+
+.card label {
+  font-size: calc(var(--fs-p) + .2rem);
+  opacity: .8;
 }
 
 @media screen and (max-width: 980px) {

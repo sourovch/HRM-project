@@ -155,7 +155,12 @@ function getTemplet(path) {
         </li>
         <li class="nav-item">
           <a href="#">
-            <div class="menu-icon" style="margin: 0 2.5px;"><i class="fas fa-clipboard-list"></i></div>
+            <div 
+              class="menu-icon" 
+              style="margin: 0 2.5px;"
+              >
+                <i class="fas fa-clipboard-list"></i>
+              </div>
             <span>Notice</span>
           </a>
         </li>
