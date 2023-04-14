@@ -55,7 +55,7 @@ body {
 }
 
 .menubar.p-absolute {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -447,7 +447,7 @@ body {
   }
 
   .menubar {
-    position: absolute !important;
+    position: fixed !important;
     top: 0;
     bottom: 0;
     left: 0;
