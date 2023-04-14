@@ -30,6 +30,23 @@ body {
   --navbar-w: 72px;
 }
 
+.btn {
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+  display: block;
+}
+
+.btn-p {
+  padding: .5em .8em;
+  background-color: rgb(var(--color-p));
+  color: white;
+  max-height: 30px;
+  border-radius: 5px;
+  display: grid;
+  place-content: center;
+}
+
 .main-cont {
   min-height: 100vh;
   background-color: rgb(var(--color-s));
@@ -256,6 +273,10 @@ body {
   padding: .8em;
 }
 
+.content-container > div:not(:last-child) {
+  margin-bottom: 1.3em;
+}
+
 .main-heading {
   font-size: var(--fs-h-p);
   padding: 0.4em .2em;
@@ -390,20 +411,31 @@ body {
   opacity: .8;
 }
 
-.table-wrapper {
+.table-wrapper,
+.form-wrapper {
   background-color: white;
-  padding: 1em;
-  border-radius: 5px;
+  border-radius: 9px;
+  overflow: hidden;
 }
 
 .table-resp-wrapper {
   overflow-x: auto;
 }
 
+.table-heading,
+.form-heading {
+  padding: 1em;
+  border-bottom: 1px solid rgb(var(--color-d), .2);
+}
+
 .table-heading {
   padding-bottom: .9em;
   margin-bottom: .9em;
-  border-bottom: 1px solid rgb(var(--color-d), .2);
+}
+
+.form-heading {
+  background-color: rgb(var(--color-p));
+  color: white;
 }
 
 .table-wrapper table {
@@ -441,6 +473,84 @@ body {
   text-align: center;
 }
 
+.form-wrapper form {
+  display: flex;
+  gap: .5em;
+  padding: 1em;
+  align-items: end;
+}
+
+.form-wrapper .select-wrapper {
+  width: 100%;
+}
+
+.form-wrapper select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: .4em .9em;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+.form-wrapper select::-ms-expand {
+  display: none;
+}
+
+.form-wrapper .select {
+  position: relative;
+  width: 100%;
+  min-width: 15ch;
+  border: 1px solid rgb(var(--color-d), .5);
+  border-radius: 0.25em;
+  padding-right: .3em;
+  font-size: var(--fs-p);
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  display: grid;
+  grid-template-areas: 'select';
+  align-items: center;
+}
+
+.form-wrapper .select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: rgb(var(--color-d), .5);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  grid-area: select;
+  justify-self: end;
+  position: absolute;
+}
+
+.form-wrapper select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid rgb(var(--color-p));
+  border-radius: inherit;
+}
+
+.form-wrapper .required {
+  color: rgb(var(--color-r));
+  font-size: calc(var(--fs-p) + .5em);
+}
+
+.form-wrapper label {
+  display: block;
+  padding-bottom: .3em;
+}
+
+
 @media screen and (max-width: 980px) {
   :root {
     --navbar-w: 0px;
@@ -451,6 +561,12 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .form-wrapper form {
+    flex-direction: column;
   }
 }
 
