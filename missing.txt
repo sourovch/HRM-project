@@ -1,4 +1,13 @@
+pages:
 1. settings/projects
 2. settings/divition
 3. settings/module
 4. settings/options
+5. settings/district
+6 .party manage/customer
+
+form:
+    every forms that appare on "+" icon click
+
+table:
+1. permition/module permition

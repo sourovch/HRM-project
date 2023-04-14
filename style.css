@@ -21,6 +21,7 @@ body {
   --color-g: 49, 196, 82;
   --color-r: 227, 92, 105;
   --color-d: 52, 58, 64;
+  --color-w: 254, 192, 7;
 
   --fs-h-p: 1.8rem;
   --fs-h-s: auto;
@@ -35,16 +36,32 @@ body {
   text-decoration: none;
   border: none;
   display: block;
+  cursor: pointer;
 }
 
-.btn-p {
+.btn-p,
+.btn-y,
+.btn-s {
   padding: .5em .8em;
-  background-color: rgb(var(--color-p));
   color: white;
   max-height: 30px;
   border-radius: 5px;
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn-p {
+  background-color: rgb(var(--color-p));
+}
+
+.btn-y {
+  background-color: rgb(var(--color-w));
+}
+
+.btn-s {
+  background-color: rgb(var(--color-g));
 }
 
 .main-cont {
@@ -64,6 +81,11 @@ body {
   transition: width 0.5s ease-out;
   z-index: 1;
   overflow-x: hidden;
+  stroke-width: none;
+}
+
+.menubar::-webkit-scrollbar {
+  display: none;
 }
 
 .menubar.active {
@@ -469,18 +491,47 @@ body {
   font-size: calc(var(--fs-p) + .5rem);
 }
 
-.table-wrapper .td-options {
+.table-wrapper .td-options,
+.table-wrapper .td-middle {
   text-align: center;
 }
 
+.table-wrapper .td-option {
+  width: fit-content;
+  text-align: center;
+  margin: .2em auto;
+}
+
+.table-wrapper tr[--data-active="true"] > td:first-child {
+  background-color: rgb(var(--color-g));
+  color: white;
+}
+
+.table-wrapper tr[--data-active="false"] > td:first-child {
+  background-color: rgb(var(--color-r));
+  color: white;
+}
+
 .form-wrapper form {
+  padding: 1em;
+}
+
+.form-wrapper .form-content-wrapper {
   display: flex;
   gap: .5em;
-  padding: 1em;
   align-items: end;
 }
 
-.form-wrapper .select-wrapper {
+.form-wrapper .form-content-wrapper-grid {
+  --min-width: 450px;
+  display: grid;
+  align-items: end;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-width), auto));
+  gap: .5em;
+}
+
+.form-wrapper .select-wrapper,
+.from-wrapper .input-wrapper {
   width: 100%;
 }
 
@@ -550,6 +601,26 @@ body {
   padding-bottom: .3em;
 }
 
+.form-wrapper input[type='text'] {
+  font-size: var(--fs-p);
+  width: 100%;
+  padding: .2em .5em;
+  border: 1px solid rgb(var(--color-d), .5);
+  border-radius: 3px;
+}
+
+.form-wrapper .form-bottom-sec {
+  padding: 1em 0;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.form-wrapper .form-bottom-sec button {
+  max-height: 40px;
+  font-size: calc(var(--fs-p) + .1em);
+}
+
 
 @media screen and (max-width: 980px) {
   :root {
@@ -562,11 +633,21 @@ body {
     bottom: 0;
     left: 0;
   }
+
+  .form-wrapper .form-content-wrapper-grid {
+    --min-width: 320px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-  .form-wrapper form {
+  .form-wrapper .form-content-wrapper {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-wrapper .form-content-wrapper-grid {
+    --min-width: 250px;
   }
 }
 

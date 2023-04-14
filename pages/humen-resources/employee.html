@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Employee</h1>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Menu
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="company-name" id="sel-company-name">
+                    <option value="Select Company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">Company 1</option>
+                    <option value="company-2">Company 2</option>
+                    <option value="company-3">Company 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="branch-name"
+                  ><span class="required">*</span>Branch Name</label
+                >
+                <div class="select">
+                  <select name="branch-name" id="sel-branch-name">
+                    <option value="Select branch Name" hidden>
+                      Select Branch Name
+                    </option>
+                    <option value="branch-1">Branch 1</option>
+                    <option value="branch-2">Branch 2</option>
+                    <option value="branch-3">Branch 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="department-name"
+                  ><span class="required">*</span>Department Name</label
+                >
+                <div class="select">
+                  <select name="department-name" id="sel-department-name">
+                    <option value="Select department Name" hidden>
+                      Select Department Name
+                    </option>
+                    <option value="department-1">Department 1</option>
+                    <option value="department-2">Department 2</option>
+                    <option value="department-3">Department 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="section"
+                    ><span class="required">*</span>Section</label
+                  >
+                  <div class="select">
+                    <select name="section" id="sel-section">
+                      <option value="Select section Name" hidden>
+                        Select Section
+                      </option>
+                      <option value="section-1">Section 1</option>
+                      <option value="section-2">Section 2</option>
+                      <option value="section-3">Section 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="shift"
+                    ><span class="required">*</span>Shift</label
+                  >
+                  <div class="select">
+                    <select name="shift" id="sel-shift-name">
+                      <option value="Select Shift" hidden>
+                        Select Shift Name
+                      </option>
+                      <option value="shift-1">Shift 1</option>
+                      <option value="shift-2">Shift 2</option>
+                      <option value="shift-3">Shift 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="employee-name"
+                  ><span class="required">*</span>Employee Name</label
+                >
+                <input type="text" name="employee-name" id="employee-name" placeholder="Employee Name">
+              </div>
+              <div class="input-wrapper">
+                <label for="employee-id"
+                  ><span class="required">*</span>Employee Id</label
+                >
+                <input type="text" name="employee-id" id="employee-id" placeholder="Employee ID">
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+                <button type="submit" class="btn btn-p"><i class="fas fa-search"></i> Search</button>
+                <button type="reset" class="btn btn-y"><i class="fas fa-broom"></i> Clear</button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Company List
+          </h3>
+          <div class="table-resp-wrapper">
+            <table>
+                <thead>
+                  <tr>
+                    <th>SL</th>
+                    <th>Company Details</th>
+                    <th>Employee Details</th>
+                    <th>Contact Details</th>
+                    <th>Fixed Payble</th>
+                    <th>Gross Salary</th>
+                    <th>Gross Deducation</th>
+                    <th>Net Salary</th>
+                    <th class="td-options">Options</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr --data-active='true' >
+                    <td>1.</td>
+                    <td>
+                        <div>My Group,</div>
+                        <div>Head Office(L)</div>
+                    </td>
+                    <td>
+                        <div><img src="../../recorces/images/no-avatar.png" alt=""></div>
+                        <div>A.K.M Hassan Kabir, Emp</div>
+                        <div>Id: 100292009</div>
+                        <div>ERP: 202000303</div>
+                    </td>
+                    <td>
+                        <div>N/A</div>
+                        <div><i class="fas fa-user"></i> 001993002</div>
+                        <div><i class="fas fa-mobile"></i> 93938439</div>
+                        <div>MBA</div>
+                    </td>
+                    <td>45700</td>
+                    <td>58800</td>
+                    <td>1509</td>
+                    <td>102991</td>
+                    <td class="td-options">
+                      <div>
+                          <a href="./company-info.html" class="company-info"
+                            ><i class="fas fa-pen-square"></i>
+                            <!-- company info url -->
+                          </a>
+                      </div>
+                      <div>
+                          <a href="./company-info.html" class="btn btn-s td-option"
+                            ><i class="fas fa-id-card-alt"></i> Profile
+                            <!-- company info url -->
+                          </a>
+                      </div>
+                      <div>
+                          <a href="./company-info.html" class="btn btn-y td-option"
+                            ><i class="fas fa-sign-out-alt"></i> Leave
+                            <!-- company info url -->
+                          </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr --data-active='false' >
+                    <td>2.</td>
+                    <td>
+                        <div>My Group,</div>
+                        <div>Head Office(L)</div>
+                    </td>
+                    <td>
+                        <div><img src="../../recorces/images/no-avatar.png" alt=""></div>
+                        <div>A.K.M Hassan Kabir, Emp</div>
+                        <div>Id: 100292009</div>
+                        <div>ERP: 202000303</div>
+                    </td>
+                    <td>
+                        <div>N/A</div>
+                        <div><i class="fas fa-user"></i> 001993002</div>
+                        <div><i class="fas fa-mobile"></i> 93938439</div>
+                        <div>MBA</div>
+                    </td>
+                    <td>45700</td>
+                    <td>58800</td>
+                    <td>1509</td>
+                    <td>102991</td>
+                    <td class="td-options">
+                      <div>
+                          <a href="./company-info.html" class="company-info"
+                            ><i class="fas fa-pen-square"></i>
+                            <!-- company info url -->
+                          </a>
+                      </div>
+                      <div>
+                          <a href="./company-info.html" class="btn btn-s td-option"
+                            ><i class="fas fa-id-card-alt"></i> Profile
+                            <!-- company info url -->
+                          </a>
+                      </div>
+                      <div>
+                          <a href="./company-info.html" class="btn btn-y td-option"
+                            ><i class="fas fa-sign-out-alt"></i> Leave
+                            <!-- company info url -->
+                          </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>  
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

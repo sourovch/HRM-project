@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Permition</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Menu Permition</h1>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Menu
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="company-name" id="sel-company-name">
+                    <option value="Select Company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">Company 1</option>
+                    <option value="company-2">Company 2</option>
+                    <option value="company-3">Company 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="module-name"
+                  ><span class="required">*</span>Module Name</label
+                >
+                <div class="select">
+                  <select name="module-name" id="sel-module-name">
+                    <option value="Select module Name" hidden>
+                      Select module Name
+                    </option>
+                    <option value="module-1">Module 1</option>
+                    <option value="module-2">Module 2</option>
+                    <option value="module-3">Module 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="menu-status"
+                  ><span class="required">*</span>Menu status</label
+                >
+                <div class="select">
+                  <select status="menu-status" id="sel-menu-status">
+                    <option value="Select menu status" hidden>
+                      Select menu Status
+                    </option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-p">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- menu table -->
+    </main-sec>
+  </body>
+</html>

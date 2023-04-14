@@ -116,19 +116,19 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/permition/module-perm.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Module Permission</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/permition/menu-perm.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Menu Permission</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/permition/option-perm.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Option Permission</span>
             </a>
@@ -143,37 +143,37 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/humen-resources/employee.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Employee</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/humen-resources/manage-holidays.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Manage Holiday</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/humen-resources/stuff-attendance.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Stuff Ateendance</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/humen-resources/out-of-station-duty.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Out Station Duty</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/humen-resources/attendance-data-load.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Ateendance Data Load</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/humen-resources/monthly-attendance.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Monthly Ateendance</span>
             </a>
