@@ -188,31 +188,31 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/party-manage/session.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Session</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/party-manage/customer.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Customer</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/party-manage/distributor.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Distributor</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/party-manage/guest-list.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Guest List</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/party-manage/importer.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Importer</span>
             </a>
@@ -377,7 +377,7 @@ function getTemplet(path) {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/reports/daily-attendance.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Daily Attendance</span>
             </a>
