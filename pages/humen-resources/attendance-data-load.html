@@ -18,39 +18,107 @@
     <main-sec path="../../">
       <div class="content-container">
         <h1 class="main-heading">Attendance Data Load</h1>
-        <!-- <div class="table-wrapper">
-          <h3 class="table-heading">
-            <i class="fas fa-list"></i> Company List
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Employee
           </h3>
-          <div class="table-resp-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>SL</th>
-                  <th style="width: 30%">Company Name</th>
-                  <th>Divition</th>
-                  <th>Area</th>
-                  <th>Status</th>
-                  <th class="td-options">Options</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1.</td>
-                  <td>My Group</td>
-                  <td>Dhake</td>
-                  <td>Karwan Bazar</td>
-                  <td>Active</td>
-                  <td class="td-options">
-                    <a href="./company-info.html" class="company-info"
-                      ><i class="fas fa-pen-square"></i>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div> -->
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="company-name" id="sel-company-name">
+                    <option value="Select Company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">Company 1</option>
+                    <option value="company-2">Company 2</option>
+                    <option value="company-3">Company 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="Branch-name"
+                  ><span class="required">*</span>Branch Name</label
+                >
+                <div class="select">
+                  <select name="Branch-name" id="sel-Branch-name">
+                    <option value="Select Branch Name" hidden>
+                      Select Branch Name
+                    </option>
+                    <option value="Branch-1">Branch 1</option>
+                    <option value="Branch-2">Branch 2</option>
+                    <option value="Branch-3">Branch 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="fiscal year"
+                    ><span class="required">*</span>fiscal year</label
+                  >
+                  <div class="select">
+                    <select name="fiscal year" id="sel-fiscal year">
+                      <option value="Select fiscal year" hidden>
+                        Select fiscal year
+                      </option>
+                      <option value="fiscal year-1">fiscal year 1</option>
+                      <option value="fiscal year-2">fiscal year 2</option>
+                      <option value="fiscal year-3">fiscal year 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="shift"
+                    ><span class="required">*</span>Shift</label
+                  >
+                  <div class="select">
+                    <select name="shift" id="sel-shift-name">
+                      <option value="Select Shift" hidden>
+                        Select Shift Name
+                      </option>
+                      <option value="shift-1">Shift 1</option>
+                      <option value="shift-2">Shift 2</option>
+                      <option value="shift-3">Shift 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="from-date"
+                  ><span class="required">*</span>From Date</label
+                >
+                <input type="date" name="from-date" id="from-date" />
+              </div>
+              <div class="input-wrapper">
+                <label for="to-date"
+                  ><span class="required">*</span>To Date</label
+                >
+                <input type="date" name="to-date" id="to-date" />
+              </div>
+              <div class="input-wrapper">
+                <label for="data-file" class="file-label"
+                  ><span class="required">*</span>Data File
+                  <input type="file" name="data-file" id="data-file"/>
+                </label>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-upload"></i> Upload
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </main-sec>
   </body>

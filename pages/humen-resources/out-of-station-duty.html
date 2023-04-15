@@ -18,7 +18,45 @@
     <main-sec path="../../">
       <div class="content-container">
         <h1 class="main-heading">Out Of Station Duty</h1>
-        <!-- <div class="table-wrapper">
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search OD
+          </h3>
+          <form>
+            <div class="form-content-wrapper padding-b-2em">
+              <div class="select-wrapper">
+                <label for="empolyee-name"
+                  ><span class="required">*</span>Empolyee Name</label
+                >
+                <div class="select">
+                  <select name="empolyee-name" id="sel-empolyee-name">
+                    <option value="Select empolyee Name" hidden>
+                      Select Empolyee Name
+                    </option>
+                    <option value="empolyee-1">Empolyee 1</option>
+                    <option value="empolyee-2">Empolyee 2</option>
+                    <option value="empolyee-3">Empolyee 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="from-date"
+                  ><span class="required">*</span>From Date</label
+                >
+                <input type="date" name="from-date" id="from-date" />
+              </div>
+              <div class="input-wrapper">
+                <label for="to-date"
+                  ><span class="required">*</span>To Date</label
+                >
+                <input type="date" name="to-date" id="to-date" />
+              </div>
+              <button type="submit" class="btn btn-p">Search</button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
           <h3 class="table-heading">
             <i class="fas fa-list"></i> Company List
           </h3>
@@ -27,30 +65,47 @@
               <thead>
                 <tr>
                   <th>SL</th>
-                  <th style="width: 30%">Company Name</th>
-                  <th>Divition</th>
-                  <th>Area</th>
-                  <th>Status</th>
+                  <th>Company Details</th>
+                  <th>Employee Details</th>
+                  <th>Department</th>
+                  <th>From Date</th>
+                  <th>To Date</th>
+                  <th>Total OD</th>
                   <th class="td-options">Options</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1.</td>
-                  <td>My Group</td>
-                  <td>Dhake</td>
-                  <td>Karwan Bazar</td>
-                  <td>Active</td>
+                  <td>
+                    <div>My Group</div>
+                    <div>Head Office</div>
+                  </td>
+                  <td>
+                    <div>Ariful Islam</div>
+                    <div>Office, Purchase</div>
+                  </td>
+                  <td>Account & Finance</td>
+                  <td>28-09-2022</td>
+                  <td>28-09-2022</td>
+                  <td>1</td>
                   <td class="td-options">
-                    <a href="./company-info.html" class="company-info"
-                      ><i class="fas fa-pen-square"></i>
-                    </a>
+                    <div>
+                      <a href="./company-info.html" class="company-info"
+                        ><i class="fas fa-pen-square"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-y td-option">
+                        <i class="fas fa-hiking"></i> OD Details
+                      </a>
+                    </div>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div> -->
+        </div>
       </div>
     </main-sec>
   </body>

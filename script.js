@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageContents = document.getElementById("page-contents");
   const navCloser = document.querySelector(".nav-closer");
   const menuToggle = document.getElementById("menu-toggle");
+  const fileSelector = document.querySelectorAll(".form-wrapper input[type='file']")
 
   dd.forEach((i) => {
     i.onclick = () => {
@@ -33,4 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
       menuBar.classList.add("p-absolute");
     }
   };
+
+  fileSelector.forEach((elem) => {
+    elem.onchange = (e) => {
+      e.target.parentElement.dataset.filename = e.target.files[0].name;
+    }
+  })
 });
