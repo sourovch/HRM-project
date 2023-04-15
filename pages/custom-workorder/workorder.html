@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Workorder</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+</head>
+<body>
+    <main-sec path="../../">
+        <div class="content-container">
+            <h1 class="main-heading">Custom Workorder</h1>
+            <div class="form-wrapper">
+                <h3 class="form-heading">
+                    <i class="fas fa-pen-square"></i> Search Menu
+                  </h3>
+                <form>
+                    <div class="form-content-wrapper">
+                      <div class="select-wrapper">
+                          <label for="customer-name"><span class="required">*</span>Customer Name</label>
+                          <div class="select">
+                              <select name="customer-name" id="sel-customer-name">
+                                  <option value="Select customer Name" hidden>Select Customer Name</option>
+                                  <option value="customer-1">customer 1</option>
+                                  <option value="customer-2">customer 2</option>
+                                  <option value="customer-3">customer 3</option>
+                              </select>
+                              <span class="focus"></span>
+                          </div>
+                      </div>
+                      <div class="input-wrapper">
+                          <label for="workorder-no"><span class="required">*</span>Wordorder No.</label>
+                          <input type="text" name="workorder-no" id="workorder-no" placeholder="Wordorder No.">
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="from-date"
+                          ><span class="required">*</span>From Date</label
+                        >
+                        <input type="date" name="from-date" id="to-date" />
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="to-date"
+                          ><span class="required">*</span>To Date</label
+                        >
+                        <input type="date" name="to-date" id="to-date" />
+                      </div>
+                    </div>
+                    <div class="form-bottom-sec">
+                        <button type="submit" class="btn btn-p">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="table-wrapper">
+                <h3 class="table-heading">
+                  <i class="fas fa-list"></i> Menu List
+                </h3>
+                <div class="table-resp-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>SL</th>
+                        <th style="width: 25%;">Wordorder Details</th>
+                        <th style="width: 25%;">Customer Details</th>
+                        <th>Total Amount</th>
+                        <th>Discount</th>
+                        <th>VAT Amount</th>
+                        <th>AIT Amount</th>
+                        <th>NET Amount</th>
+                        <th class="td-options">Options</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1.</td>
+                        <td>
+                            <div>Workorder No: 11223</div>
+                            <div>Date: 01-12-2022</div>
+                            <div>Wordorder Type: Fresh</div>
+                        </td>
+                        <td></td>
+                        <td>62000.00</td>
+                        <td>2000.00</td>
+                        <td>4500.00</td>
+                        <td>2257.50</td>
+                        <td>66758.00</td>
+                        <td class="td-options">
+                          <div>
+                              <a href="./company-info.html" class="company-info"
+                                ><i class="fas fa-pen-square"></i>
+                              </a>
+                          </div>
+                          <div>
+                            <a href="#" class="btn btn-p">
+                              <i class="fas fa-print"></i> Form
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+        </div>
+    </main-sec>
+</body>
+</html>

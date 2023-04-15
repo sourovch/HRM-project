@@ -243,7 +243,7 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/custom-workorder/workorder.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Workorder</span>
             </a>
