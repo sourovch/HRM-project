@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subsidiary Ledger (SL) Level 2</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Subsidiary Ledger (SL) Level 2</h1>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search SL Level-2
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="group-ledger-name"
+                  ><span class="required">*</span>Group Ledger Name</label
+                >
+                <div class="select">
+                  <select name="group-ledger-name" id="Group">
+                    <option value="select-group-ledger-name" selected hidden>Select Group Ledger Name</option>
+                    <option value="group-ledger-1">Group Ledger 1</option>
+                    <option value="group-ledger-2">Group Ledger 2</option>
+                    <option value="group-ledger-3">Group Ledger 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="sl-level-1-name"
+                  ><span class="required">*</span>SL Level 1 Name</label
+                >
+                <div class="select">
+                  <select name="sl-level-1-name" id="Group">
+                    <option value="select-sl-level-1" selected hidden>Select SL Level-1</option>
+                    <option value="sl-level-1-1">SL Level-1 1</option>
+                    <option value="sl-level-1-2">SL Level-1 2</option>
+                    <option value="sl-level-1-3">SL Level-1 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Reset
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Subsidiary Ledger 2 List
+          </h3>
+          <div class="table-resp-wrapper">
+            <table class="sl-table">
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th style="width: 30%">GL Name</th>
+                  <th style="width: 25%">SL Level 1 Name</th>
+                  <th style="width: 25%">SL Level 2 Name</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Assets</td>
+                  <td>Current Assets</td>
+                  <td>Cash</td>
+                  <td class="td-options">
+                    <a href="#" class="company-info"
+                      ><i class="fas fa-pen-square"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

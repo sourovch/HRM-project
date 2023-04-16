@@ -332,31 +332,25 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/accounts/sl-level-1.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>SL Level-1</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/accounts/sl-level-2.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>SL Level-2</span>
             </a>
           </li>
           <li>
-            <a href="#">
-              <div class="menu-icon"><i class="far fa-circle"></i></div>
-              <span>SL Level-2</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
+            <a href="${path}pages/accounts/sl-level-3.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>SL Level-3</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/accounts/chart-of-accounts.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Chart of Accounts</span>
             </a>
@@ -383,25 +377,25 @@ function getTemplet(path) {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/reports/job-card.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Job Card</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/reports/cash-salary-sheet.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Cash Salary Seet</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/reports/bank-salary-sheet.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Bank Salary Sheet</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/reports/my-job-card.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>My Job Card</span>
             </a>

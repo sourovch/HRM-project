@@ -1,0 +1,9 @@
+left: 
+    reports/monthly stuff Attendance
+duplicates:
+    monthly salary sheet
+    monthly employee attendance
+    employee attendance
+
+todo:
+    complete all add forms

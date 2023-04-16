@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Salary Sheet</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Cash Salary Sheet</h1>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Salary Sheet
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="company-name" id="sel-company-name">
+                    <option value="Select Company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">Company 1</option>
+                    <option value="company-2">Company 2</option>
+                    <option value="company-3">Company 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="Branch-name"
+                  ><span class="required">*</span>Branch Name</label
+                >
+                <div class="select">
+                  <select name="Branch-name" id="sel-Branch-name">
+                    <option value="Select Branch Name" hidden>
+                      Select Branch Name
+                    </option>
+                    <option value="Branch-1">Branch 1</option>
+                    <option value="Branch-2">Branch 2</option>
+                    <option value="Branch-3">Branch 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="fiscal-year"
+                  ><span class="required">*</span>fiscal year</label
+                >
+                <div class="select">
+                  <select name="fiscal-year" id="sel-fiscal-year">
+                    <option value="Select fiscal year" hidden>
+                      Select fiscal year
+                    </option>
+                    <option value="fiscal-year-1">fiscal year 1</option>
+                    <option value="fiscal-year-2">fiscal year 2</option>
+                    <option value="fiscal-year-3">fiscal year 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="salary month"><span class="required">*</span>Salary Month</label>
+                <div class="select">
+                  <select name="salary month" id="sel-salary-month-name">
+                    <option value="Select salary month" hidden>
+                      Select Salary Month Name
+                    </option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">july</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="salary year"><span class="required">*</span>Salary year</label>
+                <div class="select">
+                  <select name="salary year" id="sel-salary-year-name">
+                    <option value="Select salary year" hidden>
+                      Select Salary Year
+                    </option>
+                    <option value="january">2023</option>
+                    <option value="february">2022</option>
+                    <option value="march">2021</option>
+                    <option value="april">2020</option>
+                    <option value="may">2019</option>
+                    <option value="june">2018</option>
+                    <option value="july">2017</option>
+                    <option value="august">2016</option>
+                    <option value="september">2015</option>
+                    <option value="october">2014</option>
+                    <option value="november">2013</option>
+                    <option value="december">2012</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button class="btn btn-s">
+                <i class="fas fa-print"></i> Print
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Cash Salary Sheet List
+          </h3>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>
