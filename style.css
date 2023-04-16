@@ -663,8 +663,8 @@ body {
   right: 0;
   background-color: rgb(var(--color-d), .2);
   align-items: center;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .form-wrapper .form-bottom-sec {
