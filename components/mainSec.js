@@ -258,13 +258,13 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/salary-management/genarate-salary-sheet.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
-              <span>Genarate Salary Sheet</span>
+              <span>Gegerate Salary Sheet</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/salary-management/manage-salary-bill.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Manage Salary Bill</span>
             </a>
