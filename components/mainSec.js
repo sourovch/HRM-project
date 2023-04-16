@@ -279,7 +279,7 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/purchase-order/distributor-po.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Distribution PO</span>
             </a>
@@ -294,7 +294,7 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/delivery-challan/delivery-challan.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Delivery Challan</span>
             </a>
@@ -311,13 +311,13 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/leave-management/leave-type.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Leave Type</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="${path}pages/leave-management/leave-compose.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Leave Compose</span>
             </a>
