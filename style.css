@@ -649,6 +649,10 @@ body {
   position: absolute;
 }
 
+.form-wrapper .focus {
+  z-index: inherit;
+}
+
 .form-wrapper select:focus + .focus {
   position: absolute;
   top: -1px;
@@ -657,6 +661,7 @@ body {
   bottom: -1px;
   border: 2px solid rgb(var(--color-p));
   border-radius: inherit;
+  pointer-events: none;
 }
 
 .form-wrapper .required {
