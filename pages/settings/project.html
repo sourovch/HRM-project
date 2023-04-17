@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -13,48 +13,145 @@
       crossorigin="anonymous"
     />
     <script src="../../script.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main-sec path="../../">
-        <div class="content-container">
-            <h1 class="main-heading">Projects</h1>
-            <div class="table-wrapper">
-                <h3 class="table-heading"><i class="fas fa-list"></i> Project List</h3>
-                <div class="table-res-wrapper">
-                  <table>
-                    <thead>
-                      <th>SL</th>
-                      <th>Company Name</th>
-                      <th>Branch Name</th>
-                      <th style="width: 20%;">Project Name</th>
-                      <th style="width: 20%;">Project Discription</th>
-                      <th>Project Price</th>
-                      <th>Project Budget</th>
-                      <th class="td-options">Option</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Head Office(Industrial Enterprise)</td>
-                        <td>Head Office(Lira Industrial Enterprise)</td>
-                        <td>fjfjs</td>
-                        <td>dksj</td>
-                        <td>20.000</td>
-                        <td>25.000</td>
-                        <td class="td-options-group">
-                          <a href="#" class="btn btn-p td-option">
-                            <i class="fas fa-pen-square"></i>
-                          </a>
-                          <a href="#" class="btn btn-d td-option">
-                            <i class="fas fa-trash"></i>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+      <div class="content-container">
+        <h1 class="main-heading">
+          Projects<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Division
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option value="Select Company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">Company 1</option>
+                    <option value="company-2">Company 2</option>
+                    <option value="company-3">Company 3</option>
+                  </select>
+                  <span class="focus"></span>
                 </div>
               </div>
+              <div class="select-wrapper">
+                <label for="branch-name" name="branch-name">
+                  <span class="required">*</span> Branch Name
+                </label>
+                <div class="select">
+                  <select name="branch-name" id="branch-name">
+                    <option hidden selected>Select Branch Name</option>
+                    <option value="branch-1">Branch 1</option>
+                    <option value="branch-2">Branch 2</option>
+                    <option value="branch-3">Branch 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="project-name">
+                  <span class="required">*</span>Project Name
+                </label>
+                <input
+                  type="text"
+                  name="project-name"
+                  id="project-name"
+                  placeholder="Project Name"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="project-discription">
+                  <span class="required">*</span>Project Discription
+                </label>
+                <input
+                  type="text"
+                  name="project-discription"
+                  id="project-discription"
+                  placeholder="Project Discription"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="project-price">
+                  <span class="required">*</span>Project Price
+                </label>
+                <input
+                  type="text"
+                  name="project-price"
+                  id="project-price"
+                  placeholder="Project Price"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="project-budget">
+                  <span class="required">*</span>Project Budget
+                </label>
+                <input
+                  type="text"
+                  name="project-budget"
+                  id="project-budget"
+                  placeholder="Project Budget"
+                />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
         </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Project List
+          </h3>
+          <div class="table-res-wrapper">
+            <table>
+              <thead>
+                <th>SL</th>
+                <th>Company Name</th>
+                <th>Branch Name</th>
+                <th style="width: 20%">Project Name</th>
+                <th style="width: 20%">Project Discription</th>
+                <th>Project Price</th>
+                <th>Project Budget</th>
+                <th class="td-options">Option</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Head Office(Industrial Enterprise)</td>
+                  <td>Head Office(Lira Industrial Enterprise)</td>
+                  <td>fjfjs</td>
+                  <td>dksj</td>
+                  <td>20.000</td>
+                  <td>25.000</td>
+                  <td class="td-options-group">
+                    <a href="#" class="btn btn-p td-option">
+                      <i class="fas fa-pen-square"></i>
+                    </a>
+                    <a href="#" class="btn btn-d td-option">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main-sec>
-</body>
+  </body>
 </html>

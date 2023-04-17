@@ -43,7 +43,7 @@ body {
 .btn-y,
 .btn-s,
 .btn-d {
-  padding: .5em .8em;
+  padding: 0.5em 0.8em;
   color: white;
   min-height: 38px;
   border-radius: 5px;
@@ -51,7 +51,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  margin: .1em;
+  margin: 0.1em;
 }
 
 .btn-p {
@@ -68,6 +68,29 @@ body {
 
 .btn-d {
   background-color: rgb(var(--color-r));
+}
+
+.add-btn {
+  display: inline;
+  font-size: calc(var(--fs-p) + 0.4em);
+  padding: 0 0.2em;
+  color: rgb(var(--color-d), 0.8);
+  transition: 0.2s all ease-out;
+}
+
+.add-btn:hover {
+  color: rgb(var(--color-d), 1);
+}
+
+.add-form {
+  height: fit-content;
+  max-height: 0;
+  transition: 0.8s all ease-out;
+  overflow: hidden;
+}
+
+.add-form.active {
+  max-height: 800px;
 }
 
 .padding-b-2em {
@@ -302,7 +325,7 @@ body {
 }
 
 .content-container {
-  padding: .8em;
+  padding: 0.8em;
 }
 
 .content-container > div:not(:last-child) {
@@ -311,7 +334,7 @@ body {
 
 .main-heading {
   font-size: var(--fs-h-p);
-  padding: 0.4em .2em;
+  padding: 0.4em 0.2em;
 }
 
 .dashboard-info {
@@ -320,8 +343,8 @@ body {
 }
 
 .dashboard-info:not(:last-child) {
-  margin-bottom: .5em;
-  padding-bottom: .5em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.499);
 }
 
@@ -394,7 +417,7 @@ body {
 
 .card-s .count,
 .card-t .count {
-  font-size: calc(var(--fs-p) + .2rem);
+  font-size: calc(var(--fs-p) + 0.2rem);
   font-weight: bold;
 }
 
@@ -410,8 +433,8 @@ body {
 }
 
 .card-top-text {
-  font-size: calc(var(--fs-p) + .2rem);
-  opacity: .8;
+  font-size: calc(var(--fs-p) + 0.2rem);
+  opacity: 0.8;
 }
 
 .card progress {
@@ -439,8 +462,8 @@ body {
 }
 
 .card label {
-  font-size: calc(var(--fs-p) + .2rem);
-  opacity: .8;
+  font-size: calc(var(--fs-p) + 0.2rem);
+  opacity: 0.8;
 }
 
 .table-wrapper,
@@ -462,12 +485,12 @@ body {
 .table-heading,
 .form-heading {
   padding: 1em;
-  border-bottom: 1px solid rgb(var(--color-d), .2);
+  border-bottom: 1px solid rgb(var(--color-d), 0.2);
 }
 
 .table-heading {
-  padding-bottom: .9em;
-  margin-bottom: .9em;
+  padding-bottom: 0.9em;
+  margin-bottom: 0.9em;
 }
 
 .form-heading {
@@ -481,15 +504,15 @@ body {
   font-size: var(--fs-p);
 }
 
-.table-wrapper table, 
+.table-wrapper table,
 .table-wrapper td,
 .table-wrapper th {
-  border: 1px solid rgb(var(--color-d), .2);
+  border: 1px solid rgb(var(--color-d), 0.2);
 }
 
 .table-wrapper td,
 .table-wrapper th {
-  padding: .5em .8em;
+  padding: 0.5em 0.8em;
   text-align: left;
   vertical-align: middle;
 }
@@ -507,7 +530,7 @@ body {
 }
 
 .table-wrapper .company-info {
-  font-size: calc(var(--fs-p) + .5rem);
+  font-size: calc(var(--fs-p) + 0.5rem);
 }
 
 .table-wrapper .td-options,
@@ -518,7 +541,7 @@ body {
 
 .table-wrapper .td-options-group {
   display: flex;
-  gap: .2em;
+  gap: 0.2em;
   align-items: center;
   justify-content: center;
 }
@@ -530,7 +553,7 @@ body {
 .table-wrapper .td-option {
   width: fit-content;
   text-align: center;
-  margin: .2em auto;
+  margin: 0.2em auto;
 }
 
 .table-wrapper tr[--data-active="true"] > td:first-child {
@@ -544,7 +567,7 @@ body {
 }
 
 .table-wrapper .sl-table {
-  font-size: calc(var(--fs-p) + .2em);
+  font-size: calc(var(--fs-p) + 0.2em);
 }
 
 .table-wrapper .sl-table thead {
@@ -562,8 +585,9 @@ body {
 
 .form-wrapper .form-content-wrapper {
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
   align-items: end;
+  width: 100%;
 }
 
 .form-wrapper .form-content-wrapper-grid {
@@ -571,7 +595,7 @@ body {
   display: grid;
   align-items: end;
   grid-template-columns: repeat(auto-fit, minmax(var(--min-width), auto));
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .form-wrapper .select-wrapper,
@@ -583,7 +607,7 @@ body {
   appearance: none;
   background-color: transparent;
   border: none;
-  padding: .7em .9em;
+  padding: 0.7em 0.9em;
   margin: 0;
   width: 100%;
   font-family: inherit;
@@ -601,16 +625,16 @@ body {
   position: relative;
   width: 100%;
   min-width: 15ch;
-  border: 1px solid rgb(var(--color-d), .5);
+  border: 1px solid rgb(var(--color-d), 0.5);
   border-radius: 0.25em;
-  padding-right: .3em;
+  padding-right: 0.3em;
   font-size: var(--fs-p);
   cursor: pointer;
   line-height: 1.1;
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
   display: grid;
-  grid-template-areas: 'select';
+  grid-template-areas: "select";
   align-items: center;
 }
 
@@ -618,7 +642,7 @@ body {
   content: "";
   width: 0.8em;
   height: 0.5em;
-  background-color: rgb(var(--color-d), .5);
+  background-color: rgb(var(--color-d), 0.5);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
   grid-area: select;
   justify-self: end;
@@ -637,32 +661,64 @@ body {
 
 .form-wrapper .required {
   color: rgb(var(--color-r));
-  font-size: calc(var(--fs-p) + .5em);
+  font-size: calc(var(--fs-p) + 0.5em);
 }
 
 .form-wrapper label {
   display: block;
-  padding-bottom: .3em;
+  padding-bottom: 0.3em;
 }
 
-.form-wrapper input {
+.form-wrapper input,
+.form-wrapper textarea {
   font-size: var(--fs-p);
   width: 100%;
-  border: 1px solid rgb(var(--color-d), .5);
+  border: 1px solid rgb(var(--color-d), 0.5);
   border-radius: 3px;
 }
 
-.form-wrapper input[type='text'] {
-  padding: .5em .5em;
+.form-wrapper input[type="text"],
+.form-wrapper input[type='tel'],
+.form-wrapper input[type='email'] {
+  padding: 0.5em 0.5em;
 }
 
 .form-wrapper input[type="date"] {
-  padding: .6em .5em;
+  padding: 0.6em 0.5em;
 }
 
-.form-wrapper input[type='file'] {
+.form-wrapper input[type="file"] {
   opacity: 0;
-  padding: .25em 0;
+  padding: 0.25em 0;
+}
+
+.form-wrapper textarea {
+  resize: vertical;
+  padding: .6em .4em;
+  min-height: 38px;
+  height: 38px;
+}
+
+.form-wrapper .form-sec {
+  margin: 0.4em;
+  padding: 0.4em;
+  border: 1px solid rgb(var(--color-d), 0.2);
+  border-top: 5px solid rgb(var(--color-p));
+  border-radius: 5px;
+}
+
+.form-wrapper .form-sec > h3 {
+  font-size: calc(var(--fs-p) + 0.2em);
+  padding: 0.2em;
+  color: rgb(var(--color-d), 0.5);
+}
+
+.form-wrapper .form-sec > h3::after {
+  content: ":";
+}
+
+.form-wrapper .form-sec > .form-content-wrapper:not(:last-child) {
+  margin-bottom: .8em;
 }
 
 .file-label {
@@ -674,11 +730,11 @@ body {
   box-sizing: border-box;
   position: absolute;
   min-height: 2em;
-  border: 1px solid rgb(var(--color-d), .2);
+  border: 1px solid rgb(var(--color-d), 0.2);
   border-radius: 4px;
   cursor: pointer;
   display: grid;
-  padding: 0 .5em;
+  padding: 0 0.5em;
 }
 
 .file-label::after {
@@ -696,7 +752,7 @@ body {
   width: 80%;
   bottom: 0;
   right: 0;
-  background-color: rgb(var(--color-d), .2);
+  background-color: rgb(var(--color-d), 0.2);
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
@@ -706,25 +762,24 @@ body {
   padding: 1em 0;
   display: flex;
   align-items: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .form-wrapper .form-bottom-sec button {
-  font-size: calc(var(--fs-p) + .1em);
+  font-size: calc(var(--fs-p) + 0.1em);
 }
 
 .session-anim {
-  background-color: rgb(var(--color-r), .8);
+  background-color: rgb(var(--color-r), 0.8);
   width: 100%;
   height: 20px;
   margin: 1em 0;
   transform-origin: left center;
-  animation-name: 'reduce-scale';
+  animation-name: "reduce-scale";
   animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-
 
 @media screen and (max-width: 980px) {
   :root {

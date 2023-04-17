@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const navCloser = document.querySelector(".nav-closer");
   const menuToggle = document.getElementById("menu-toggle");
   const fileSelector = document.querySelectorAll(".form-wrapper input[type='file']")
+  const addBtn = document.getElementById('add-btn');
+  const addForm = document.getElementById('add-form');
+  const addFormClose = document.getElementById('add-form-close');
 
   dd.forEach((i) => {
     i.onclick = () => {
@@ -39,5 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
     elem.onchange = (e) => {
       e.target.parentElement.dataset.filename = e.target.files[0].name;
     }
+  })
+
+  addBtn?.addEventListener('click', (e) => {
+    addForm?.classList.toggle('active');
+  })
+
+  addFormClose?.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    addForm?.classList.remove('active');
   })
 });
