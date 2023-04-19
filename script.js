@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fileSelector.forEach((elem) => {
     elem.onchange = (e) => {
-      e.target.parentElement.dataset.filename = e.target.files[0].name;
+      console.log("ok")
+      e.target.parentElement.dataset.filename = e.target.files[0].name || "";
     }
   })
 
@@ -53,4 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     addForm?.classList.remove('active');
   })
+
+  const optionPer = document.querySelector('.form-wrapper select[multiple] option').parentElement;
+  console.log(optionPer)
 });

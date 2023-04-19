@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Territory Area</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -13,76 +13,252 @@
       crossorigin="anonymous"
     />
     <script src="../../script.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main-sec path="../../">
-        <div class="content-container">
-            <h1 class="main-heading">Territory Area<button class="btn add-btn" id="add-btn">+</button></h1>
-            <div class="table-wrapper">
-                <h3 class="table-heading">
-                  <i class="fas fa-list"></i> Company List
-                </h3>
-                <div class="table-resp-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>SL</th>
-                        <th style="width: 30%;">Company Name</th>
-                        <th>Divition</th>
-                        <th>Area</th>
-                        <th>Territory Area</th>
-                        <th>Status</th>
-                        <th class="td-options">Options</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>1.</td>
-                        <td>My Group</td>
-                        <td>Dhake</td>
-                        <td>Karwan Bazar</td>
-                        <td>Karwan Bazar</td>
-                        <td>Active</td>
-                        <td class="td-options">
-                          <a href="./company-info.html" class="company-info"
-                            ><i class="fas fa-pen-square"></i>
-                            <!-- company info url -->
-                          </a>
-                        </td>
-                      </tr>
-                        <tr>
-                        <td>1.</td>
-                        <td>My Group</td>
-                        <td>Dhake</td>
-                        <td>Karwan Bazar</td>
-                        <td>Karwan Bazar</td>
-                        <td>Active</td>
-                        <td class="td-options">
-                          <a href="./company-info.html" class="company-info"
-                            ><i class="fas fa-pen-square"></i>
-                            <!-- company info url -->
-                          </a>
-                        </td>
-                      </tr>
-                        <tr>
-                        <td>1.</td>
-                        <td>My Group</td>
-                        <td>Dhake</td>
-                        <td>Karwan Bazar</td>
-                        <td>Karwan Bazar</td>
-                        <td>Active</td>
-                        <td class="td-options">
-                          <a href="./company-info.html" class="company-info"
-                            ><i class="fas fa-pen-square"></i>
-                            <!-- company info url -->
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+      <div class="content-container">
+        <h1 class="main-heading">
+          Territory Area<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Territory Area
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name" name="company-name">
+                  <span class="required">*</span>Company Name
+                </label>
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option hidden selected>Select Company Name</option>
+                    <option value="company name 1">Company Name 1</option>
+                    <option value="company name 2">Company Name 2</option>
+                  </select>
                 </div>
               </div>
+              <div class="select-wrapper">
+                <label for="divition-name" name="divition-name">
+                  <span class="required">*</span>Divition Name
+                </label>
+                <div class="select">
+                  <select name="divition-name" id="divition-name">
+                    <option hidden selected>Select Divition Name</option>
+                    <option value="divition name 1">Divition Name 1</option>
+                    <option value="divition name 2">Divition Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="area-name" name="area-name">
+                  <span class="required">*</span>Area Name
+                </label>
+                <div class="select">
+                  <select name="area-name" id="area-name">
+                    <option hidden selected>Select Area Name</option>
+                    <option value="area name 1">Area Name 1</option>
+                    <option value="area name 2">Area Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label
+                  for="trt-area-name"
+                  name="trt-area-name"
+                >
+                  <span class="required">*</span>Territory Area Name
+                </label>
+                <input
+                  type="text"
+                  name="trt-area-name"
+                  id="trt-area-name"
+                  placeholder="Territory Area Name"
+                />
+              </div>
+              <div class="select-wrapper">
+                <label for="status">Status</label>
+                <div class="select">
+                  <select name="status" id="status">
+                    <option value="select status" hidden selected>
+                      Select Status
+                    </option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button class="btn btn-p" type="submit">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button class="btn btn-y" type="reset">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
         </div>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Area
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option value="Select Company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">Company 1</option>
+                    <option value="company-2">Company 2</option>
+                    <option value="company-3">Company 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="division-name" name="division-name">
+                  <span class="required">*</span> Divition Name
+                </label>
+                <div class="select">
+                  <select name="divition-name" id="divition-name">
+                    <option value="Select divition Name" hidden>
+                      Select Divition Name
+                    </option>
+                    <option value="divition-1">Divition 1</option>
+                    <option value="divition-2">Divition 2</option>
+                    <option value="divition-3">Divition 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="area-name" name="area-name">
+                  <span class="required">*</span> Area Name
+                </label>
+                <div class="select">
+                  <select name="area-name" id="area-name">
+                    <option value="Select area Name" hidden>
+                      Select Area Name
+                    </option>
+                    <option value="area-1">Area 1</option>
+                    <option value="area-2">Area 2</option>
+                    <option value="area-3">Area 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="trt-area-name">Territory Area Name</label>
+                <input
+                  type="text"
+                  name="trt-area-name"
+                  id="trt-area-name"
+                  placeholder="Territory Area Name"
+                />
+              </div>
+              <div class="select-wrapper">
+                <label for="status"
+                  ><span class="required">*</span>Status</label
+                >
+                <div class="select">
+                  <select name="status" id="status">
+                    <option value="select status" hidden>Select Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Company List
+          </h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th style="width: 30%">Company Name</th>
+                  <th>Divition</th>
+                  <th>Area</th>
+                  <th>Territory Area</th>
+                  <th>Status</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>My Group</td>
+                  <td>Dhake</td>
+                  <td>Karwan Bazar</td>
+                  <td>Karwan Bazar</td>
+                  <td>Active</td>
+                  <td class="td-options">
+                    <a href="./company-info.html" class="company-info"
+                      ><i class="fas fa-pen-square"></i>
+                      <!-- company info url -->
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td>My Group</td>
+                  <td>Dhake</td>
+                  <td>Karwan Bazar</td>
+                  <td>Karwan Bazar</td>
+                  <td>Active</td>
+                  <td class="td-options">
+                    <a href="./company-info.html" class="company-info"
+                      ><i class="fas fa-pen-square"></i>
+                      <!-- company info url -->
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td>My Group</td>
+                  <td>Dhake</td>
+                  <td>Karwan Bazar</td>
+                  <td>Karwan Bazar</td>
+                  <td>Active</td>
+                  <td class="td-options">
+                    <a href="./company-info.html" class="company-info"
+                      ><i class="fas fa-pen-square"></i>
+                      <!-- company info url -->
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main-sec>
-</body>
+  </body>
 </html>

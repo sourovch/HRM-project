@@ -1,9 +1,15 @@
-left: 
-    reports/monthly stuff Attendance
-duplicates:
-    monthly salary sheet
-    monthly employee attendance
-    employee attendance
-
 todo:
-    complete all add forms
+    dashboard double(Hr dashboard, Mis Dashboard).
+    new section(in ss) in dashboard.
+    search button in dashboard(in ss).
+    make all complax tabels(in website).
+
+
+report:
+    404 Not Found on party manage/Gust List.
+    Billing Salary: no add form.
+    my job card table missing.
+    module permition/menu permition no forms
+
+hint:
+    humen resorce/attendance and reports/attendance.

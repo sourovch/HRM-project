@@ -22,6 +22,7 @@ body {
   --color-r: 227, 92, 105;
   --color-d: 52, 58, 64;
   --color-w: 254, 192, 7;
+  --color-contrast: 255, 255, 255;
 
   --fs-h-p: 1.8rem;
   --fs-h-s: auto;
@@ -44,7 +45,7 @@ body {
 .btn-s,
 .btn-d {
   padding: 0.5em 0.8em;
-  color: white;
+  color: rgb(var(--color-contrast));
   min-height: 38px;
   border-radius: 5px;
   display: flex;
@@ -90,7 +91,7 @@ body {
 }
 
 .add-form.active {
-  max-height: 800px;
+  max-height: 2500px;
 }
 
 .padding-b-2em {
@@ -215,7 +216,7 @@ body {
 
 .nav-items li:hover > a,
 .dropdown.open > a {
-  color: white;
+  color: rgb(var(--color-contrast));
   background-color: rgb(var(--color-s), 0.2);
 }
 
@@ -226,7 +227,7 @@ body {
 
 .nav-items .nav-item.active > a {
   background-color: rgb(var(--color-p));
-  color: white;
+  color: rgb(var(--color-contrast));
 }
 
 .nav-item:not(:last-child),
@@ -305,7 +306,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0.5em;
-  background-color: white;
+  background-color: rgb(var(--color-contrast));
 }
 
 .top-bar > h4 {
@@ -351,7 +352,7 @@ body {
 .card {
   padding: 1em;
   margin: 0.5em;
-  color: white;
+  color: rgb(var(--color-contrast));
   min-height: 140px;
 }
 
@@ -376,7 +377,7 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  color: white;
+  color: rgb(var(--color-contrast));
   padding: 0.6em;
   background-color: rgb(var(--color-p-s));
   text-decoration: none;
@@ -454,11 +455,11 @@ body {
 }
 
 .card progress::-webkit-progress-value {
-  background-color: white;
+  background-color: rgb(var(--color-contrast));
 }
 
 .card progress::-moz-progress-bar {
-  background-color: white;
+  background-color: rgb(var(--color-contrast));
 }
 
 .card label {
@@ -468,7 +469,7 @@ body {
 
 .table-wrapper,
 .form-wrapper {
-  background-color: white;
+  background-color: rgb(var(--color-contrast));
   border-radius: 9px;
   overflow: hidden;
 }
@@ -495,7 +496,7 @@ body {
 
 .form-heading {
   background-color: rgb(var(--color-p));
-  color: white;
+  color: rgb(var(--color-contrast));
 }
 
 .table-wrapper table {
@@ -558,12 +559,12 @@ body {
 
 .table-wrapper tr[--data-active="true"] > td:first-child {
   background-color: rgb(var(--color-g));
-  color: white;
+  color: rgb(var(--color-contrast));
 }
 
 .table-wrapper tr[--data-active="false"] > td:first-child {
   background-color: rgb(var(--color-r));
-  color: white;
+  color: rgb(var(--color-contrast));
 }
 
 .table-wrapper .sl-table {
@@ -572,7 +573,7 @@ body {
 
 .table-wrapper .sl-table thead {
   background-color: rgb(var(--color-p));
-  color: white;
+  color: rgb(var(--color-contrast));
 }
 
 .table-wrapper .sl-table tr td:nth-child(n + 3) {
@@ -617,6 +618,15 @@ body {
   outline: none;
 }
 
+.form-wrapper select[multiple] {
+  height: 2.3rem;
+}
+
+.form-wrapper select[multiple] option {
+  display: inline;
+  padding: .3em .5em;
+}
+
 .form-wrapper select::-ms-expand {
   display: none;
 }
@@ -627,7 +637,6 @@ body {
   min-width: 15ch;
   border: 1px solid rgb(var(--color-d), 0.5);
   border-radius: 0.25em;
-  padding-right: 0.3em;
   font-size: var(--fs-p);
   cursor: pointer;
   line-height: 1.1;
@@ -647,6 +656,7 @@ body {
   grid-area: select;
   justify-self: end;
   position: absolute;
+  margin-right: 0.5em;
 }
 
 .form-wrapper .focus {
@@ -684,7 +694,10 @@ body {
 
 .form-wrapper input[type="text"],
 .form-wrapper input[type='tel'],
-.form-wrapper input[type='email'] {
+.form-wrapper input[type='email'],
+.form-wrapper input[type='url'],
+.form-wrapper input[type='time'],
+.form-wrapper input[type='password'] {
   padding: 0.5em 0.5em;
 }
 
@@ -692,9 +705,15 @@ body {
   padding: 0.6em 0.5em;
 }
 
+.form-wrapper input:disabled {
+  background-color: rgb(var(--color-d), 0.2);
+}
+
 .form-wrapper input[type="file"] {
   opacity: 0;
+  overflow: hidden;
   padding: 0.25em 0;
+  max-width: 0;
 }
 
 .form-wrapper textarea {
@@ -714,7 +733,7 @@ body {
 
 .form-wrapper .form-sec > h3 {
   font-size: calc(var(--fs-p) + 0.2em);
-  padding: 0.2em;
+  padding: 0.2em 0;
   color: rgb(var(--color-d), 0.5);
 }
 
@@ -728,13 +747,15 @@ body {
 
 .file-label {
   position: relative;
+  overflow: hidden;
+  padding-bottom: 2.3em !important;
 }
 
 .file-label::after,
 .file-label::before {
   box-sizing: border-box;
   position: absolute;
-  min-height: 2em;
+  height: 2.3em;
   border: 1px solid rgb(var(--color-d), 0.2);
   border-radius: 4px;
   cursor: pointer;
@@ -780,7 +801,7 @@ body {
   height: 20px;
   margin: 1em 0;
   transform-origin: left center;
-  animation-name: "reduce-scale";
+  animation-name: reduce-scale;
   animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;

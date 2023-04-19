@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shift</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -13,62 +13,143 @@
       crossorigin="anonymous"
     />
     <script src="../../script.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main-sec path="../../">
-        <div class="content-container">
-            <h1 class="main-heading">Shift<button class="btn add-btn" id="add-btn">+</button></h1>
-            <div class="table-wrapper">
-                <h3 class="table-heading">
-                  <i class="fas fa-list"></i> Company List
-                </h3>
-                <div class="table-resp-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>SL</th>
-                        <th style="width: 30%;">Company Name</th>
-                        <th>Shift Name</th>
-                        <th>Shift Duration</th>
-                        <th>Shift Capacity</th>
-                        <th>Status</th>
-                        <th class="td-options">Options</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1.</td>
-                        <td>My Group</td>
-                        <td>Front Desk</td>
-                        <td>10:33:00 - 15:00:00</td>
-                        <td>30</td>
-                        <td>Active</td>
-                        <td class="td-options">
-                          <a href="./company-info.html" class="company-info"
-                            ><i class="fas fa-pen-square"></i>
-                            <!-- company info url -->
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1.</td>
-                        <td>My Group</td>
-                        <td>Night</td>
-                        <td>21:00:00 - 06:00:00</td>
-                        <td>50</td>
-                        <td>Inactive</td>
-                        <td class="td-options">
-                          <a href="./company-info.html" class="company-info"
-                            ><i class="fas fa-pen-square"></i>
-                            <!-- company info url -->
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+      <div class="content-container">
+        <h1 class="main-heading">
+          Shift<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Territory Area
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="company-name" name="company-name">
+                  <span class="required">*</span>Company Name
+                </label>
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option hidden selected>Select Company Name</option>
+                    <option value="company name 1">Company Name 1</option>
+                    <option value="company name 2">Company Name 2</option>
+                  </select>
                 </div>
               </div>
+              <div class="select-wrapper">
+                <label for="shift-name" name="shift-name">
+                  <span class="required">*</span>Shift Name
+                </label>
+                <input
+                  type="text"
+                  name="shift-name"
+                  id="shift-name"
+                  placeholder="Shift Name"
+                />
+              </div>
+              <div class="select-wrapper">
+                <label for="status">
+                  <span class="required">*</span> Status</label
+                >
+                <div class="select">
+                  <select name="status" id="status">
+                    <option value="select status" hidden selected>
+                      Select Status
+                    </option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="start-time"
+                    ><span class="required">*</span>Start Time</label
+                  >
+                  <input type="time" name="start-time" id="start-time" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="end-time"
+                    ><span class="required">*</span>End Time</label
+                  >
+                  <input type="time" name="end-time" id="end-time" />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="shift-capacity"
+                  ><span class="required">*</span>Shift Capacity</label
+                >
+                <input type="text" name="shift-capacity" id="shift-capacity" />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button class="btn btn-p" type="submit">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button class="btn btn-y" type="reset">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
         </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Company List
+          </h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th style="width: 30%">Company Name</th>
+                  <th>Shift Name</th>
+                  <th>Shift Duration</th>
+                  <th>Shift Capacity</th>
+                  <th>Status</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>My Group</td>
+                  <td>Front Desk</td>
+                  <td>10:33:00 - 15:00:00</td>
+                  <td>30</td>
+                  <td>Active</td>
+                  <td class="td-options">
+                    <a href="./company-info.html" class="company-info"
+                      ><i class="fas fa-pen-square"></i>
+                      <!-- company info url -->
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td>My Group</td>
+                  <td>Night</td>
+                  <td>21:00:00 - 06:00:00</td>
+                  <td>50</td>
+                  <td>Inactive</td>
+                  <td class="td-options">
+                    <a href="./company-info.html" class="company-info"
+                      ><i class="fas fa-pen-square"></i>
+                      <!-- company info url -->
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main-sec>
-</body>
+  </body>
 </html>

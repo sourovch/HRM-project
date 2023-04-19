@@ -17,7 +17,93 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">Menu<button class="btn add-btn" id="add-btn">+</button></h1>
+        <h1 class="main-heading">
+          Menu<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Territory Area
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name" name="company-name">
+                  <span class="required">*</span>Company Name
+                </label>
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option hidden selected>Select Company Name</option>
+                    <option value="company name 1">Company Name 1</option>
+                    <option value="company name 2">Company Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="module-name" name="module-name">
+                  <span class="required">*</span>Module Name
+                </label>
+                <div class="select">
+                  <select name="module-name" id="module-name">
+                    <option hidden selected>Select Module Name</option>
+                    <option value="module name 1">Module Name 1</option>
+                    <option value="module name 2">Module Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="menu-slug">
+                  <span class="required">*</span>Menu Slug
+                </label>
+                <input
+                  type="text"
+                  name="menu-slug"
+                  id="menu-slug"
+                  placeholder="Menu Slug"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="menu-name">
+                  <span class="required">*</span>Menu Name
+                </label>
+                <input
+                  type="text"
+                  name="menu-name"
+                  id="menu-name"
+                  placeholder="Menu Name"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="order-number">
+                  <span class="required">*</span>Order Number
+                </label>
+                <input
+                  type="text"
+                  name="order-number"
+                  id="order-number"
+                  placeholder="Order Number"
+                />
+              </div>
+              <div class="select-wrapper">
+                <label for="status"
+                  ><span class="required">*</span>Status</label
+                >
+                <div class="select">
+                  <select name="status" id="status">
+                    <option value="select status" hidden>Select Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p"><i class="fas fa-plus"></i> Add</button>
+              <button type="reset" class="btn btn-y"><i class="fas fa-broom"></i> Clear</button>
+              <button class="btn btn-d" id="add-form-close"><i class="fas fa-window-close"></i> Cancel</button>
+            </div>
+          </form>
+        </div>
         <div class="form-wrapper">
           <h3 class="form-heading">
             <i class="fas fa-pen-square"></i> Search Menu
@@ -25,7 +111,7 @@
           <form>
             <div class="form-content-wrapper">
               <div class="select-wrapper">
-                <label for="company-name"
+                <label for="sel-company-name"
                   ><span class="required">*</span>Company Name</label
                 >
                 <div class="select">
@@ -41,7 +127,7 @@
                 </div>
               </div>
               <div class="select-wrapper">
-                <label for="module-name"
+                <label for="sel-module-name"
                   ><span class="required">*</span>Module Name</label
                 >
                 <div class="select">
@@ -57,7 +143,7 @@
                 </div>
               </div>
               <div class="select-wrapper">
-                <label for="menu-name"
+                <label for="sel-menu-name"
                   ><span class="required">*</span>Menu Name</label
                 >
                 <div class="select">

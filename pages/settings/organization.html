@@ -17,7 +17,332 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">Company<button class="btn add-btn" id="add-btn">+</button></h1>
+        <h1 class="main-heading">
+          Company<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <!-- add form -->
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Division
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="input-wrapper">
+                <label for="company-name" name="company-name">
+                  <span class="required">*</span>Company Name
+                </label>
+                <input
+                  type="text"
+                  name="company-name"
+                  id="company-name"
+                  placeholder="Company Name"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="address" name="address">
+                  <span class="required">*</span>Address
+                </label>
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Address"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="phone" name="phone">
+                  <span class="required">*</span>Phone
+                </label>
+                <input type="tel" name="phone" id="phone" placeholder="Phone" />
+              </div>
+              <div class="input-wrapper">
+                <label for="mobile" name="mobile">
+                  <span class="required">*</span>Mobile
+                </label>
+                <input
+                  type="tel"
+                  name="mobile"
+                  id="mobile"
+                  placeholder="Mobile"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="email" name="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="site-url" name="site-url">
+                  <span class="required">*</span>Site URL
+                </label>
+                <input
+                  type="url"
+                  name="site-url"
+                  id="site-url"
+                  placeholder="Site URL"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="ssr-url" name="ssr-url">
+                  <span class="required">*</span>SSR URL
+                </label>
+                <input
+                  type="url"
+                  name="ssr-url"
+                  id="ssr-url"
+                  placeholder="SSR URL"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="backend-title" name="backend-title">
+                  <span class="required">*</span>Backend Title
+                </label>
+                <input
+                  type="text"
+                  name="backend-title"
+                  id="backend-title"
+                  placeholder="Backend Title"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="frontend-title" name="frontend-title">
+                  <span class="required">*</span>Frontend Title
+                </label>
+                <input
+                  type="text"
+                  name="frontend-title"
+                  id="frontend-title"
+                  placeholder="Frontend Title"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="short-title" name="short-title">
+                  <span class="required">*</span>Short Title
+                </label>
+                <input
+                  type="text"
+                  name="short-title"
+                  id="short-title"
+                  placeholder="Short Title"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="small-logo" name="small-logo" class="file-label">
+                  <span class="required">*</span>Small Logo
+                  <input type="file" name="small-logo" id="small-logo" />
+                </label>
+              </div>
+              <div class="input-wrapper">
+                <label for="large-logo" name="large-logo" class="file-label">
+                  <span class="required">*</span>Large Logo
+                  <input type="file" name="large-logo" id="large-logo" />
+                </label>
+              </div>
+              <div class="input-wrapper">
+                <label for="copyright" name="copyright">
+                  <span class="required">*</span>Copyright
+                </label>
+                <input
+                  type="text"
+                  name="copyright"
+                  id="copyright"
+                  placeholder="Copyright"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="keyword" name="keyword">
+                  <span class="required">*</span>Keyword
+                </label>
+                <input
+                  type="text"
+                  name="keyword"
+                  id="keyword"
+                  placeholder="Keyword"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="meta-description" name="meta-description">
+                  <span class="required">*</span>Meta description
+                </label>
+                <input
+                  type="text"
+                  name="meta-description"
+                  id="meta-description"
+                  placeholder="Meta description"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="currency-sign" name="currency-sign">
+                  <span class="required">*</span>Currency Sign
+                </label>
+                <input
+                  type="text"
+                  name="currency-sign"
+                  id="currency-sign"
+                  placeholder="Currency Sign"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="currency-code" name="currency-code">
+                  <span class="required">*</span>Currency Code
+                </label>
+                <input
+                  type="text"
+                  name="currency-code"
+                  id="currency-code"
+                  placeholder="Currency Code"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="default-language" name="default-language">
+                  <span class="required">*</span>Default Language
+                </label>
+                <input
+                  type="text"
+                  name="default-language"
+                  id="default-language"
+                  placeholder="Default Language"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="license-key" name="license-key">
+                  <span class="required">*</span>License Key
+                </label>
+                <input
+                  type="text"
+                  name="license-key"
+                  id="license-key"
+                  placeholder="License Key"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="secret-key" name="secret-key">
+                  <span class="required">*</span>Secret Key
+                </label>
+                <input
+                  type="text"
+                  name="secret-key"
+                  id="secret-key"
+                  placeholder="Secret Key"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="site-offline" name="site-offline">
+                  <span class="required">*</span>Site offline
+                </label>
+                <div class="select">
+                  <select name="site-offline" id="site-offline">
+                    <option value="Select" hidden>Select</option>
+                    <option value="option-1">option 1</option>
+                    <option value="option-2">option 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="offline-message" name="offline-message">
+                  <span class="required">*</span>Offline Message
+                </label>
+                <input
+                  type="text"
+                  name="offline-message"
+                  id="offline-message"
+                  placeholder="Offline Message"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="allow-registration" name="allow-registration">
+                  <span class="required">*</span>Allow Registration
+                </label>
+                <div class="select">
+                  <select name="allow-registration" id="allow-registration">
+                    <option value="Select" hidden>Select</option>
+                    <option value="option-1">option 1</option>
+                    <option value="option-2">option 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="booking-cancellatiion" name="booking-cancellatiion">
+                  <span class="required">*</span>Booking Cancellatiion
+                </label>
+                <div class="select">
+                  <select
+                    name="booking-cancellatiion"
+                    id="booking-cancellatiion"
+                  >
+                    <option value="Select" hidden>Select</option>
+                    <option value="option-1">option 1</option>
+                    <option value="option-2">option 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="default-shift-name" name="default-shift-name">
+                  <span class="required">*</span>Default Shift Name
+                </label>
+                <div class="select">
+                  <select name="default-shift-name" id="default-shift-name">
+                    <option value="Select" hidden>Select</option>
+                    <option value="option-1">option 1</option>
+                    <option value="option-2">option 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="weekend" name="weekend">
+                  <span class="required">*</span>Weekend
+                </label>
+                <div class="select">
+                  <select name="weekend" id="weekend" multiple>
+                    <option value="Select" hidden disabled>Select</option>
+                    <option value="saterday">Saterday</option>
+                    <option value="sunday">Sunday</option>
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label
+                  for="one-day-deducation-for-late"
+                  name="one-day-deducation-for-late"
+                >
+                  <span class="required">*</span>One Day Deducation For Late
+                </label>
+                <input
+                  type="text"
+                  name="one-day-deducation-for-late"
+                  id="one-day-deducation-for-late"
+                  placeholder="One Day Deducation For Late"
+                />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- table -->
         <div class="table-wrapper">
           <h3 class="table-heading">
             <i class="fas fa-list"></i> Company List
@@ -29,8 +354,8 @@
                   <th>SL</th>
                   <th>Small Logo</th>
                   <th>Large Logo</th>
-                  <th style="width: 20%;">Company Name</th>
-                  <th style="width: 20%;">Contact</th>
+                  <th style="width: 20%">Company Name</th>
+                  <th style="width: 20%">Contact</th>
                   <th>Backend Title</th>
                   <th>Currency</th>
                   <th>Language</th>
@@ -41,10 +366,16 @@
                 <tr>
                   <td>1.</td>
                   <td>
-                    <img src="../../recorces/images/dummy-logo.png" alt="logo" />
+                    <img
+                      src="../../recorces/images/dummy-logo.png"
+                      alt="logo"
+                    />
                   </td>
                   <td>
-                    <img src="../../recorces/images/dummy-logo.png" alt="logo" />
+                    <img
+                      src="../../recorces/images/dummy-logo.png"
+                      alt="logo"
+                    />
                   </td>
                   <td>My Group</td>
                   <td>

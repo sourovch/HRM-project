@@ -20,7 +20,7 @@ function getTemplet(path) {
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a>
+        <a href="#">
           <div class="dd-icon"><i class="fas fa-chevron-down"></i></div>
           <div class="menu-icon">
             <i class="fa fa-cog" aria-hidden="true"></i>
@@ -109,7 +109,7 @@ function getTemplet(path) {
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a>
+        <a href="#">
           <div class="dd-icon"><i class="fas fa-chevron-down"></i></div>
           <div class="menu-icon"><i class="fas fa-key"></i></div>
           <span>Permission</span>
