@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Workorder</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -13,102 +13,484 @@
       crossorigin="anonymous"
     />
     <script src="../../script.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main-sec path="../../">
-        <div class="content-container">
-            <h1 class="main-heading">Custom Workorder<button class="btn add-btn" id="add-btn">+</button></h1>
-            <div class="form-wrapper">
-                <h3 class="form-heading">
-                    <i class="fas fa-pen-square"></i> Search Menu
-                  </h3>
-                <form>
-                    <div class="form-content-wrapper">
-                      <div class="select-wrapper">
-                          <label for="sel-customer-name"><span class="required">*</span>Customer Name</label>
-                          <div class="select">
-                              <select name="sel-customer-name" id="sel-customer-name">
-                                  <option value="Select customer Name" hidden>Select Customer Name</option>
-                                  <option value="customer-1">customer 1</option>
-                                  <option value="customer-2">customer 2</option>
-                                  <option value="customer-3">customer 3</option>
-                              </select>
-                              <span class="focus"></span>
-                          </div>
-                      </div>
-                      <div class="input-wrapper">
-                          <label for="workorder-no"><span class="required">*</span>Wordorder No.</label>
-                          <input type="text" name="workorder-no" id="workorder-no" placeholder="Wordorder No.">
-                      </div>
-                      <div class="input-wrapper">
-                        <label for="from-date"
-                          ><span class="required">*</span>From Date</label
-                        >
-                        <input type="date" name="from-date" id="to-date" />
-                      </div>
-                      <div class="input-wrapper">
-                        <label for="to-date"
-                          ><span class="required">*</span>To Date</label
-                        >
-                        <input type="date" name="to-date" id="to-date" />
-                      </div>
+      <div class="content-container">
+        <h1 class="main-heading">
+          Custom Workorder<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Custom Wordorder
+          </h3>
+          <form>
+            <div class="form-sec">
+              <h3>Distributor Details</h3>
+              <div class="form-content-wrapper-grid">
+                <div class="select-wrapper">
+                  <label for="customer-name"
+                    ><span class="required">*</span>Customer Name</label
+                  >
+                  <div class="select">
+                    <select name="customer-name" id="customer-name">
+                      <option value="Select customer Name" hidden>
+                        Select Customer Name
+                      </option>
+                      <option value="customer-1">customer 1</option>
+                      <option value="customer-2">customer 2</option>
+                      <option value="customer-3">customer 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="form-content-wrapper">
+                  <div class="input-wrapper">
+                    <label for="workorder-no">Wordorder No.</label>
+                    <input
+                      type="text"
+                      name="workorder-no"
+                      id="workorder-no"
+                      placeholder="Workorder No."
+                    />
+                  </div>
+                  <div class="select-wrapper">
+                    <label for="workorder-type"
+                      ><span class="required">*</span>Wordorder Type</label
+                    >
+                    <div class="select">
+                      <select name="workorder-type" id="workorder-type">
+                        <option value="Select Wordorder Type" hidden>
+                          Select Wordorder Type
+                        </option>
+                        <option value="workorder-type-1">
+                          Workorder Type 1
+                        </option>
+                        <option value="workorder-type-2">
+                          Workorder Type 2
+                        </option>
+                        <option value="workorder-type-3">
+                          Workorder Type 3
+                        </option>
+                      </select>
+                      <span class="focus"></span>
                     </div>
-                    <div class="form-bottom-sec">
-                        <button type="submit" class="btn btn-p">Search</button>
-                    </div>
-                </form>
-            </div>
-            <div class="table-wrapper">
-                <h3 class="table-heading">
-                  <i class="fas fa-list"></i> Menu List
-                </h3>
-                <div class="table-resp-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>SL</th>
-                        <th style="width: 25%;">Wordorder Details</th>
-                        <th style="width: 25%;">Customer Details</th>
-                        <th>Total Amount</th>
-                        <th>Discount</th>
-                        <th>VAT Amount</th>
-                        <th>AIT Amount</th>
-                        <th>NET Amount</th>
-                        <th class="td-options">Options</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1.</td>
-                        <td>
-                            <div>Workorder No: 11223</div>
-                            <div>Date: 01-12-2022</div>
-                            <div>Wordorder Type: Fresh</div>
-                        </td>
-                        <td></td>
-                        <td>62000.00</td>
-                        <td>2000.00</td>
-                        <td>4500.00</td>
-                        <td>2257.50</td>
-                        <td>66758.00</td>
-                        <td class="td-options">
-                          <div>
-                              <a href="./company-info.html" class="company-info"
-                                ><i class="fas fa-pen-square"></i>
-                              </a>
-                          </div>
-                          <div>
-                            <a href="#" class="btn btn-p">
-                              <i class="fas fa-print"></i> Form
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="workorder-date">
+                    <span class="required">*</span> Wordorder date
+                  </label>
+                  <input
+                    type="date"
+                    name="workorder-date"
+                    id="workorder-date"
+                  />
+                </div>
+                <div class="select-wrapper">
+                  <label for="sales-person"
+                    ><span class="required">*</span>Sales Person</label
+                  >
+                  <div class="select">
+                    <select name="sales-person" id="sales-person">
+                      <option value="Select Sales Person" hidden>
+                        Select Sales Person
+                      </option>
+                      <option value="sales-person-1">sales-person 1</option>
+                      <option value="sales-person-2">sales-person 2</option>
+                      <option value="sales-person-3">sales-person 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="OEM">OEM</label>
+                  <input type="text" name="OEM" id="OEM" placeholder="OEM" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="deliviry-date">
+                    <span class="required">*</span> Deliviry Date
+                  </label>
+                  <input type="date" name="deliviry-date" id="deliviry-date" />
+                </div>
+                <div class="select-wrapper">
+                  <label for="including-vat-&-AIT"
+                    ><span class="required">*</span>Including VAT & AIT</label
+                  >
+                  <div class="select">
+                    <select name="including-vat-&-AIT" id="including-vat-&-AIT">
+                      <option value="Select Including VAT & AIT" hidden>
+                        Including VAT & AIT
+                      </option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-text">
+                  <label for="dis-det-vat-percentage">
+                    <span class="required">*</span>VAT Percentage(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="dis-det-vat-percentage"
+                    id="dis-det-vat-percentage"
+                    placeholder="VAT Percentage"
+                  />
+                </div>
+                <div class="input-text">
+                  <label for="dis-det-ait-percentage">
+                    <span class="required">*</span>AIT Percentage(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="dis-det-ait-percentage"
+                    id="dis-det-ait-percentage"
+                    placeholder="AIT Percentage"
+                  />
                 </div>
               </div>
+            </div>
+            <div class="form-sec">
+              <h3>Product Details</h3>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="category">Category*</label>
+                  <div class="select">
+                    <select name="category" id="category">
+                      <option value="Select Category" hidden>
+                        Select Category
+                      </option>
+                      <option value="category-1">category-1</option>
+                      <option value="category-2">category-2</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="product-description">Product Description*</label>
+                  <input
+                    type="text"
+                    name="product-description"
+                    id="product-description"
+                    placeholder="Product Description"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="product-sku">Product SKU</label>
+                  <input
+                    type="text"
+                    name="product-sku"
+                    id="product-sku"
+                    placeholder="Product SKU"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="validity">Validity</label>
+                  <input
+                    type="text"
+                    name="validity"
+                    id="validity"
+                    placeholder="Validity"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="quantity">Quantity*</label>
+                  <input
+                    type="text"
+                    name="quantity"
+                    id="quantity"
+                    placeholder="Quantity"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="unit-price">Unit Price</label>
+                  <input
+                    type="text"
+                    name="unit-price"
+                    id="unit-price"
+                    placeholder="Unit Price"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="total">Total</label>
+                  <input
+                    type="text"
+                    name="total"
+                    id="total"
+                    placeholder="Total"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="remarks">Remarks</label>
+                  <input
+                    type="text"
+                    name="remarks"
+                    id="remarks"
+                    placeholder="Remarks"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Billing Details</h3>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="total-workorder-value">
+                    <span class="required">*</span>Total Wordorder Value
+                  </label>
+                  <input
+                    type="text"
+                    name="total-workorder-value"
+                    id="total-workorder-value"
+                    placeholder="Total Wordorder Value"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="discount-percentage">
+                    <span class="required">*</span>Discount Percentage
+                  </label>
+                  <input
+                    type="text"
+                    name="discount-percentage"
+                    id="discount-percentage"
+                    placeholder="Discount Percentage"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="discount-amount">
+                    <span class="required">*</span>Discount Amount
+                  </label>
+                  <input
+                    type="text"
+                    name="discount-amount"
+                    id="discount-amount"
+                    placeholder="Discount Amount"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="sub-total">
+                    <span class="required">*</span>Sub Total
+                  </label>
+                  <input
+                    disabled
+                    type="text"
+                    name="sub-total"
+                    id="sub-total"
+                    placeholder="Sub Total"
+                  />
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="payment-mode">
+                    <span class="required">*</span>Payment Mode
+                  </label>
+                  <div class="select">
+                    <select name="payment-mode" id="payment-mode">
+                      <option value="cash" selected>Cash</option>
+                      <option value="card">Card</option>
+                      <option value="bank">Bank</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="bill-vat-percentage">
+                    <span class="required">*</span>VAT Percentage(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="bill-vat-percentage"
+                    id="bill-vat-percentage"
+                    placeholder="VAT Percentage"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="bill-vat-amount">
+                    <span class="required">*</span>VAT Amount(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="bill-vat-amount"
+                    id="bill-vat-amount"
+                    placeholder="VAT Amount"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="grand-total">
+                    <span class="require">*</span>Grand Total
+                  </label>
+                  <input
+                    disabled
+                    type="text"
+                    name="grand-total"
+                    id="grand-total"
+                    placeholder="Grand Total"
+                  />
+                </div>
+              </div>
+                <div class="form-content-wrapper">
+                  <div class="input-wrapper">
+                    <label for="midman-commission">
+                      <span class="require">*</span>Midman Commission
+                    </label>
+                    <input
+                      type="text"
+                      name="midman-commission"
+                      id="midman-commission"
+                      placeholder="Midman Commission(BDT)"
+                    />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="bill-ait-percentage">
+                      <span class="require">*</span>AIT Percentage(Add)
+                    </label>
+                    <input
+                      type="text"
+                      name="bill-ait-percentage"
+                      id="bill-ait-percentage"
+                      placeholder="AIT Percentage"
+                    />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="bill-ait-amount">
+                      <span class="require">*</span>AIT Amount(Add)
+                    </label>
+                    <input
+                      type="text"
+                      name="bill-ait-amount"
+                      id="bill-ait-amount"
+                      placeholder="AIT Amount"
+                    />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="net-bill-receivable">
+                      <span class="require">*</span>Net Receivable
+                    </label>
+                    <input
+                      disabled
+                      type="text"
+                      name="net-bill-receivable"
+                      id="net-bill-receivable"
+                      placeholder="Net Receivable"
+                    />
+                  </div>
+                </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
         </div>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Menu
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="sel-customer-name"
+                  ><span class="required">*</span>Customer Name</label
+                >
+                <div class="select">
+                  <select name="sel-customer-name" id="sel-customer-name">
+                    <option value="Select customer Name" hidden>
+                      Select Customer Name
+                    </option>
+                    <option value="customer-1">customer 1</option>
+                    <option value="customer-2">customer 2</option>
+                    <option value="customer-3">customer 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="sel-workorder-no"
+                  ><span class="required">*</span>Wordorder No.</label
+                >
+                <input
+                  type="text"
+                  name="sel-workorder-no"
+                  id="sel-workorder-no"
+                  placeholder="Wordorder No."
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="from-date"
+                  ><span class="required">*</span>From Date</label
+                >
+                <input type="date" name="from-date" id="to-date" />
+              </div>
+              <div class="input-wrapper">
+                <label for="to-date"
+                  ><span class="required">*</span>To Date</label
+                >
+                <input type="date" name="to-date" id="to-date" />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">Search</button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading"><i class="fas fa-list"></i> Menu List</h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th style="width: 25%">Wordorder Details</th>
+                  <th style="width: 25%">Customer Details</th>
+                  <th>Total Amount</th>
+                  <th>Discount</th>
+                  <th>VAT Amount</th>
+                  <th>AIT Amount</th>
+                  <th>NET Amount</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <div>Workorder No: 11223</div>
+                    <div>Date: 01-12-2022</div>
+                    <div>Wordorder Type: Fresh</div>
+                  </td>
+                  <td></td>
+                  <td>62000.00</td>
+                  <td>2000.00</td>
+                  <td>4500.00</td>
+                  <td>2257.50</td>
+                  <td>66758.00</td>
+                  <td class="td-options">
+                    <div>
+                      <a href="./company-info.html" class="company-info"
+                        ><i class="fas fa-pen-square"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-p">
+                        <i class="fas fa-print"></i> Form
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main-sec>
-</body>
+  </body>
 </html>

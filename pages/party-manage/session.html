@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Session</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -13,43 +13,111 @@
       crossorigin="anonymous"
     />
     <script src="../../script.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main-sec path="../../">
-        <div class="content-container">
-            <h1 class="main-heading">Fiscal Year<button class="btn add-btn" id="add-btn">+</button></h1>
-            <div class="table-wrapper padding-b-2em">
-                <h3 class="table-heading">
-                  <i class="fas fa-list"></i> Fiscal Year List
-                </h3>
-                <div class="session-anim"></div>
-                <div class="table-resp-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>SL</th>
-                        <th style="width: 30%;">Company Name</th>
-                        <th>Fiscal Year</th>
-                        <th>Year Duration</th>
-                        <th>Status</th>
-                        <th class="td-options">Options</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1.</td>
-                        <td>My Group</td>
-                        <td>Jan to Dec 2022</td>
-                        <td>01/01/2022-31-12-2022</td>
-                        <td>Active</td>
-                        <td class="td-options">
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+      <div class="content-container">
+        <h1 class="main-heading">
+          Fiscal Year<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Fiscal Year
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name" name="company-name">
+                  <span class="required">*</span>Company Name
+                </label>
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option hidden selected>Select Company Name</option>
+                    <option value="company name 1">Company Name 1</option>
+                    <option value="company name 2">Company Name 2</option>
+                  </select>
                 </div>
               </div>
+              <div class="input-wrapper">
+                <label for="fiscal-year">
+                  <span class="required">*</span> Fiscal Year
+                </label>
+                <input
+                  type="text"
+                  name="fiscal-year"
+                  id="fiscal-year"
+                  placeholder="Fiscal Year"
+                />
+              </div>
+              <div class="select-wrapper">
+                <label for="status">Status</label>
+                <div class="select">
+                  <select name="status" id="status">
+                    <option value="select status" hidden selected>
+                      Select Status
+                    </option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="year-start"
+                  ><span class="required">*</span>Year Start</label
+                >
+                <input type="date" name="year-start" id="year-start" />
+              </div>
+              <div class="input-wrapper">
+                <label for="year-end"
+                  ><span class="required">*</span>Year End</label
+                >
+                <input type="date" name="year-end" id="year-end" />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
         </div>
+        <div class="table-wrapper padding-b-2em">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Fiscal Year List
+          </h3>
+          <div class="session-anim"></div>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th style="width: 30%">Company Name</th>
+                  <th>Fiscal Year</th>
+                  <th>Year Duration</th>
+                  <th>Status</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>My Group</td>
+                  <td>Jan to Dec 2022</td>
+                  <td>01/01/2022-31-12-2022</td>
+                  <td>Open</td>
+                  <td class="td-options"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main-sec>
-</body>
+  </body>
 </html>

@@ -17,7 +17,157 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">Delivery Challan<button class="btn add-btn" id="add-btn">+</button></h1>
+        <h1 class="main-heading">
+          Delivery Challan<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="add-form form-wrapper" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Add Delivery Challan
+          </h3>
+          <form>
+            <div class="form-sec">
+              <h3>Challan Details</h3>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="customer-name"
+                    ><span class="required">*</span>Customer Name</label
+                  >
+                  <div class="select">
+                    <select name="customer-name" id="customer-name">
+                      <option value="Select customer Name" hidden>
+                        Select Customer Name
+                      </option>
+                      <option value="customer-1">customer 1</option>
+                      <option value="customer-2">customer 2</option>
+                      <option value="customer-3">customer 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="workorder-no"
+                    ><span class="required">*</span>Workorder No</label
+                  >
+                  <div class="select">
+                    <select name="workorder-no" id="workorder-no">
+                      <option value="Select Workorder No" hidden>
+                        Select Workorder No
+                      </option>
+                      <option value="workorder-1">workorder 1</option>
+                      <option value="workorder-2">workorder 2</option>
+                      <option value="workorder-3">workorder 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="challan-date">
+                    <span class="required">*</span>Challan Details
+                  </label>
+                  <input type="date" name="challan-date" id="challan-date" />
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Product Details(Sales)</h3>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="product-description">
+                    <span class="require">*</span> Product Description
+                  </label>
+                  <input
+                    type="text"
+                    name="product-description"
+                    id="product-description"
+                    placeholder="Product Description"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="product-sku"> Product SKU </label>
+                  <input
+                    type="text"
+                    name="product-sku"
+                    id="product-sku"
+                    placeholder="Product SKU"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="license"> License </label>
+                  <input
+                    type="text"
+                    name="license"
+                    id="license"
+                    placeholder="License"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="start-date"> Start date </label>
+                  <input type="date" name="start-date" id="start-date" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="end-date"> End date </label>
+                  <input type="date" name="end-date" id="end-date" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="quantity"> Quantity </label>
+                  <input
+                    type="text"
+                    name="quantity"
+                    id="quantity"
+                    placeholder="Quantity"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="remarks"> Remarks </label>
+                  <input
+                    type="text"
+                    name="remarks"
+                    id="remarks"
+                    placeholder="Remarks"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Delivery Details</h3>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="delivery-address">
+                    <span class="required">*</span>Delivery Address
+                  </label>
+                  <textarea
+                    name="delivery-address"
+                    id="delivery-address"
+                    placeholder="Delivery Address"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="delivery-notes">
+                    <span class="required">*</span>Delivery Notes
+                  </label>
+                  <textarea
+                    name="delivery-notes"
+                    id="delivery-notes"
+                    placeholder="Delivery Notes"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
         <div class="form-wrapper">
           <h3 class="form-heading">
             <i class="fas fa-pen-square"></i> Search Delivery Challan

@@ -134,7 +134,7 @@ body {
 }
 
 .padding-b-2em {
-  padding-bottom: 2em;
+  padding-bottom: 2em !important;
 }
 
 .main-cont {
@@ -637,6 +637,13 @@ body {
   align-items: center;
   padding: .2em 1em;
   white-space: nowrap;
+}
+
+.table-wrapper .table-top-bar.h-group {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
 }
 
 .table-wrapper .table-top-bar .color-marks {

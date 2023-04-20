@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Distributor</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -13,34 +13,211 @@
       crossorigin="anonymous"
     />
     <script src="../../script.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main-sec path="../../">
-        <div class="content-container">
-            <h1 class="main-heading">Distributor<button class="btn add-btn" id="add-btn">+</button></h1>
-            <div class="table-wrapper">
-                <h3 class="table-heading">
-                  <i class="fas fa-list"></i> Company List
-                </h3>
-                <div class="table-resp-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>SL</th>
-                        <th>Distributor Details</th>
-                        <th>Billing Address</th>
-                        <th>Shipping Address</th>
-                        <th>Contact Person</th>
-                        <th>Contact Details</th>
-                        <th class="td-options">Options</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
+      <div class="content-container">
+        <h1 class="main-heading">
+          Distributor<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Distributor
+          </h3>
+          <form>
+            <div class="form-sec">
+              <h3>Distributor Details</h3>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="distributor-name">
+                    <span class="required">*</span> Distributor Name
+                  </label>
+                  <input
+                    type="text"
+                    name="distributor-name"
+                    id="distributor-name"
+                    placeholder="Distributor Name"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="short-code">
+                    <span class="required">*</span> Short Code
+                  </label>
+                  <input
+                    type="text"
+                    name="short-code"
+                    id="short-code"
+                    placeholder="Short Code"
+                  />
                 </div>
               </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="distributor-address">Distributor Address</label>
+                  <textarea
+                    name="distributor-address"
+                    id="distributor-address"
+                    placeholder="Distributor Address"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="billing-address">Billing Address</label>
+                  <textarea
+                    name="billing-address"
+                    id="billing-address"
+                    placeholder="Billing Address"
+                  ></textarea>
+                </div>
+                <div class="input-wrapper">
+                  <label for="shipping-address">Shipping Address</label>
+                  <textarea
+                    name="shipping-address"
+                    id="shipping-address"
+                    placeholder="Shipping Address"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Contact Person Information</h3>
+              <div class="form-content-wrapper-grid">
+                <div class="input-wrapper">
+                  <label for="contact-person">Contact Person</label>
+                  <input
+                    type="text"
+                    name="contact-person"
+                    id="contact-person"
+                    placeholder="Contact Person"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="designation"
+                    ><span class="required">*</span>Designation</label
+                  >
+                  <input
+                    type="text"
+                    name="designation"
+                    id="designation"
+                    placeholder="Designation"
+                  />
+                </div>
+                <div class="form-content-wrapper">
+                  <div class="select-wrapper">
+                    <label for="gender"
+                      ><span class="required">*</span>Gender:</label
+                    >
+                    <div class="select">
+                      <select name="gender" id="gender">
+                        <option value="select gender" hidden>
+                          Select Gender
+                        </option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <span class="focus"></span>
+                    </div>
+                  </div>
+                  <div class="select-wrapper">
+                    <label for="currency"
+                      ><span class="required">*</span>Currency:</label
+                    >
+                    <div class="select">
+                      <select name="currency" id="currency">
+                        <option value="select currency" hidden>
+                          Select Currency
+                        </option>
+                        <option value="BDT">BDT</option>
+                        <option value="USD">USD</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <span class="focus"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="attention">Attention</label>
+                  <input
+                    type="text"
+                    name="attention"
+                    id="attention"
+                    placeholder="Attention"
+                  />
+                </div>
+                <div class="form-content-wrapper">
+                  <div class="input-wrapper">
+                    <label for="mobile">Mobile</label>
+                    <input
+                      type="tel"
+                      name="mobile"
+                      id="mobile"
+                      placeholder="Mobile"
+                    />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="phone">Phone</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      placeholder="Phone"
+                    />
+                  </div>
+                </div>
+                <div class="form-content-wrapper">
+                  <div class="input-wrapper">
+                    <label for="fax">Fax</label>
+                    <input type="text" name="fax" id="fax" placeholder="Fax" />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
         </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Company List
+          </h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th>Distributor Details</th>
+                  <th>Billing Address</th>
+                  <th>Shipping Address</th>
+                  <th>Contact Person</th>
+                  <th>Contact Details</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main-sec>
-</body>
+  </body>
 </html>
