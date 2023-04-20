@@ -15,21 +15,40 @@ body {
 }
 
 :root {
-  --color-p: 0, 123, 255;
+  --color-p: 79, 169, 210;
+  --color-p-s: 70, 155, 180;
+  --color-s: 245, 246, 250;
+  --color-g: 49, 196, 82;
+  --color-r: 223, 103, 86;
+  --color-d: 52, 65, 80;
+  --color-w: 240, 221, 93;
+  --color-contrast: 255, 255, 255;
+  /* --color-p: 0, 123, 255;
   --color-p-s: 0, 110, 229;
   --color-s: 245, 246, 250;
   --color-g: 49, 196, 82;
   --color-r: 227, 92, 105;
   --color-d: 52, 58, 64;
   --color-w: 254, 192, 7;
-  --color-contrast: 255, 255, 255;
+  --color-contrast: 255, 255, 255; */
 
   --fs-h-p: 1.8rem;
-  --fs-h-s: auto;
   --fs-p: 0.9rem;
-  --fs-s: auto;
 
   --navbar-w: 72px;
+}
+
+.c-p {
+  color: rgb(var(--color-p));
+}
+.c-y {
+  color: rgb(var(--color-w));
+}
+.c-s {
+  color: rgb(var(--color-g));
+}
+.c-d {
+  color: rgb(var(--color-r));
 }
 
 .btn {
@@ -43,7 +62,11 @@ body {
 .btn-p,
 .btn-y,
 .btn-s,
-.btn-d {
+.btn-d,
+.mini-card-p,
+.mini-card-y,
+.mini-card-s,
+.mini-card-d {
   padding: 0.5em 0.8em;
   color: rgb(var(--color-contrast));
   min-height: 38px;
@@ -71,6 +94,22 @@ body {
   background-color: rgb(var(--color-r));
 }
 
+.mini-card-p {
+  background-color: rgb(var(--color-p));
+}
+
+.mini-card-y {
+  background-color: rgb(var(--color-w));
+}
+
+.mini-card-s {
+  background-color: rgb(var(--color-g));
+}
+
+.mini-card-d {
+  background-color: rgb(var(--color-r));
+}
+
 .add-btn {
   display: inline;
   font-size: calc(var(--fs-p) + 0.4em);
@@ -91,7 +130,7 @@ body {
 }
 
 .add-form.active {
-  max-height: 4500px;
+  max-height: 4900px;
 }
 
 .padding-b-2em {
@@ -518,7 +557,7 @@ body {
   vertical-align: middle;
 }
 
-.table-wrapper th:first-child {
+.table-wrapper tr:first-child th:first-child {
   width: 5%;
 }
 
@@ -578,6 +617,35 @@ body {
 
 .table-wrapper .sl-table tr td:nth-child(n + 3) {
   font-weight: bold;
+}
+
+.table-wrapper .table-top-bar {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.table-wrapper .table-top-bar > div {
+  font-size: calc(var(--fs-p) + .1em);
+  font-weight: 700;
+  border: 1px solid rgb(var(--color-d), 0.2);
+  gap: 10px;
+}
+
+.table-wrapper .table-top-bar  div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: .2em 1em;
+  white-space: nowrap;
+}
+
+.table-wrapper .table-top-bar .color-marks {
+  display: flex;
+}
+
+.table-wrapper .table-top-bar span {
+  color: rgb(var(--color-p-s));
+  font-size: calc(var(--fs-p) + .2em);
 }
 
 .form-wrapper form {
@@ -684,7 +752,7 @@ body {
   padding-bottom: 0.3em;
 }
 
-.form-wrapper input,
+input,
 .form-wrapper textarea {
   font-size: var(--fs-p);
   width: 100%;
@@ -692,24 +760,24 @@ body {
   border-radius: 3px;
 }
 
-.form-wrapper input[type="text"],
-.form-wrapper input[type='tel'],
-.form-wrapper input[type='email'],
-.form-wrapper input[type='url'],
-.form-wrapper input[type='time'],
-.form-wrapper input[type='password'] {
+input[type="text"],
+input[type='tel'],
+input[type='email'],
+input[type='url'],
+input[type='time'],
+input[type='password'] {
   padding: 0.5em 0.5em;
 }
 
-.form-wrapper input[type="date"] {
+input[type="date"] {
   padding: 0.6em 0.5em;
 }
 
-.form-wrapper input:disabled {
+input:disabled {
   background-color: rgb(var(--color-d), 0.2);
 }
 
-.form-wrapper input[type="file"] {
+input[type="file"] {
   opacity: 0;
   overflow: hidden;
   padding: 0.25em 0;

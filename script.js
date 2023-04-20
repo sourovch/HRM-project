@@ -54,7 +54,4 @@ document.addEventListener("DOMContentLoaded", () => {
     
     addForm?.classList.remove('active');
   })
-
-  const optionPer = document.querySelector('.form-wrapper select[multiple] option').parentElement;
-  console.log(optionPer)
 });

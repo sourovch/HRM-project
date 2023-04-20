@@ -17,7 +17,114 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">Holidays Setup<button class="btn add-btn" id="add-btn">+</button></h1>
+        <h1 class="main-heading">
+          Holidays Setup<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="add-form form-wrapper" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Holiday
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name"><span class="required">*</span>Company Name</label>
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option hidden selected>Select Company Name</option>
+                    <option value="company name 1">Company Name 1</option>
+                    <option value="company name 2">Company Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="branch-name"><span class="required">*</span>Branch Name</label>
+                <div class="select">
+                <select name="branch-name" id="branch-name">
+                    <option hidden selected>Select Branch Name</option>
+                    <option value="branch name 1">Branch Name 1</option>
+                    <option value="branch name 2">Branch Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="fiscal year"
+                  ><span class="required">*</span>fiscal year</label
+                >
+                <div class="select">
+                  <select name="fiscal year" id="sel-fiscal year">
+                    <option value="Select fiscal year" hidden>
+                      Select fiscal year
+                    </option>
+                    <option value="fiscal year-1">fiscal year 1</option>
+                    <option value="fiscal year-2">fiscal year 2</option>
+                    <option value="fiscal year-3">fiscal year 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="holiday-name"
+                  ><span class="required">*</span>Holiday Name</label
+                >
+                <input
+                  type="text"
+                  name="holiday-name"
+                  id="holiday-name"
+                  placeholder="Holiday Name"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="from-date"
+                  ><span class="required">*</span>From Date</label
+                >
+                <input type="date" name="from-date" id="from-date" />
+              </div>
+              <div class="input-wrapper">
+                <label for="to-date"
+                  ><span class="required">*</span>To Date</label
+                >
+                <input type="date" name="to-date" id="to-date" />
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="input-wrapper">
+                <label for="holiday-image" class="file-label">
+                  <span class="required">*</span>Holiday Image
+                  <input
+                    type="file"
+                    name="holiday-image"
+                    id="holiday-image"
+                  />
+                </label>
+              </div>
+              <div class="select-wrapper">
+                <label for="status"
+                  ><span class="required">*</span>Status</label
+                >
+                <div class="select">
+                  <select name="status" id="status">
+                    <option value="select status" hidden>Select Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- tabel -->
         <div class="table-wrapper">
           <h3 class="table-heading">
             <i class="fas fa-list"></i> Holiday List
@@ -50,7 +157,7 @@
                   <td>21-2-2022</td>
                   <td>1</td>
                   <td class="td-middle">
-                    <img src="../../recorces/images/21-february-.png" alt="">
+                    <img src="../../recorces/images/21-february-.png" alt="" />
                   </td>
                   <td class="td-options">
                     <div>
@@ -62,7 +169,7 @@
                       <a href="./company-info.html" class="btn btn-s td-option"
                         ><i class="fas fa-gift"></i> Holiday
                       </a>
-                  </div>
+                    </div>
                   </td>
                 </tr>
               </tbody>

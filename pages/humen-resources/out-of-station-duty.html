@@ -17,7 +17,195 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">Out Of Station Duty<button class="btn add-btn" id="add-btn">+</button></h1>
+        <h1 class="main-heading">
+          Out Of Station Duty<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Employee
+          </h3>
+          <form>
+            <div class="form-sec">
+              <h3>OD Details</h3>
+              <div class="form-content-wrapper-grid">
+                <div class="select-wrapper">
+                  <label for="employee-name"
+                    ><span class="required">*</span>Employee Name</label
+                  >
+                  <div class="select">
+                    <select name="employee-name" id="sel-employee-name">
+                      <option value="Select Employee Name" hidden>
+                        Select Employee Name
+                      </option>
+                      <option value="employee-1">Employee 1</option>
+                      <option value="employee-2">Employee 2</option>
+                      <option value="employee-3">Employee 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="company-name"
+                    ><span class="required">*</span>Company Name</label
+                  >
+                  <div class="select">
+                    <select name="company-name" id="sel-company-name">
+                      <option value="Select Company Name" hidden>
+                        Select Company Name
+                      </option>
+                      <option value="company-1">Company 1</option>
+                      <option value="company-2">Company 2</option>
+                      <option value="company-3">Company 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="branch-name"
+                    ><span class="required">*</span>Branch Name</label
+                  >
+                  <div class="select">
+                    <select name="branch-name" id="sel-branch-name">
+                      <option value="Select branch Name" hidden>
+                        Select Branch Name
+                      </option>
+                      <option value="branch-1">Branch 1</option>
+                      <option value="branch-2">Branch 2</option>
+                      <option value="branch-3">Branch 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="department-name"
+                    ><span class="required">*</span>Department Name</label
+                  >
+                  <div class="select">
+                    <select name="department-name" id="sel-department-name">
+                      <option value="Select department Name" hidden>
+                        Select Department Name
+                      </option>
+                      <option value="department-1">Department 1</option>
+                      <option value="department-2">Department 2</option>
+                      <option value="department-3">Department 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="section"
+                    ><span class="required">*</span>Section</label
+                  >
+                  <div class="select">
+                    <select name="section" id="section">
+                      <option value="Select section" hidden>
+                        Select Section
+                      </option>
+                      <option value="section-1">section 1</option>
+                      <option value="section-2">section 2</option>
+                      <option value="section-3">section 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="fiscal year"
+                    ><span class="required">*</span>fiscal year</label
+                  >
+                  <div class="select">
+                    <select name="fiscal year" id="sel-fiscal year">
+                      <option value="Select fiscal year" hidden>
+                        Select fiscal year
+                      </option>
+                      <option value="fiscal year-1">fiscal year 1</option>
+                      <option value="fiscal year-2">fiscal year 2</option>
+                      <option value="fiscal year-3">fiscal year 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="shift"
+                    ><span class="required">*</span>Shift</label
+                  >
+                  <div class="select">
+                    <select name="shift" id="sel-shift-name">
+                      <option value="Select Shift" hidden>
+                        Select Shift Name
+                      </option>
+                      <option value="shift-1">Shift 1</option>
+                      <option value="shift-2">Shift 2</option>
+                      <option value="shift-3">Shift 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="remarks"
+                    ><span class="required">*</span>Remarks</label
+                  >
+                  <input
+                    type="text"
+                    name="remarks"
+                    id="remarks"
+                    placeholder="Remarks"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="od-to"
+                    ><span class="required">*</span>OD To</label
+                  >
+                  <input
+                    type="date"
+                    name="od-to"
+                    id="od-to"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="od-from"
+                    ><span class="required">*</span>OD From</label
+                  >
+                  <input
+                    type="date"
+                    name="od-from"
+                    id="od-from"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="in-time"
+                    ><span class="required">*</span>In Time</label
+                  >
+                  <input
+                    type="time"
+                    name="in-time"
+                    id="in-time"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="out-time"
+                    ><span class="required">*</span>Out Time</label
+                  >
+                  <input
+                    type="time"
+                    name="out-time"
+                    id="out-time"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
         <div class="form-wrapper">
           <h3 class="form-heading">
             <i class="fas fa-pen-square"></i> Search OD

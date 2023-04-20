@@ -57,11 +57,11 @@
                 </div>
               </div>
               <div class="select-wrapper">
-                <label for="fiscal year"
+                <label for="fiscal-year"
                   ><span class="required">*</span>fiscal year</label
                 >
                 <div class="select">
-                  <select name="fiscal year" id="sel-fiscal year">
+                  <select name="fiscal-year" id="fiscal-year">
                     <option value="Select fiscal year" hidden>
                       Select fiscal year
                     </option>
@@ -115,10 +115,13 @@
             </div>
             <div class="form-bottom-sec">
               <button type="submit" class="btn btn-p">
-                <i class="fas fa-search"></i> Search
+                <i class="fas fa-plus"></i> Add
               </button>
               <button type="reset" class="btn btn-y">
                 <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
               </button>
             </div>
           </form>
@@ -132,28 +135,34 @@
               <thead>
                 <tr>
                   <th>SL</th>
-                  <th style="width: 30%">Company Name</th>
-                  <th>Branch Name</th>
-                  <th>Fiscal Year</th>
-                  <th>Department</th>
-                  <th>Shift</th>
-                  <th>Attendance Date</th>
-                  <th class="td-options">Options</th>
+                  <th style="width: 30%">Employee Name</th>
+                  <th>Mobile</th>
+                  <th>In Time</th>
+                  <th>Out Time</th>
+                  <th>Remarks</th>
+                  <th class="td-options">Is Present</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1.</td>
-                  <td>My Group</td>
-                  <td>Bari Plastic</td>
-                  <td>Jan To Dec 2022</td>
-                  <td>Finance</td>
-                  <td>Front Desk</td>
-                  <td>01-01-2022</td>
+                  <td>
+                    <div>MD. Sojibur Rahaman</div>
+                    <div>12039303</div>
+                    <div>ASS.Officer, Accounts</div>
+                  </td>
+                  <td>9384938849</td>
+                  <td>
+                    <input type="text" placeholder="09:00:00">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="12:00:00">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="Remarks">
+                  </td>
                   <td class="td-options">
-                    <a href="./company-info.html" class="company-info"
-                      ><i class="fas fa-pen-square"></i>
-                    </a>
+                    <input type="checkbox">
                   </td>
                 </tr>
               </tbody>
