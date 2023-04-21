@@ -433,6 +433,7 @@ body {
   max-width: 150px;
   padding: 0 0.5em;
   align-items: end;
+  gap: 1.5em;
 }
 
 .db-filter .radio-btn-wrapper input {
@@ -442,6 +443,10 @@ body {
 .db-filter .radio-btn-wrapper label {
   font-size: var(--fs-p);
   color: rgb(var(--color-d), 0.8);
+}
+
+.db-filter .radio-btn-wrapper label:active {
+  background-color: transparent;
 }
 
 .db-filter .radio-container {
