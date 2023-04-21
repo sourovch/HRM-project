@@ -33,7 +33,7 @@ body {
   --color-contrast: 255, 255, 255; */
 
   --fs-h-p: 1.8rem;
-  --fs-p: 0.9rem;
+  --fs-p: calc(0.7rem + .15vw);
 
   --navbar-w: 72px;
 }
@@ -395,6 +395,7 @@ body {
 
 .db-filter form {
   display: flex;
+  align-items: center;
 }
 
 .db-filter .db-filter-form-wrapper {
@@ -1054,8 +1055,9 @@ input[type="file"] {
 }
 
 .uility-btn-sec {
-  margin: 1em;
+  margin: .2%;
   margin-left: auto;
+  white-space: nowrap;
 }
 
 .uility-btn-sec > button {
