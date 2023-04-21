@@ -1117,6 +1117,11 @@ input[type="file"] {
   .form-wrapper .form-content-wrapper-grid {
     --min-width: 250px;
   }
+
+  .db-filter .radio-btn-wrapper > div {
+    max-width: none;
+    width: 100px;
+  }
 }
 
 @keyframes fadeIn {
