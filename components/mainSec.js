@@ -422,7 +422,9 @@ function getTemplet(path) {
         <button><i class="fas fa-bars"></i></button>
       </div>
       <h4>HRM Management System</h4>
-      <div class="uility-btn-sec"></div>
+      <div class="uility-btn-sec">
+        <button id="logout-btn" class="btn">Logout <i class="fas fa-sign-out-alt"></i></button>
+      </div>
     </div>
     <slot id="slot"></slot>
   </main>

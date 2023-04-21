@@ -1053,6 +1053,22 @@ input[type="file"] {
   animation-fill-mode: forwards;
 }
 
+.uility-btn-sec {
+  margin: 1em;
+  margin-left: auto;
+}
+
+.uility-btn-sec > button {
+  font-size: calc(var(--fs-p) + .2em);
+  padding: .3em .5em;
+  border-radius: 10px;
+  transition: .3s all ease-out;
+}
+
+.uility-btn-sec > button:hover {
+  background-color: rgb(var(--color-d), .1);
+}
+
 @media screen and (max-width: 980px) {
   :root {
     --navbar-w: 0px;

@@ -54,4 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     addForm?.classList.remove('active');
   })
+
+  document.getElementById("logout-btn").onclick = (e) => console.log("Log Out");
 });
