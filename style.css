@@ -32,8 +32,8 @@ body {
   --color-w: 254, 192, 7;
   --color-contrast: 255, 255, 255; */
 
-  --fs-h-p: 1.8rem;
-  --fs-p: calc(0.7rem + .15vw);
+  --fs-h-p: calc(1.6rem + 0.15vw);
+  --fs-p: calc(0.7rem + 0.15vw);
 
   --navbar-w: 72px;
 }
@@ -386,7 +386,7 @@ body {
   flex-wrap: wrap;
   background-color: rgb(var(--color-contrast));
   border-radius: 10px;
-  padding: 0 .5em;
+  padding: 0 0.5em;
 }
 
 .db-filter > div {
@@ -417,23 +417,25 @@ body {
 
 .db-filter .db-filter-form-wrapper div label {
   display: inline !important;
-  white-space: nowrap;  
+  white-space: nowrap;
 }
 
 .db-filter .radio-btn-wrapper {
   display: flex;
   justify-content: end;
-  padding: .8em 0;
+  padding: 0.8em 0;
   flex-wrap: wrap;
 }
 
 .db-filter .radio-btn-wrapper > div {
   flex-grow: 1;
   display: flex;
-  max-width: 150px;
   padding: 0 0.5em;
   align-items: end;
   gap: 1.5em;
+  min-width: 100px;
+  justify-content: center;
+  max-width: 150px;
 }
 
 .db-filter .radio-btn-wrapper input {
@@ -443,10 +445,14 @@ body {
 .db-filter .radio-btn-wrapper label {
   font-size: var(--fs-p);
   color: rgb(var(--color-d), 0.8);
+  white-space: nowrap;
 }
 
 .db-filter .radio-btn-wrapper label:active {
-  background-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .db-filter .radio-container {
@@ -455,7 +461,6 @@ body {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -474,11 +479,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  width: 20px;
+  aspect-ratio: 1;
   background-color: rgb(var(--color-s));
   border-radius: 50%;
-  transition: .3s all ease-out;
+  transition: 0.3s all ease-out;
 }
 
 .db-filter .radio-container:hover input ~ .checkmark {
@@ -500,10 +505,10 @@ body {
 }
 
 .db-filter .radio-container .checkmark:after {
-  top: 9px;
-  left: 9px;
+  inset: 0;
+  margin: auto;
   width: 8px;
-  height: 8px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background: rgb(var(--color-contrast));
 }
@@ -516,7 +521,7 @@ body {
 .dashboard-info:not(:last-child) {
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid rgb(var(--color-d), .5);
+  border-bottom: 1px solid rgb(var(--color-d), 0.5);
 }
 
 .card {
@@ -1060,20 +1065,20 @@ input[type="file"] {
 }
 
 .uility-btn-sec {
-  margin: .2%;
+  margin: 0.2%;
   margin-left: auto;
   white-space: nowrap;
 }
 
 .uility-btn-sec > button {
-  font-size: calc(var(--fs-p) + .2em);
-  padding: .3em .5em;
+  font-size: calc(var(--fs-p) + 0.2em);
+  padding: 0.3em 0.5em;
   border-radius: 10px;
-  transition: .3s all ease-out;
+  transition: 0.3s all ease-out;
 }
 
 .uility-btn-sec > button:hover {
-  background-color: rgb(var(--color-d), .1);
+  background-color: rgb(var(--color-d), 0.1);
 }
 
 @media screen and (max-width: 980px) {
@@ -1091,7 +1096,7 @@ input[type="file"] {
   .form-wrapper .form-content-wrapper-grid {
     --min-width: 320px;
   }
-  
+
   .db-filter .radio-btn-wrapper {
     justify-content: center;
   }
@@ -1100,6 +1105,11 @@ input[type="file"] {
 @media screen and (max-width: 700px) {
   .form-wrapper .form-content-wrapper {
     flex-direction: column;
+  }
+
+  .db-filter .radio-btn-wrapper {
+    justify-content: end;
+    gap: 1em;
   }
 }
 
