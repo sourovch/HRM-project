@@ -12,4 +12,7 @@ report:
     module permition/menu permition no forms
 
 hint:
-    humen resorce/attendance and reports/attendance.
+    humen resorce/attendance and reports/attendance same
+
+refs:
+    inline option buttons settings/project.

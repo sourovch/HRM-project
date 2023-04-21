@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Employee Attendance</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Monthly Employee Attendance</h1>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Employee
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="company-name" id="sel-company-name">
+                    <option value="Select Company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">Company 1</option>
+                    <option value="company-2">Company 2</option>
+                    <option value="company-3">Company 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="Branch-name"
+                  ><span class="required">*</span>Branch Name</label
+                >
+                <div class="select">
+                  <select name="Branch-name" id="sel-Branch-name">
+                    <option value="Select Branch Name" hidden>
+                      Select Branch Name
+                    </option>
+                    <option value="Branch-1">Branch 1</option>
+                    <option value="Branch-2">Branch 2</option>
+                    <option value="Branch-3">Branch 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="sel-department-name"
+                  ><span class="required">*</span>Department Name</label
+                >
+                <div class="select">
+                  <select name="department-name" id="sel-department-name">
+                    <option value="Select department Name" hidden>
+                      Select Department Name
+                    </option>
+                    <option value="department-1">Department 1</option>
+                    <option value="department-2">Department 2</option>
+                    <option value="department-3">Department 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="fiscal year"
+                  ><span class="required">*</span>fiscal year</label
+                >
+                <div class="select">
+                  <select name="fiscal year" id="sel-fiscal year">
+                    <option value="Select fiscal year" hidden>
+                      Select fiscal year
+                    </option>
+                    <option value="fiscal year-1">fiscal year 1</option>
+                    <option value="fiscal year-2">fiscal year 2</option>
+                    <option value="fiscal year-3">fiscal year 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="sel-shift-name"
+                  ><span class="required">*</span>Shift</label
+                >
+                <div class="select">
+                  <select name="shift" id="sel-shift-name">
+                    <option value="Select Shift" hidden>
+                      Select Shift Name
+                    </option>
+                    <option value="shift-1">Shift 1</option>
+                    <option value="shift-2">Shift 2</option>
+                    <option value="shift-3">Shift 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="month"><span class="required">*</span>Month</label>
+                <div class="select">
+                  <select name="month" id="sel-month-name">
+                    <option value="Select month" hidden>
+                      Select Month Name
+                    </option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">july</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button class="btn btn-s">
+                <i class="fas fa-print"></i> Print
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Monthly Employee Attendance List
+          </h3>
+          <div class="table-top-bar">
+            <div>Branch: <span id="branch">Head Office</span></div>
+            <div>
+              Department: <span id="department">Accounts & Finance</span>
+            </div>
+            <div class="color-marks">
+              <div>
+                <h4>Color Marks:</h4>
+              </div>
+              <div>
+                <div class="mini-card-s">
+                  <i class="fas fa-check-circle"></i> Present
+                </div>
+                <div class="mini-card-d"><i class="fas fa-times"></i> Absent</div>
+                <div class="mini-card-y"><i class="fas fa-ban"></i> Weekend</div>
+                <div class="mini-card-p">
+                  <i class="fas fa-lock"></i> Holiday
+                </div>
+                <div class="mini-card-p">
+                  <i class="fas fa-sign-out-alt"></i> Leave
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th rowspan="2">Sl</th>
+                  <th rowspan="2" style="min-width: 130px;">Employee Name</th>
+                  <th colspan="31" class="td-middle"><span id="month">Mar 2022</span></th>
+                </tr>
+                <tr>
+                  <!-- enter th count based on month -->
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+                  <th>13</th>
+                  <th>14</th>
+                  <th>15</th>
+                  <th>16</th>
+                  <th>17</th>
+                  <th>18</th>
+                  <th>19</th>
+                  <th>20</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+                  <th>25</th>
+                  <th>26</th>
+                  <th>27</th>
+                  <th>28</th>
+                  <th>29</th>
+                  <th>30</th>
+                  <th>31</th>
+                </tr>
+              </thead>
+              <tbody>
+                <td>1.</td>
+                <td>
+                  <div>Ariful Islam</div>
+                  <div>Officer, Purches</div>
+                </td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-ban c-y"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-lock c-p"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-ban c-y"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-ban c-y"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-sign-out-alt c-p"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-ban c-y"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+                <td class="td-middle"><i class="fas fa-check-circle c-s"></i></td>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

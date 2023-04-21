@@ -16,7 +16,13 @@ function getTemplet(path) {
       <li class="nav-item active">
         <a href="/">
           <div class="menu-icon"><i class="fas fa-tachometer-alt"></i></div>
-          <span>Dashbord</span>
+          <span>HR Dashbord</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/mis-dashboard.html">
+          <div class="menu-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <span>MIS Dashbord</span>
         </a>
       </li>
       <li class="nav-item dropdown">
@@ -365,7 +371,7 @@ function getTemplet(path) {
         </a>
         <ul>
           <li>
-            <a href="#">
+            <a href="${path}pages/reports/monthly-stuff-attendance.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Monthly Stuff Attendance</span>
             </a>

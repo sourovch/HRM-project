@@ -113,9 +113,13 @@ body {
 .add-btn {
   display: inline;
   font-size: calc(var(--fs-p) + 0.4em);
-  padding: 0 0.2em;
-  color: rgb(var(--color-d), 0.8);
+  padding: 0 0.5em;
   transition: 0.2s all ease-out;
+  background-color: rgb(var(--color-p));
+  margin: 0 0.5em;
+  color: rgb(var(--color-contrast));
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .add-btn:hover {
@@ -377,6 +381,127 @@ body {
   padding: 0.4em 0.2em;
 }
 
+.db-filter {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(var(--color-contrast));
+  border-radius: 10px;
+  padding: 0 .5em;
+}
+
+.db-filter > div {
+  flex-grow: 1;
+}
+
+.db-filter form {
+  display: flex;
+}
+
+.db-filter .db-filter-form-wrapper {
+  display: flex;
+  gap: 3%;
+  align-items: end;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.db-filter .db-filter-form-wrapper div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.db-filter .db-filter-form-wrapper div label {
+  display: inline !important;
+  white-space: nowrap;  
+}
+
+.db-filter .radio-btn-wrapper {
+  display: flex;
+  justify-content: end;
+  padding: .8em 0;
+  flex-wrap: wrap;
+}
+
+.db-filter .radio-btn-wrapper > div {
+  flex-grow: 1;
+  display: flex;
+  max-width: 150px;
+  padding: 0 0.5em;
+  align-items: end;
+}
+
+.db-filter .radio-btn-wrapper input {
+  width: auto;
+}
+
+.db-filter .radio-btn-wrapper label {
+  font-size: var(--fs-p);
+  color: rgb(var(--color-d), 0.8);
+}
+
+.db-filter .radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.db-filter .radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.db-filter .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(var(--color-s));
+  border-radius: 50%;
+  transition: .3s all ease-out;
+}
+
+.db-filter .radio-container:hover input ~ .checkmark {
+  background-color: rgb(var(--color-d), 0.1);
+}
+
+.db-filter .radio-container input:checked ~ .checkmark {
+  background-color: rgb(var(--color-p));
+}
+
+.db-filter .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.db-filter .radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.db-filter .radio-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(var(--color-contrast));
+}
+
 .dashboard-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
@@ -385,7 +510,7 @@ body {
 .dashboard-info:not(:last-child) {
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.499);
+  border-bottom: 1px solid rgb(var(--color-d), .5);
 }
 
 .card {
@@ -627,7 +752,7 @@ body {
 }
 
 .table-wrapper .table-top-bar > div {
-  font-size: calc(var(--fs-p) + .1em);
+  font-size: calc(var(--fs-p) + 0.1em);
   font-weight: 700;
   border: 1px solid rgb(var(--color-d), 0.2);
   gap: 10px;
@@ -636,7 +761,7 @@ body {
 .table-wrapper .table-top-bar div {
   display: flex;
   align-items: center;
-  padding: .2em 1em;
+  padding: 0.2em 1em;
   white-space: nowrap;
   flex-grow: 1;
   flex-wrap: wrap;
@@ -655,7 +780,7 @@ body {
 
 .table-wrapper .table-top-bar span {
   color: rgb(var(--color-p-s));
-  font-size: calc(var(--fs-p) + .2em);
+  font-size: calc(var(--fs-p) + 0.2em);
 }
 
 .table-wrapper tfoot td {
@@ -665,13 +790,13 @@ body {
 .table-wrapper .table-bottom-bar {
   display: flex;
   flex-wrap: wrap;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 .table-wrapper .table-bottom-bar > div {
   border: 1px solid rgb(var(--color-d), 0.2);
   flex-grow: 1;
-  font-size: calc(var(--fs-p) + .1em);
+  font-size: var(--fs-p);
   padding: 1em;
 }
 
@@ -680,12 +805,25 @@ body {
 }
 
 .table-wrapper .table-bottom-bar > div > div {
-  margin-top: .8em;
+  margin-top: 0.8em;
 }
 
 .table-wrapper thead,
 .table-wrapper tfoot {
   background-color: rgb(var(--color-s));
+}
+
+.table-wrapper tfoot {
+  font-size: calc(var(--fs-p) + 0.1em);
+  font-weight: bold;
+}
+
+.table-wrapper tbody tr {
+  transition: 0.2s ease-in all;
+}
+
+.table-wrapper tbody tr:hover {
+  background-color: rgb(var(--color-d), 0.1);
 }
 
 .form-wrapper form {
@@ -732,7 +870,7 @@ body {
 
 .form-wrapper select[multiple] option {
   display: inline;
-  padding: .3em .5em;
+  padding: 0.3em 0.5em;
 }
 
 .form-wrapper select::-ms-expand {
@@ -801,11 +939,11 @@ input,
 }
 
 input[type="text"],
-input[type='tel'],
-input[type='email'],
-input[type='url'],
-input[type='time'],
-input[type='password'] {
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="time"],
+input[type="password"] {
   padding: 0.5em 0.5em;
 }
 
@@ -826,7 +964,7 @@ input[type="file"] {
 
 .form-wrapper textarea {
   resize: vertical;
-  padding: .6em .4em;
+  padding: 0.6em 0.4em;
   min-height: 38px;
   height: 38px;
 }
@@ -850,7 +988,7 @@ input[type="file"] {
 }
 
 .form-wrapper .form-sec > .form-content-wrapper:not(:last-child) {
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 
 .file-label {
@@ -929,6 +1067,10 @@ input[type="file"] {
 
   .form-wrapper .form-content-wrapper-grid {
     --min-width: 320px;
+  }
+  
+  .db-filter .radio-btn-wrapper {
+    justify-content: center;
   }
 }
 
