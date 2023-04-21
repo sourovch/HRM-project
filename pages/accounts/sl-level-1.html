@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subsidiary Ledger (SL) Level-1</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -13,41 +13,111 @@
       crossorigin="anonymous"
     />
     <script src="../../script.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main-sec path="../../">
-        <div class="content-container">
-            <h1 class="main-heading">Subsidiary Ledger (SL) Level-1<button class="btn add-btn" id="add-btn">+</button></h1>
-            <div class="table-wrapper">
-                <h3 class="table-heading">
-                  <i class="fas fa-list"></i> Subsidiary Ledger 1 List
-                </h3>
-                <div class="table-resp-wrapper">
-                  <table class="sl-table">
-                    <thead>
-                      <tr>
-                        <th>SL</th>
-                        <th style="width: 30%;">GL Name</th>
-                        <th style="width: 35%;">SL Level-1 Name</th>
-                        <th class="td-options">Options</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1.</td>
-                        <td>Assets</td>
-                        <td>Current Assets</td>
-                        <td class="td-options">
-                          <a href="#" class="company-info"
-                            ><i class="fas fa-pen-square"></i>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+      <div class="content-container">
+        <h1 class="main-heading">
+          Subsidiary Ledger (SL) Level-1<button
+            class="btn add-btn"
+            id="add-btn"
+          >
+            +
+          </button>
+        </h1>
+        <div class="add-form form-wrapper" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New SL Level-1
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option value="Select company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">company 1</option>
+                    <option value="company-2">company 2</option>
+                    <option value="company-3">company 3</option>
+                  </select>
+                  <span class="focus"></span>
                 </div>
               </div>
+              <div class="select-wrapper">
+                <label for="group-ledger-name"
+                  ><span class="required">*</span>Group Ledger Name</label
+                >
+                <div class="select">
+                  <select name="group-ledger-name" id="group-ledger-name">
+                    <option value="Select group-ledger Name" hidden>
+                      Select Group Ledger Name
+                    </option>
+                    <option value="group-ledger-1">group-ledger 1</option>
+                    <option value="group-ledger-2">group-ledger 2</option>
+                    <option value="group-ledger-3">group-ledger 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="sl-level-1-name">
+                  <span class="required">*</span>SL Level-1 Name
+                </label>
+                <input
+                  type="text"
+                  name="sl-level-1-name"
+                  id="sl-level-1-name"
+                  placeholder="SL Level 1 Name"
+                />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
         </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Subsidiary Ledger 1 List
+          </h3>
+          <div class="table-resp-wrapper">
+            <table class="sl-table">
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th style="width: 30%">GL Name</th>
+                  <th style="width: 35%">SL Level-1 Name</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Assets</td>
+                  <td>Current Assets</td>
+                  <td class="td-options">
+                    <a href="#" class="company-info"
+                      ><i class="fas fa-pen-square"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main-sec>
-</body>
+  </body>
 </html>

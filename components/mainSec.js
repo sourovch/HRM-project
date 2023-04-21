@@ -83,6 +83,12 @@ function getTemplet(path) {
             </a>
           </li>
           <li>
+            <a href="${path}pages/settings/session.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Session</span>
+            </a>
+          </li>
+          <li>
             <a href="${path}pages/settings/shift.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Shift</span>
@@ -187,12 +193,6 @@ function getTemplet(path) {
           <span>Party Manage</span>
         </a>
         <ul>
-          <li>
-            <a href="${path}pages/party-manage/session.html">
-              <div class="menu-icon"><i class="far fa-circle"></i></div>
-              <span>Session</span>
-            </a>
-          </li>
           <li>
             <a href="${path}pages/party-manage/customer.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>

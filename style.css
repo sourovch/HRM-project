@@ -516,6 +516,7 @@ body {
 .table-wrapper {
   padding-left: 1em;
   padding-right: 1em;
+  padding-bottom: 1em;
 }
 
 .table-resp-wrapper {
@@ -622,6 +623,7 @@ body {
 .table-wrapper .table-top-bar {
   display: flex;
   margin-bottom: 1em;
+  flex-wrap: wrap;
 }
 
 .table-wrapper .table-top-bar > div {
@@ -631,12 +633,13 @@ body {
   gap: 10px;
 }
 
-.table-wrapper .table-top-bar  div {
-  width: 100%;
+.table-wrapper .table-top-bar div {
   display: flex;
   align-items: center;
   padding: .2em 1em;
   white-space: nowrap;
+  flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .table-wrapper .table-top-bar.h-group {
@@ -653,6 +656,36 @@ body {
 .table-wrapper .table-top-bar span {
   color: rgb(var(--color-p-s));
   font-size: calc(var(--fs-p) + .2em);
+}
+
+.table-wrapper tfoot td {
+  text-align: end;
+}
+
+.table-wrapper .table-bottom-bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: .5em 0;
+}
+
+.table-wrapper .table-bottom-bar > div {
+  border: 1px solid rgb(var(--color-d), 0.2);
+  flex-grow: 1;
+  font-size: calc(var(--fs-p) + .1em);
+  padding: 1em;
+}
+
+.table-wrapper .table-bottom-bar span {
+  color: rgb(var(--color-p-s));
+}
+
+.table-wrapper .table-bottom-bar > div > div {
+  margin-top: .8em;
+}
+
+.table-wrapper thead,
+.table-wrapper tfoot {
+  background-color: rgb(var(--color-s));
 }
 
 .form-wrapper form {

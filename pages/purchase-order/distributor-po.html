@@ -17,7 +17,411 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">Distributor PO<button class="btn add-btn" id="add-btn">+</button></h1>
+        <h1 class="main-heading">
+          Distributor PO<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Distributor PO
+          </h3>
+          <form>
+            <div class="form-sec">
+              <h3>Distributor Po Details</h3>
+              <div class="form-content-wrapper-grid">
+                <div class="select-wrapper">
+                  <label for="distributor-name"
+                    ><span class="required">*</span>Distributor Name</label
+                  >
+                  <div class="select">
+                    <select name="distributor-name" id="distributor-name">
+                      <option value="Select distributor Name" hidden>
+                        Select Distributor Name
+                      </option>
+                      <option value="distributor-1">Distributor 1</option>
+                      <option value="distributor-2">Distributor 2</option>
+                      <option value="distributor-3">Distributor 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="attention">
+                    <span class="required">*</span>
+                    Attention
+                  </label>
+                  <input
+                    type="text"
+                    name="attention"
+                    id="attention"
+                    placeholder="Attentionu"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="po-date">
+                    <span class="required">*</span>
+                    Po Date
+                  </label>
+                  <input type="date" name="po-date" id="po-date" />
+                </div>
+                <div class="select-wrapper">
+                  <label for="imorter-name">
+                    <span class="required">*</span> Importer Name
+                  </label>
+                  <div class="select">
+                    <select name="imorter-name" id="imorter-name">
+                      <option value="Select imorter Name" hidden>
+                        Select Imorter Name
+                      </option>
+                      <option value="imorter-1">Imorter 1</option>
+                      <option value="imorter-2">Imorter 2</option>
+                      <option value="imorter-3">Imorter 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="customer-name">
+                    <span class="required">*</span>Customer Name
+                  </label>
+                  <div class="select">
+                    <select name="customer-name" id="customer-name">
+                      <option value="Select customer Name" hidden>
+                        Select Customer Name
+                      </option>
+                      <option value="customer-1">Customer 1</option>
+                      <option value="customer-2">Customer 2</option>
+                      <option value="customer-3">Customer 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="workorder-no">
+                    <span class="required">*</span>Wordorder No
+                  </label>
+                  <div class="select">
+                    <select name="workorder-no" id="workorder-no">
+                      <option value="Select Wordorder No" hidden>
+                        Select Workorder No
+                      </option>
+                      <option value="workorder-no-1">workorder-no 1</option>
+                      <option value="workorder-no-2">workorder-no 2</option>
+                      <option value="workorder-no-3">workorder-no 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="subject">
+                    <span class="required">*</span>Subject
+                  </label>
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="currency">Currency</label>
+                  <input
+                    disabled
+                    type="text"
+                    name="currency"
+                    id="currency"
+                    placeholder="Currency"
+                  />
+                </div>
+                <div class="select-wrapper">
+                  <label for="including-vat-&-ait">
+                    <span class="required">*</span>Including VAT & AIT
+                  </label>
+                  <div class="select">
+                    <select name="including-vat-&-ait" id="including-vat-&-ait">
+                      <option value="yes" selected>Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="po-det-vat-percentage">
+                    <span class="required">*</span>VAT Percentage(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="po-det-vat-percentage"
+                    id="po-det-vat-percentage"
+                    placeholder="VAT Percentage"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="po-det-ait-percentage">
+                    <span class="require">*</span>AIT Percentage(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="po-det-ait-percentage"
+                    id="po-det-ait-percentage"
+                    placeholder="AIT Percentage"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Product Details(Buy)</h3>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="product-description">
+                    <span class="required">*</span>Product Description
+                  </label>
+                  <input
+                    type="text"
+                    name="product-description"
+                    id="product-description"
+                    placeholder="Product Description"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="product-sku"> Product Sku </label>
+                  <input
+                    type="text"
+                    name="product-sku"
+                    id="product-sku"
+                    placeholder="Product Sku"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="validity"> Validity </label>
+                  <input
+                    type="text"
+                    name="validity"
+                    id="validity"
+                    placeholder="Validity"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="quantity">
+                    <span class="required">*</span>Quantity
+                  </label>
+                  <input
+                    type="text"
+                    name="quantity"
+                    id="quantity"
+                    placeholder="Quantity"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="unit-price">
+                    <span class="required">*</span>Unit Price
+                  </label>
+                  <input
+                    type="text"
+                    name="unit-price"
+                    id="unit-price"
+                    placeholder="Unit Price"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="total">
+                    <span class="required">*</span>Total
+                  </label>
+                  <input
+                    type="text"
+                    name="total"
+                    id="total"
+                    placeholder="Unit Price"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="remarks">
+                    <span class="required">*</span>Remarks
+                  </label>
+                  <input
+                    type="text"
+                    name="remarks"
+                    id="remarks"
+                    placeholder="Unit Price"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Billing Details</h3>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="total-po-value">
+                    <span class="required">*</span>Total Po Value
+                  </label>
+                  <input
+                    type="text"
+                    name="total-po-value"
+                    id="total-po-value"
+                    placeholder="0"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="discount-percentage">
+                    <span class="required">*</span>Discount Percentage
+                  </label>
+                  <input
+                    type="text"
+                    name="discount-percentage"
+                    id="discount-percentage"
+                    placeholder="0"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="discount-amount">
+                    <span class="required">*</span>Discount Amount
+                  </label>
+                  <input
+                    type="text"
+                    name="discount-amount"
+                    id="discount-amount"
+                    placeholder="0"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="sub-total">
+                    <span class="required">*</span>Sub Total
+                  </label>
+                  <input
+                    disabled
+                    type="text"
+                    name="sub-total"
+                    id="sub-total"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="payment-mode">
+                    <span class="required">*</span>Payment Mode
+                  </label>
+                  <div class="select">
+                    <select name="payment-mode" id="payment-mode">
+                      <option value="cash" selected>Cash</option>
+                      <option value="card">Card</option>
+                      <option value="bank">Bank</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="prod-det-vat-percentage">
+                    <span class="required">*</span>VAT Percentage(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="prod-det-vat-percentage"
+                    id="prod-det-vat-percentage"
+                    placeholder="VAT Percentage"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="prod-det-vat-amount">
+                    <span class="require">*</span>VAT Amount(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="prod-det-vat-amount"
+                    id="prod-det-vat-amount"
+                    placeholder="VAT Amount"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="grand-total">
+                    <span class="required">*</span>Grand Total
+                  </label>
+                  <input
+                    disabled
+                    type="text"
+                    name="grand-total"
+                    id="grand-total"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="offer-attach" class="file-label">
+                    <input type="file" name="offer-attach" id="offer-attach">
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <label for="prod-det-ait-percentage">
+                    <span class="required">*</span>AIT Percentage(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="prod-det-ait-percentage"
+                    id="prod-det-ait-percentage"
+                    placeholder="AIT Percentage"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="prod-det-ait-amount">
+                    <span class="require">*</span>AIT Amount(Add)
+                  </label>
+                  <input
+                    type="text"
+                    name="prod-det-ait-amount"
+                    id="prod-det-ait-amount"
+                    placeholder="AIT Amount"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="net-bill-receivable">
+                    <span class="required">*</span>Net Bill Receivable
+                  </label>
+                  <input
+                    disabled
+                    type="text"
+                    name="net-bill-receivable"
+                    id="net-bill-receivable"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="payment-terms"><span class="required">*</span>Payment Terms</label>
+                  <textarea name="payment-terms" id="payment-terms" placeholder="Payment Terms"></textarea>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="delivery-to"><span class="required">*</span>Delivery To</label>
+                  <textarea name="delivery-to" id="delivery-to" placeholder="Delivery To"></textarea>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="ship-to"><span class="required">*</span>Ship To</label>
+                  <textarea name="ship-to" id="ship-to" placeholder="Ship To"></textarea>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="bill-to"><span class="required">*</span>Bill To</label>
+                  <textarea name="bill-to" id="bill-to" placeholder="Bill To"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
         <div class="form-wrapper">
           <h3 class="form-heading">
             <i class="fas fa-pen-square"></i> Search Distributor PO
@@ -44,9 +448,7 @@
                 <label for="po-no"><span class="required">*</span>PO No.</label>
                 <div class="select">
                   <select name="po-no" id="sel-po-no">
-                    <option value="Select po no" hidden>
-                      Select Po No
-                    </option>
+                    <option value="Select po no" hidden>Select Po No</option>
                     <option value="Po-no-1">Po-No 1</option>
                     <option value="Po-no-2">Po-No 2</option>
                     <option value="Po-no-3">Po-No 3</option>

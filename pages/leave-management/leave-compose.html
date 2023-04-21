@@ -17,7 +17,171 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">Leave<button class="btn add-btn" id="add-btn">+</button></h1>
+        <h1 class="main-heading">
+          Leave<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Leave
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="employee-name"
+                  ><span class="required">*</span>Employee Name</label
+                >
+                <div class="select">
+                  <select name="employee-name" id="employee-name">
+                    <option value="Select employee Name" hidden>
+                      Select Employee Name
+                    </option>
+                    <option value="employee-1">employee 1</option>
+                    <option value="employee-2">employee 2</option>
+                    <option value="employee-3">employee 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="leave-nature"
+                    ><span class="required">*</span>Leave Nature</label
+                  >
+                  <div class="select">
+                    <select name="leave-nature" id="leave-nature">
+                      <option value="Select Leave Nature" hidden>
+                        Select Leave Nature
+                      </option>
+                      <option value="leave-nature-1">leave-nature 1</option>
+                      <option value="leave-nature-2">leave-nature 2</option>
+                      <option value="leave-nature-3">leave-nature 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="leave-type"
+                    ><span class="required">*</span>Leave Type</label
+                  >
+                  <div class="select">
+                    <select name="leave-type" id="leave-type">
+                      <option value="Select Leave Type" hidden>
+                        Select Leave Type
+                      </option>
+                      <option value="leave-type-1">leave-type 1</option>
+                      <option value="leave-type-2">leave-type 2</option>
+                      <option value="leave-type-3">leave-type 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="application-date">Application Date</label>
+                  <input
+                    type="date"
+                    name="application-date"
+                    id="application-date"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="leave-from">Leave From</label>
+                  <input type="date" name="leave-from" id="leave-from" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="leave-to">Leave To</label>
+                  <input type="date" name="leave-to" id="leave-to" />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="purpose-of-leave">
+                  <span class="required">*</span>Purpose Of Leave
+                </label>
+                <input
+                  type="text"
+                  name="purpose-of-leave"
+                  id="purpose-of-leave"
+                  placeholder="Purpose Of Leave"
+                />
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="recommended-by">
+                    <span class="required">*</span>Recommended By
+                  </label>
+                  <input
+                    type="text"
+                    name="recommended-by"
+                    id="recommended-by"
+                    placeholder="Recommended By"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="section-chief">
+                    <span class="required">*</span>Section Chief
+                  </label>
+                  <input
+                    type="text"
+                    name="section-chief"
+                    id="section-chief"
+                    placeholder="Section Chief"
+                  />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="head-of-department">
+                  <span class="required">*</span>Head Of Department
+                </label>
+                <input
+                  type="text"
+                  name="head-of-department"
+                  id="head-of-department"
+                  placeholder="Head Of Department"
+                />
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="input-wrapper">
+                <label for="leave-address">
+                  <span class="required">*</span>Leave Address
+                </label>
+                <input
+                  type="text"
+                  name="leave-address"
+                  id="leave-address"
+                  placeholder="Leave Address"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="mobile">
+                  <span class="required">*</span>Mobile
+                </label>
+                <input
+                  type="tel"
+                  name="mobile"
+                  id="mobile"
+                  placeholder="Mobile"
+                />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
         <div class="form-wrapper">
           <h3 class="form-heading">
             <i class="fas fa-pen-square"></i> Search Leave
@@ -99,9 +263,9 @@
                   <td>1-01-23</td>
                   <td>1</td>
                   <td class="td-options">
-                      <a href="#" class="btn btn-s">
-                        <i class="fas fa-print"></i> Leave Details
-                      </a>
+                    <a href="#" class="btn btn-s">
+                      <i class="fas fa-print"></i> Leave Details
+                    </a>
                   </td>
                 </tr>
               </tbody>
