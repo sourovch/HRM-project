@@ -1,0 +1,10 @@
+print info:
+    - Add print() in any button to print page;
+    - Add print id to the section element you want to change
+
+about changing id and class:
+    - you can change any id inside form-wrapper class
+    - changing any class will cause unexpectd style
+
+about adding options in select element and row in tables:
+    - All demos are given as refarance.

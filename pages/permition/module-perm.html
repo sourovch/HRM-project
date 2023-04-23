@@ -55,12 +55,108 @@
                   <span class="focus"></span>
                 </div>
               </div>
-              <button type="submit" class="btn btn-p" style="width: 20%;">Search</button>
+              <button type="submit" class="btn btn-p" style="width: 20%">
+                Search
+              </button>
             </div>
           </form>
         </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading"><i class="fas fa-list"></i> Menu List</h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th rowspan="2">SL</th>
+                  <th rowspan="2">module name</th>
+                  <th colspan="5" class="td-middle">User Role</th>
+                </tr>
+                <tr>
+                  <th class="td-middle">Super Administrator</th>
+                  <th class="td-middle">Administrator</th>
+                  <th class="td-middle">HR Admin</th>
+                  <th class="td-middle">Employee</th>
+                  <th class="td-middle">User</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Setting</td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="Super Administrator" disabled />
+                  </td>
+                  <td class="td-middle">
+                    <input
+                      type="checkbox"
+                      name="Administrator"
+                      checked
+                      disabled
+                    />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="HR Admin" checked />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="Employee" checked disabled />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="User" checked disabled />
+                  </td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Setting</td>
+                  <td class="td-middle">
+                    <input
+                      type="checkbox"
+                      name="Super Administrator"
+                      checked
+                      disabled
+                    />
+                  </td>
+                  <td class="td-middle">
+                    <input
+                      type="checkbox"
+                      name="Administrator"
+                      checked
+                      disabled
+                    />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="HR Admin" checked disabled />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="Employee" />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="User" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td>Setting</td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="Super Administrator" disabled />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="Administrator" />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="HR Admin" disabled />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="Employee" disabled />
+                  </td>
+                  <td class="td-middle">
+                    <input type="checkbox" name="User" checked />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      <!-- module table -->
     </main-sec>
   </body>
 </html>

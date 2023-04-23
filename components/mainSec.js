@@ -275,6 +275,12 @@ function getTemplet(path) {
               <span>Manage Salary Bill</span>
             </a>
           </li>
+          <li>
+            <a href="${path}pages/salary-management/empoly-salary.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Salary</span>
+            </a>
+          </li>
         </ul>
       </li>
       <li class="nav-item dropdown">

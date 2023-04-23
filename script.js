@@ -1,6 +1,12 @@
 import { MainSec } from "./components/mainSec.js";
 customElements.define("main-sec", MainSec);
 
+function print(e) {
+  const printArea = document.getElementById("print");
+  
+  print();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const dd = document.querySelectorAll(".dropdown");
   const menuBar = document.getElementById("menubar");

@@ -747,7 +747,8 @@ body {
   font-size: calc(var(--fs-p) + 0.2em);
 }
 
-.table-wrapper .sl-table thead {
+.table-wrapper .sl-table thead,
+.table-wrapper .salary-table thead {
   background-color: rgb(var(--color-p));
   color: rgb(var(--color-contrast));
 }
@@ -760,6 +761,31 @@ body {
   display: flex;
   margin-bottom: 1em;
   flex-wrap: wrap;
+}
+
+.table-wrapper .table-top-bar-wrapper {
+  text-align: center;
+  background-color: rgb(var(--color-s));
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+.table-wrapper .table-top-bar-wrapper > h1 {
+  margin: 0.3em 0;
+}
+
+.table-wrapper .table-top-bar-wrapper > h2 {
+  background-color: rgb(var(--color-p-s));
+  color: rgb(var(--color-contrast));
+  padding: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.table-wrapper .table-top-bar-wrapper .table-top-bar {
+  margin: 0 0.5em;
+  margin-bottom: 0;
 }
 
 .table-wrapper .table-top-bar > div {
@@ -776,6 +802,11 @@ body {
   white-space: nowrap;
   flex-grow: 1;
   flex-wrap: wrap;
+}
+
+.table-wrapper .table-top-bar-wrapper .table-top-bar div {
+  flex: 1;
+  background-color: rgb(var(--color-contrast));
 }
 
 .table-wrapper .table-top-bar.h-group {
@@ -819,9 +850,22 @@ body {
   margin-top: 0.8em;
 }
 
-.table-wrapper thead,
-.table-wrapper tfoot {
+.table-wrapper thead {
   background-color: rgb(var(--color-s));
+}
+
+.table-wrapper tfoot tr:nth-child(odd) {
+  background-color: rgb(var(--color-d), 0.5);
+  color: rgb(var(--color-contrast));
+}
+
+.table-wrapper tfoot tr:nth-child(3) {
+  background-color: rgb(var(--color-p-s));
+}
+
+.table-wrapper tfoot tr:nth-child(5) > td{
+  text-align: left;
+  font-weight: bold;
 }
 
 .table-wrapper tfoot {
@@ -892,7 +936,7 @@ body {
   position: relative;
   width: 100%;
   min-width: 15ch;
-  border: 1px solid rgb(var(--color-d), 0.5);
+  border: 1px solid rgb(var(--color-d), 0.2);
   border-radius: 0.25em;
   font-size: var(--fs-p);
   cursor: pointer;
@@ -945,7 +989,7 @@ input,
 .form-wrapper textarea {
   font-size: var(--fs-p);
   width: 100%;
-  border: 1px solid rgb(var(--color-d), 0.5);
+  border: 1px solid rgb(var(--color-d), 0.2);
   border-radius: 3px;
 }
 
@@ -955,7 +999,7 @@ input[type="email"],
 input[type="url"],
 input[type="time"],
 input[type="password"] {
-  padding: 0.5em 0.5em;
+  padding: 0.58em 0.5em;
 }
 
 input[type="date"] {
@@ -1081,6 +1125,11 @@ input[type="file"] {
   background-color: rgb(var(--color-d), 0.1);
 }
 
+.salary-print-btn {
+  margin: auto;
+  margin-bottom: .8em;
+}
+
 @media screen and (max-width: 980px) {
   :root {
     --navbar-w: 0px;
@@ -1141,5 +1190,22 @@ input[type="file"] {
 
   100% {
     scale: 0% 100%;
+  }
+}
+
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #print, #print * {
+    visibility: visible;
+  }
+  
+  #print {
+    position: absolute;
+    /* left: 0; */
+    top: 0;
   }
 }
