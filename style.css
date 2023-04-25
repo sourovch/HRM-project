@@ -863,7 +863,7 @@ body {
   background-color: rgb(var(--color-p-s));
 }
 
-.table-wrapper tfoot tr:nth-child(5) > td{
+.table-wrapper tfoot tr:nth-child(5) > td {
   text-align: left;
   font-weight: bold;
 }
@@ -1033,9 +1033,11 @@ input[type="file"] {
 }
 
 .form-wrapper .form-sec > h3 {
-  font-size: calc(var(--fs-p) + 0.2em);
+  font-size: calc(var(--fs-p) + 0.5em);
+  color: rgb(var(--color-p-s));
   padding: 0.2em 0;
-  color: rgb(var(--color-d), 0.5);
+  margin: 0.5em 0;
+  text-align: center;
 }
 
 .form-wrapper .form-sec > h3::after {
@@ -1127,7 +1129,58 @@ input[type="file"] {
 
 .salary-print-btn {
   margin: auto;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
+}
+
+.info-cont {
+  padding: 1em;
+  font-size: calc(var(--fs-p) + 0.2em);
+  margin-bottom: 0.2em !important;
+  margin-top: 0.5em;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none;
+}
+
+.info-cont.active {
+  display: block;
+}
+
+.info-cont.info {
+  background-color: rgb(var(--color-g));
+  color: rgb(var(--color-contrast));
+}
+
+.info-cont.error {
+  background-color: rgb(var(--color-r));
+  color: rgb(var(--color-contrast));
+}
+
+.page-indicator {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+  row-gap: 5px;
+  border-collapse: collapse;
+}
+
+.page-indicator > * {
+  width: 35px;
+  display: grid;
+  place-content: center;
+  border: 1px solid rgb(var(--color-p));
+  color: rgb(var(--color-p));
+  font-size: calc(var(--fs-p) + .2em);
+  font-weight: bold;
+  aspect-ratio: 1;
+  text-decoration: none;
+  transition: .3s all ease-out;
+  margin-left: -1px;
+}
+
+.page-indicator> *:hover {
+  background-color: rgb(var(--color-p));
+  color: rgb(var(--color-contrast));
 }
 
 @media screen and (max-width: 980px) {
@@ -1164,12 +1217,16 @@ input[type="file"] {
 
 @media screen and (max-width: 450px) {
   .form-wrapper .form-content-wrapper-grid {
-    --min-width: 250px;
+    --min-width: 200px;
   }
 
   .db-filter .radio-btn-wrapper > div {
     max-width: none;
     width: 100px;
+  }
+
+  .form-wrapper form {
+    padding: 0.5em;
   }
 }
 
@@ -1193,19 +1250,21 @@ input[type="file"] {
   }
 }
 
-
 @media print {
   body * {
     visibility: hidden;
   }
 
-  #print, #print * {
+  #print,
+  #print * {
     visibility: visible;
   }
-  
+
   #print {
     position: absolute;
-    /* left: 0; */
+    left: 0;
+    right: 0;
     top: 0;
+    margin: auto;
   }
 }

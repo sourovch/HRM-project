@@ -415,7 +415,7 @@ function getTemplet(path) {
         </ul>
       </li>
       <li class="nav-item">
-        <a href="#">
+        <a href="${path}pages/user.html">
           <div class="menu-icon"><i class="fas fa-user-cog"></i></div>
           <span>User</span>
         </a>

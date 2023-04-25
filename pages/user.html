@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">
+          Login Account<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <!-- Error Container -->
+        <div class="info-cont info active">The username is available</div>
+        <!-- add form -->
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> New Login Account
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="company-name">
+                  <span class="required">*</span>Company Name
+                </label>
+                <div class="select">
+                  <select name="company-name" id="company-name">
+                    <option hidden selected>Select Company Name</option>
+                    <option value="company name 1">Company Name 1</option>
+                    <option value="company name 2">Company Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="branch-name">
+                  <span class="required">*</span>Branch Name
+                </label>
+                <div class="select">
+                  <select name="branch-name" id="branch-name">
+                    <option hidden selected>Select Branch Name</option>
+                    <option value="branch name 1">Branch Name 1</option>
+                    <option value="branch name 2">Branch Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="user-name">
+                  <span class="required">*</span>User Name
+                </label>
+                <div class="select">
+                  <select name="user-name" id="user-name">
+                    <option hidden selected>Select User Name</option>
+                    <option value="User Name 1">User Name 1</option>
+                    <option value="User Name 2">User Name 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="login-id">
+                  <span class="required">*</span>Login ID
+                </label>
+                <input
+                  type="text"
+                  name="login-id"
+                  id="login-id"
+                  placeholder="Login ID"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="password">
+                  <span class="required">*</span>Password
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="confirm-password">
+                  <span class="required">*</span>Confirm Password
+                </label>
+                <input
+                  type="confirm-password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  placeholder="Confirm Pssword"
+                />
+              </div>
+              <div class="select-wrapper">
+                <label for="user-role">
+                  <span class="required">*</span>User Role
+                </label>
+                <div class="select">
+                  <select name="user-role" id="user-role">
+                    <option hidden selected>Select User Role</option>
+                    <option value="User Role 1">User Role 1</option>
+                    <option value="User Role 2">User Role 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="user-status" status="user-status">
+                  <span class="required">*</span>User Status
+                </label>
+                <div class="select">
+                  <select name="user-status" id="user-status">
+                    <option hidden selected>Select User Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- search form -->
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Menu
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="sel-company-name"
+                  ><span class="required">*</span>Company Name</label
+                >
+                <div class="select">
+                  <select name="sel-company-name" id="sel-company-name">
+                    <option value="Select Company Name" hidden>
+                      Select Company Name
+                    </option>
+                    <option value="company-1">Company 1</option>
+                    <option value="company-2">Company 2</option>
+                    <option value="company-3">Company 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="sel-branch-name"
+                  ><span class="required">*</span>Branch Name</label
+                >
+                <div class="select">
+                  <select name="sel-branch-name" id="sel-branch-name">
+                    <option value="Select branch Name" hidden>
+                      Select Branch Name
+                    </option>
+                    <option value="branch-1">Branch 1</option>
+                    <option value="branch-2">Branch 2</option>
+                    <option value="branch-3">Branch 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="department-name"
+                  ><span class="required">*</span>Department Name</label
+                >
+                <div class="select">
+                  <select name="department-name" id="sel-department-name">
+                    <option value="Select department Name" hidden>
+                      Select Department Name
+                    </option>
+                    <option value="department-1">Department 1</option>
+                    <option value="department-2">Department 2</option>
+                    <option value="department-3">Department 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="sel-section"
+                    ><span class="required">*</span>Section</label
+                  >
+                  <div class="select">
+                    <select name="section" id="sel-section">
+                      <option value="Select section Name" hidden>
+                        Select Section
+                      </option>
+                      <option value="section-1">Section 1</option>
+                      <option value="section-2">Section 2</option>
+                      <option value="section-3">Section 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="shift"
+                    ><span class="required">*</span>Shift</label
+                  >
+                  <div class="select">
+                    <select name="shift" id="sel-shift-name">
+                      <option value="Select Shift" hidden>
+                        Select Shift Name
+                      </option>
+                      <option value="shift-1">Shift 1</option>
+                      <option value="shift-2">Shift 2</option>
+                      <option value="shift-3">Shift 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="employee-name"
+                  ><span class="required">*</span>Employee Name</label
+                >
+                <input
+                  type="text"
+                  name="employee-name"
+                  id="employee-name"
+                  placeholder="Employee Name"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="employee-id"
+                  ><span class="required">*</span>Employee Id</label
+                >
+                <input
+                  type="text"
+                  name="employee-id"
+                  id="employee-id"
+                  placeholder="Employee ID"
+                />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Login Account List
+          </h3>
+          <div class="page-indicator">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">></a>
+          </div>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th>User Name</th>
+                  <th>Login Id</th>
+                  <th>User Role</th>
+                  <th class="td-options">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Anything</td>
+                  <td>Anything</td>
+                  <td>Anything</td>
+                  <td class="td-options">
+                    <div>
+                      <a href="./company-info.html" class="company-info"
+                        ><i class="fas fa-pen-square"></i>
+                        <!-- company info url -->
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>
