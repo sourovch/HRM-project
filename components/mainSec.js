@@ -73,7 +73,7 @@ function getTemplet(path) {
           <li>
             <a href="${path}pages/settings/division.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
-              <span>Divition</span>
+              <span>Division</span>
             </a>
           </li>
           <li>
@@ -151,7 +151,7 @@ function getTemplet(path) {
         <a href="#">
           <div class="dd-icon"><i class="fas fa-chevron-down"></i></div>
           <div class="menu-icon"><i class="fas fa-users"></i></div>
-          <span>Humen Resource</span>
+          <span>Human Resource</span>
         </a>
         <ul>
           <li>
