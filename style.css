@@ -418,6 +418,7 @@ body {
 .db-filter .db-filter-form-wrapper div label {
   display: inline !important;
   white-space: nowrap;
+  font-weight: bold;
 }
 
 .db-filter .radio-btn-wrapper {

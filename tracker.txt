@@ -3,6 +3,8 @@ todo:
     new section(in ss) in dashboard.
     search button in dashboard(in ss).
     make all complax tabels(in website).
+    details in every card dashboard.
+    color of redito btn 
 
 
 report:
