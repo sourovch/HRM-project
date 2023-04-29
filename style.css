@@ -447,6 +447,7 @@ body {
   font-size: var(--fs-p);
   color: rgb(var(--color-d), 0.8);
   white-space: nowrap;
+  font-weight: bold;
 }
 
 .db-filter .radio-btn-wrapper label:active {
@@ -641,6 +642,7 @@ body {
 .card label {
   font-size: calc(var(--fs-p) + 0.2rem);
   opacity: 0.8;
+  font-weight: bold;
 }
 
 .table-wrapper,
@@ -984,6 +986,7 @@ body {
 .form-wrapper label {
   display: block;
   padding-bottom: 0.3em;
+  font-weight: bold;
 }
 
 input,
