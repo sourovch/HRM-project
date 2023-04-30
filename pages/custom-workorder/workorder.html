@@ -15,6 +15,79 @@
     <script src="../../script.js" type="module"></script>
   </head>
   <body>
+    <div class="modal-wrapper" id="sales-person-modal">
+      <div class="modal">
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Add Salse Person
+          </h3>
+          <form action="">
+            <div class="form-content-wrapper">
+              <div class="input-wrapper">
+                <label for="sales-person-name">
+                  <span class="required">*</span>Sales Person Name
+                  <input
+                    type="text"
+                    name="sales-person-name"
+                    id="sales-person-name"
+                    placeholder="Sales Person Name"
+                  />
+                </label>
+              </div>
+              <div class="input-wrapper">
+                <label for="designation">
+                  <span class="required">*</span>Designation
+                  <input
+                    type="text"
+                    name="designation"
+                    id="designation"
+                    placeholder="Designation"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="input-wrapper">
+                <label for="sales-person-login-id">
+                  <span class="required">*</span>Sales Person-Login ID
+                  <input
+                    type="text"
+                    name="sales-person-login-id"
+                    id="sales-person-login-id"
+                    placeholder="Sales Person-Login ID"
+                  />
+                </label>
+              </div>
+              <div class="input-wrapper">
+                <label for="sales-person-password">
+                  <span class="required">*</span>Password
+                </label>
+                <input
+                  type="password"
+                  name="sales-person-password"
+                  id="sales-person-password"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button
+                class="btn btn-d"
+                onclick="closeModal(event, 'sales-person-modal')"
+              >
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <main-sec path="../../">
       <div class="content-container">
         <h1 class="main-heading">
@@ -89,7 +162,14 @@
                 </div>
                 <div class="select-wrapper">
                   <label for="sales-person"
-                    ><span class="required">*</span>Sales Person</label
+                    ><span class="required">*</span>Sales Person
+                    <button
+                      class="btn add-btn"
+                      onclick="openModule(event, 'sales-person-modal')"
+                      type="button"
+                    >
+                      +
+                    </button></label
                   >
                   <div class="select">
                     <select name="sales-person" id="sales-person">
@@ -231,6 +311,14 @@
                     placeholder="Remarks"
                   />
                 </div>
+              </div>
+              <div class="form-bottom-sec">
+                <button type="submit" class="btn btn-p">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+                <button class="btn btn-y">
+                  <i class="fas fa-broom"></i> Clear
+                </button>
               </div>
             </div>
             <div class="form-sec">

@@ -15,11 +15,11 @@ body {
 }
 
 :root {
-  --color-p: 79, 169, 210;
+  --color-p: 85, 175, 215;
   --color-p-s: 70, 155, 180;
   --color-s: 245, 246, 250;
-  --color-g: 49, 196, 82;
-  --color-r: 223, 103, 86;
+  --color-g: 55, 204, 92;
+  --color-r: 230, 113, 96;
   --color-d: 52, 65, 80;
   --color-w: 240, 221, 93;
   --color-contrast: 255, 255, 255;
@@ -135,6 +135,7 @@ body {
 
 .add-form.active {
   max-height: 4900px;
+  overflow: visible;
 }
 
 .padding-b-2em {
@@ -483,13 +484,13 @@ body {
   left: 0;
   width: 20px;
   aspect-ratio: 1;
-  background-color: rgb(var(--color-s));
+  background-color: rgb(var(--color-d), 0.3);
   border-radius: 50%;
   transition: 0.3s all ease-out;
 }
 
 .db-filter .radio-container:hover input ~ .checkmark {
-  background-color: rgb(var(--color-d), 0.1);
+  background-color: rgb(var(--color-d), 0.4);
 }
 
 .db-filter .radio-container input:checked ~ .checkmark {
@@ -531,11 +532,20 @@ body {
   margin: 0.5em;
   color: rgb(var(--color-contrast));
   min-height: 140px;
+  position: relative;
+}
+
+.card-s .details,
+.card-t .details {
+  color: rgb(var(--color-contrast));
+  font-size: calc(var(--fs-p) + 0.3em);
+  position: absolute;
+  top: 10px;
+  right: 12px;
 }
 
 .card-p {
   background-color: rgb(var(--color-p));
-  position: relative;
 }
 
 .card-p .count {
@@ -649,7 +659,7 @@ body {
 .form-wrapper {
   background-color: rgb(var(--color-contrast));
   border-radius: 9px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .table-wrapper {
@@ -676,6 +686,7 @@ body {
 .form-heading {
   background-color: rgb(var(--color-p));
   color: rgb(var(--color-contrast));
+  border-radius: 9px;
 }
 
 .table-wrapper table {
@@ -924,6 +935,10 @@ body {
 
 .form-wrapper select[multiple] {
   height: 2.3rem;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 .form-wrapper select[multiple] option {
@@ -933,6 +948,59 @@ body {
 
 .form-wrapper select::-ms-expand {
   display: none;
+}
+
+.select-wrapper .selected-list {
+  background-color: rgb(var(--color-contrast));
+  padding: 0.5em;
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  align-items: center;
+  width: 100%;
+}
+
+.select-wrapper .selected-list > div {
+  background-color: rgb(var(--color-d), 0.3);
+  padding: 0.3em 0.5em;
+  border-radius: 0.3em;
+  font-size: var(--fs-p);
+  z-index: 1;
+  color: rgb(var(--color-d));
+}
+
+.select-wrapper .selected-list > div:hover {
+  background-color: rgb(var(--color-d), 0.4);
+}
+
+.select-wrapper .selected-list > div:first-child {
+  pointer-events: none;
+  color: gray;
+}
+
+.select-dropdown {
+  display: none;
+  background-color: rgb(var(--color-contrast));
+  box-shadow: 0 1px 5px 1px lightgrey;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.select-dropdown.active {
+  display: block;
+}
+
+.select-dropdown > div {
+  padding: 5px;
+}
+
+.select-dropdown > div:hover {
+  background-color: rgb(var(--color-p));
 }
 
 .form-wrapper .select {
@@ -1131,7 +1199,7 @@ input[type="file"] {
   background-color: rgb(var(--color-d), 0.1);
 }
 
-.salary-print-btn {
+.middle-print-btn {
   margin: auto;
   margin-bottom: 0.8em;
 }
@@ -1174,17 +1242,87 @@ input[type="file"] {
   place-content: center;
   border: 1px solid rgb(var(--color-p));
   color: rgb(var(--color-p));
-  font-size: calc(var(--fs-p) + .2em);
+  font-size: calc(var(--fs-p) + 0.2em);
   font-weight: bold;
   aspect-ratio: 1;
   text-decoration: none;
-  transition: .3s all ease-out;
+  transition: 0.3s all ease-out;
   margin-left: -1px;
 }
 
-.page-indicator> *:hover {
+.page-indicator > *:hover {
   background-color: rgb(var(--color-p));
   color: rgb(var(--color-contrast));
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex.align-c {
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.table-top-img-wrapper {
+  height: 150px;
+  margin: 0.3em;
+  margin-right: 0;
+  margin-left: 0.7em;
+}
+
+.table-top-img-wrapper > img {
+  height: 100%;
+}
+
+.table-top-bar-wrapper > div:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.modal-wrapper .modal {
+  position: absolute;
+  width: 95%;
+  max-width: 500px;
+  padding: 1em;
+  border-radius: 9px;
+  background-color: rgb(var(--color-contrast));
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 5vh;
+  z-index: 111;
+  transform: translateY(-200%);
+  transition: all .5s ease;
+}
+
+.modal-wrapper.active .modal {
+  transform: translateY(0);
+}
+
+.modal-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(var(--color-d), 0.3);
+  inset: 0;
+  margin: auto;
+  z-index: 11;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s ease;
+}
+
+.modal-wrapper.active::after {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-wrapper .form-heading {
+  margin-bottom: .5em;
 }
 
 @media screen and (max-width: 980px) {
@@ -1209,7 +1347,8 @@ input[type="file"] {
 }
 
 @media screen and (max-width: 700px) {
-  .form-wrapper .form-content-wrapper {
+  .form-wrapper .form-content-wrapper,
+  .d-flex {
     flex-direction: column;
   }
 

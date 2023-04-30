@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Employee</title>
+    <title>Employee Loan Status</title>
     <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
@@ -17,11 +17,10 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">
-          Employee<button class="btn add-btn" id="add-btn">+</button>
-        </h1>
+        <h1 class="main-heading">Employee Loan Status</h1>
         <!-- add form -->
-        <div class="form-wrapper add-form" id="add-form">
+        <!-- <button class="btn add-btn" id="add-btn">+</button> -->
+        <!-- <div class="form-wrapper add-form" id="add-form">
           <h3 class="form-heading">
             <i class="fas fa-pen-square"></i> New Customer
           </h3>
@@ -735,11 +734,11 @@
               </button>
             </div>
           </form>
-        </div>
+        </div> -->
         <!-- search form -->
         <div class="form-wrapper">
           <h3 class="form-heading">
-            <i class="fas fa-pen-square"></i> Search Menu
+            <i class="fas fa-pen-square"></i> Search Employee Loan Status
           </h3>
           <form>
             <div class="form-content-wrapper-grid">
@@ -776,76 +775,43 @@
                 </div>
               </div>
               <div class="select-wrapper">
-                <label for="department-name"
-                  ><span class="required">*</span>Department Name</label
+                <label for="fiscal year"
+                  ><span class="required">*</span>fiscal year</label
                 >
                 <div class="select">
-                  <select name="department-name" id="sel-department-name">
-                    <option value="Select department Name" hidden>
-                      Select Department Name
+                  <select name="fiscal year" id="sel-fiscal year">
+                    <option value="Select fiscal year" hidden>
+                      Select fiscal year
                     </option>
-                    <option value="department-1">Department 1</option>
-                    <option value="department-2">Department 2</option>
-                    <option value="department-3">Department 3</option>
+                    <option value="fiscal year-1">fiscal year 1</option>
+                    <option value="fiscal year-2">fiscal year 2</option>
+                    <option value="fiscal year-3">fiscal year 3</option>
                   </select>
                   <span class="focus"></span>
                 </div>
               </div>
-              <div class="form-content-wrapper">
-                <div class="select-wrapper">
-                  <label for="sel-section"
-                    ><span class="required">*</span>Section</label
-                  >
-                  <div class="select">
-                    <select name="section" id="sel-section">
-                      <option value="Select section Name" hidden>
-                        Select Section
-                      </option>
-                      <option value="section-1">Section 1</option>
-                      <option value="section-2">Section 2</option>
-                      <option value="section-3">Section 3</option>
-                    </select>
-                    <span class="focus"></span>
-                  </div>
+              <div class="select-wrapper">
+                <label for="month"><span class="required">*</span>Month</label>
+                <div class="select">
+                  <select name="month" id="sel-month-name">
+                    <option value="Select month" hidden>
+                      Select Month Name
+                    </option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">july</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                  </select>
+                  <span class="focus"></span>
                 </div>
-                <div class="select-wrapper">
-                  <label for="shift"
-                    ><span class="required">*</span>Shift</label
-                  >
-                  <div class="select">
-                    <select name="shift" id="sel-shift-name">
-                      <option value="Select Shift" hidden>
-                        Select Shift Name
-                      </option>
-                      <option value="shift-1">Shift 1</option>
-                      <option value="shift-2">Shift 2</option>
-                      <option value="shift-3">Shift 3</option>
-                    </select>
-                    <span class="focus"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="input-wrapper">
-                <label for="employee-name"
-                  ><span class="required">*</span>Employee Name</label
-                >
-                <input
-                  type="text"
-                  name="employee-name"
-                  id="employee-name"
-                  placeholder="Employee Name"
-                />
-              </div>
-              <div class="input-wrapper">
-                <label for="employee-id"
-                  ><span class="required">*</span>Employee Id</label
-                >
-                <input
-                  type="text"
-                  name="employee-id"
-                  id="employee-id"
-                  placeholder="Employee ID"
-                />
               </div>
             </div>
             <div class="form-bottom-sec">
@@ -867,106 +833,26 @@
               <thead>
                 <tr>
                   <th>SL</th>
-                  <th>Company Details</th>
                   <th>Employee Details</th>
-                  <th>Contact Details</th>
-                  <th>Fixed Payble</th>
-                  <th>Gross Salary</th>
-                  <th>Gross Deducation</th>
-                  <th>Net Salary</th>
-                  <th class="td-options">Options</th>
+                  <th>Loan Amount</th>
+                  <th>Installment Paid</th>
+                  <th>Installment Amount</th>
+                  <th>Due Amount</th>
+                  <th>Remarks</th>
                 </tr>
               </thead>
               <tbody>
-                <tr --data-active="true">
+                <tr>
                   <td>1.</td>
                   <td>
-                    <div>My Group,</div>
-                    <div>Head Office(L)</div>
-                  </td>
-                  <td>
-                    <div>
-                      <img src="../../recorces/images/no-avatar.png" alt="" />
-                    </div>
                     <div>A.K.M Hassan Kabir, Emp</div>
-                    <div>Id: 100292009</div>
-                    <div>ERP: 202000303</div>
+                    <div>Somethig</div>
                   </td>
-                  <td>
-                    <div>N/A</div>
-                    <div><i class="fas fa-user"></i> 001993002</div>
-                    <div><i class="fas fa-mobile"></i> 93938439</div>
-                    <div>MBA</div>
-                  </td>
-                  <td>45700</td>
-                  <td>58800</td>
-                  <td>1509</td>
-                  <td>102991</td>
-                  <td class="td-options">
-                    <div>
-                      <a href="./company-info.html" class="company-info"
-                        ><i class="fas fa-pen-square"></i>
-                        <!-- company info url -->
-                      </a>
-                    </div>
-                    <div>
-                      <a href="./company-info.html" class="btn btn-s td-option"
-                        ><i class="fas fa-id-card-alt"></i> Profile
-                        <!-- company info url -->
-                      </a>
-                    </div>
-                    <div>
-                      <a href="./company-info.html" class="btn btn-y td-option"
-                        ><i class="fas fa-sign-out-alt"></i> Leave
-                        <!-- company info url -->
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr --data-active="false">
-                  <td>2.</td>
-                  <td>
-                    <div>My Group,</div>
-                    <div>Head Office(L)</div>
-                  </td>
-                  <td>
-                    <div>
-                      <img src="../../recorces/images/no-avatar.png" alt="" />
-                    </div>
-                    <div>A.K.M Hassan Kabir, Emp</div>
-                    <div>Id: 100292009</div>
-                    <div>ERP: 202000303</div>
-                  </td>
-                  <td>
-                    <div>N/A</div>
-                    <div><i class="fas fa-user"></i> 001993002</div>
-                    <div><i class="fas fa-mobile"></i> 93938439</div>
-                    <div>MBA</div>
-                  </td>
-                  <td>45700</td>
-                  <td>58800</td>
-                  <td>1509</td>
-                  <td>102991</td>
-                  <td class="td-options">
-                    <div>
-                      <a href="./company-info.html" class="company-info"
-                        ><i class="fas fa-pen-square"></i>
-                        <!-- company info url -->
-                      </a>
-                    </div>
-                    <div>
-                      <a href="./company-info.html" class="btn btn-s td-option"
-                        ><i class="fas fa-id-card-alt"></i> Profile
-                        <!-- company info url -->
-                      </a>
-                    </div>
-                    <div>
-                      <a href="./company-info.html" class="btn btn-y td-option"
-                        ><i class="fas fa-sign-out-alt"></i> Leave
-                        <!-- company info url -->
-                      </a>
-                    </div>
-                  </td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>Somthing</td>
                 </tr>
               </tbody>
             </table>

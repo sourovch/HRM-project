@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Profile</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Employee Profile</h1>
+        <button class="btn btn-p middle-print-btn" onclick="print(event)">
+          <i class="fas fa-print"></i> Print
+        </button>
+        <div class="table-wrapper" id="print">
+          <h3 class="table-heading"><i class="fas fa-user"></i> User</h3>
+          <div class="table-top-bar-wrapper">
+            <h1>Employee Profile</h1>
+            <h2>Personal Information</h2>
+            <div class="d-flex align-c">
+              <div class="table-top-img-wrapper">
+                <img src="./recorces/images/no-avatar.png" alt="no-avatar" />
+              </div>
+              <div class="flex-1">
+                <div class="table-top-bar">
+                  <div>ERP ID: <span id="erp-id">A000041</span></div>
+                  <div>
+                    Employee Name(Bng):
+                    <span id="employee-name(bn)">MD. ABC</span>
+                  </div>
+                  <div>Blood Group: <span id="blood-group">B+</span></div>
+                </div>
+                <div class="table-top-bar">
+                  <div>Employee Id: <span id="employee-id">3349433</span></div>
+                  <div>
+                    Employee Name(Eng):
+                    <span id="employee-name(en)">Abdul Quddus</span>
+                  </div>
+                  <div>
+                    Nationality <span id="nagionality">Bangladesi</span>
+                  </div>
+                </div>
+                <div class="table-top-bar">
+                  <div>
+                    Joining Date: <span id="joining-date">01-03-2000</span>
+                  </div>
+                  <div>Dath of Birth: <span id="dob">02-03-2000</span></div>
+                  <div>Religion: <span id="religion-name">Islam</span></div>
+                </div>
+                <div class="table-top-bar">
+                  <div>
+                    Contack NO.: <span id="contact-no">01984759488</span>
+                  </div>
+                  <div>Gender: <span id="gender">Male</span></div>
+                  <div>
+                    Marital Status: <span id="marital-status">Married</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="table-top-bar">
+                <div>Pre Address: <span id="pre-address">Dhaka</span></div>
+              </div>
+              <div class="table-top-bar">
+                <div>Per Address: <span id="par-address">Dhaka</span></div>
+              </div>
+              <div class="table-top-bar">
+                <div>Father's Name: <span id="father-naem">N/A</span></div>
+                <div>Mother's Name: <span id="mother-naem">N/A</span></div>
+                <div>Spouse's Name: <span id="spouse-naem">N/A</span></div>
+              </div>
+              <div class="table-top-bar">
+                <div>Phone: <span id="phone">01938848855</span></div>
+                <div>Mobile: <span id="mobile">993849383</span></div>
+                <div>Email: <span id="email">Somthing@gmail.com</span></div>
+              </div>
+              <div class="table-top-bar">
+                <div>Qualification: <span id="qualification">MBA</span></div>
+                <div>
+                  Extra Qualification: <span id="extra-qualification"></span>
+                </div>
+              </div>
+            </div>
+            <h2>Appointment Information</h2>
+            <div>
+              <div class="table-top-bar">
+                <div>
+                  Institute Name: <span id="institute-name">LIRA Group</span>
+                </div>
+                <div>
+                  Branch Name: <span id="branch-name">Head Office</span>
+                </div>
+                <div>
+                  Appointment Type: <span id="appointment-type">Full-Time</span>
+                </div>
+              </div>
+              <div class="table-top-bar">
+                <div>
+                  Appointment Date:
+                  <span id="appointment-date">01-03-2000</span>
+                </div>
+                <div>Designation: <span id="designation">DGM(dept.)</span></div>
+                <div>Weekend: <span id="weekend">Friday</span></div>
+              </div>
+              <div class="table-top-bar">
+                <div>Login ID: <span id="login-id">Somthing</span></div>
+                <div>Password: <span id="password">Somthing</span></div>
+                <div>Status: <span id="status">Inactive</span></div>
+              </div>
+            </div>
+            <h2>Salary Structure</h2>
+            <div>
+              <div class="table-top-bar">
+                <div>Cash Salary: <span id="cash-salary">9333</span></div>
+                <div>
+                  T&T Allowance:
+                  <span id="t&t-allowance">3344</span>
+                </div>
+                <div>Other Payble <span id="others-payble">3844</span></div>
+              </div>
+              <div class="table-top-bar">
+                <div>
+                  Total Fixed Payble: <span id="total-fixed-payble">0</span>
+                </div>
+              </div>
+              <div class="table-top-bar">
+                <div>Basic Salary: <span id="basic-salary">38440</span></div>
+                <div>
+                  Houserent Allowance:
+                  <span id="houserent-allowance">3844</span>
+                </div>
+                <div>
+                  Medical Allowance: <span id="medical-allowance">3844</span>
+                </div>
+              </div>
+              <div class="table-top-bar">
+                <div>
+                  Conveyanc Allowance:
+                  <span id="conveyanc-allowance">3399</span>
+                </div>
+                <div>Fastival Bonus: <span id="fastival-bonus">9333</span></div>
+                <div>
+                  Others Allowance <span id="others-allowance">0</span>
+                </div>
+              </div>
+              <div class="table-top-bar">
+                <div>Gross Salary: <span id="gross-salary">8894</span></div>
+              </div>
+              <div class="table-top-bar">
+                <div>Provident Fund: <span id="provident-fund">0</span></div>
+                <div>Income Tax: <span id="income-tax">0</span></div>
+                <div>Loan & Advance: <span id="loan&advance">0</span></div>
+              </div>
+              <div class="table-top-bar">
+                <div>Gross Deducation: <span id="gross-deducation">0</span></div>
+                <div>Net Salary: <span id="net-salary">88475</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

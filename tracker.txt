@@ -3,8 +3,6 @@ todo:
     new section(in ss) in dashboard.
     search button in dashboard(in ss).
     make all complax tabels(in website).
-    details in every card dashboard.
-    color of redito btn 
 
 
 report:
@@ -18,3 +16,14 @@ hint:
 
 refs:
     inline option buttons settings/project.
+
+
+cash salary sheet fixd payble 0 pf 0(d)
+total salary total(ss)(d)
+details in every card dashboard.(d)
+color of redito btn(d)
+malti select fix(d)
+new page(email)
+sub under parant form(d)
+employee: loan head mapping (slelect)(d)
+complete branches(d)
