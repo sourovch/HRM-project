@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Leave Status</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Employee Leave Status</h1>
+        <button class="btn btn-p middle-print-btn" onclick="print(event)">
+          <i class="fas fa-print"></i> Print
+        </button>
+        <div class="table-wrapper" id="print">
+          <h3 class="table-heading"><i class="fas fa-file"></i> Leave</h3>
+          <h2 class="fancy-heading">Employee Personal Information</h2>
+          <div class="d-flex">
+            <div class="table-top-info flex-1">
+              <div class="info-wrapper">
+                <div class="info-key">Employee Name</div>
+                <div>Mir Moshfeq Us Saleheen</div>
+              </div>
+              <div class="info-wrapper">
+                <div class="info-key">Designation</div>
+                <div>DGM(Corp. sales & Mktg.)</div>
+              </div>
+              <div class="info-wrapper">
+                <div class="info-key">Department</div>
+                <div>Account & Finance</div>
+              </div>
+              <div class="info-wrapper">
+                <div class="info-key">Joining Date</div>
+                <div>-1-02-2009</div>
+              </div>
+            </div>
+            <div class="flex-1 d-flex-nw align-c">
+              <a href="#" class="image-link border">
+                <img src="./recorces/images/create-document-icon.png" alt="" />
+              </a>
+              <a href="#" class="image-link border">
+                <img src="./recorces/images/search-document-icon.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <h2 class="fancy-heading">Leave Position</h2>
+          <div class="table-resp-wrapper">
+            <table class="fancy-table">
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th>Type Of Leave</th>
+                  <th>Total Leave</th>
+                  <th>Leave Availed</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Earned</td>
+                  <td>18</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2" class="txt-bold td-middle">Total</td>
+                  <td class="te-left">18</td>
+                  <td class="te-left">0</td>
+                  <td class="te-left">0</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

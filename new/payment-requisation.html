@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Requisation</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Payment Requisation</h1>
+        <button class="btn btn-p middle-print-btn" onclick="print(event)">
+            <i class="fas fa-print"></i> Print
+          </button>
+        <div class="table-wrapper">
+          <h3 class="table-heading"><i class="fas fa-list"></i></h3>
+          <div id="print">
+            <h1 class="big-heading">Payment Requisation(Approval Sheet)</h1>
+            <div class="table-sec">
+              <div class="table-sec-label">1. Workorder</div>
+              <div class="table-resp-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: auto">Workorder No.</th>
+                      <th>Workorder Date</th>
+                      <th style="width: 30%">End Customer</th>
+                      <th>Workorder Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2034</td>
+                      <td>01 Nov 2021</td>
+                      <td>bKash Ltd</td>
+                      <td>66768.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table-sec">
+              <div class="table-sec-label">2. Purchase Order(PO)</div>
+              <div class="table-resp-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 21%">Customer PO No.</th>
+                      <th>PO Date</th>
+                      <th style="width: 30%">PO Amount</th>
+                      <th>Vat%</th>
+                      <th>AIT%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>JFJNIE20383</td>
+                      <td>01 Nov 2021</td>
+                      <td>66768.00</td>
+                      <td>7.50%</td>
+                      <td>3.50%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table-sec">
+              <div class="table-sec-label">2. Purchase Order(PO)</div>
+              <div class="table-resp-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 21%" rowspan="2 ">
+                        Local Importer Name
+                      </th>
+                      <th rowspan="2" style="width: 22.5%">OEM</th>
+                      <th style="width: 30%" rowspan="2">Distributor</th>
+                      <th colspan="2" class="td-middle">Value USD</th>
+                      <th rowspan="2">Total Value</th>
+                    </tr>
+                    <tr>
+                      <th>Product</th>
+                      <th>Charge</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Shakil Electronics And Computers</td>
+                      <td>McAfee License</td>
+                      <td>Distributor Compan</td>
+                      <td>61994.00</td>
+                      <td>5000</td>
+                      <td>66994</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table-resp-wrapper">
+              <table class="fancy-table">
+                <thead>
+                  <tr>
+                    <th>SL</th>
+                    <th style="width: 30%">Product Description</th>
+                    <th>product SKU</th>
+                    <th>Remarks</th>
+                    <th>Validity</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th class="td-middle">Total Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+                    <td>ProductPlus Busnines Software</td>
+                    <td>EETU-WUUE-WKD</td>
+                    <td></td>
+                    <td>1 Year</td>
+                    <td>10pcs</td>
+                    <td>340</td>
+                    <td class="td-middle">3400</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="8" class="text-bold te-left">
+                      In Word:
+                      <span id="amount-in-word"
+                        >Three Thousand Five Hundred And Fifty USD Only</span
+                      >
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="table-sec">
+              <div class="table-sec-label">2. Purchase Order(PO)</div>
+              <div class="table-resp-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: auto">Bank Name</th>
+                      <th>Cheque Name</th>
+                      <th>Cheque Date</th>
+                      <th>Cheque Amount</th>
+                      <th>Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table-bottom-bar">
+              <div>
+                Prepared By:
+                <div>
+                  ......................................................<br />
+                  Signature & Sign
+                </div>
+              </div>
+              <div style="text-align: end">
+                Checked By
+                <div>
+                  ......................................................<br />
+                  Signature & Sign
+                </div>
+              </div>
+              <div style="text-align: end">
+                Approved By:
+                <div>
+                  ......................................................<br />
+                  Signature & Sign
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

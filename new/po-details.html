@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distributor PO Details</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Distributor PO</h1>
+        <button class="btn btn-p middle-print-btn" onclick="print(event)">
+          <i class="fas fa-print"></i> Print
+        </button>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Distri Po Details
+          </h3>
+          <div id="print">
+            <h1 class="big-heading">PURCHASE ORDER</h1>
+            <div class="table-top-info">
+              <div class="info-wrapper">
+                <div class="info-key">PO NO</div>
+                <div>NHJFURQRU</div>
+                <div class="right d-flex">
+                  <div class="info-key">PO Date:</div>
+                  <div>01-22-2001</div>
+                </div>
+              </div>
+              <div class="info-wrapper">
+                <div class="info-key">To</div>
+                <div>Some Company Name Pvt. Ltd.</div>
+              </div>
+              <div class="info-wrapper">
+                <div class="info-key">Attention</div>
+                <div>Somone's Name</div>
+              </div>
+              <div class="info-wrapper">
+                <div class="info-key">Subject</div>
+                <div>Subject Of Purchase.</div>
+              </div>
+              <div class="info-text">
+                <p>
+                  Dear Sir, <br />
+                  We are pleased to place you the following purchase order.
+                </p>
+              </div>
+            </div>
+            <div class="table-resp-wrapper">
+              <table class="fancy-table">
+                <thead>
+                  <tr>
+                    <th>SL</th>
+                    <th style="width: 30%">Product Description</th>
+                    <th>product SKU</th>
+                    <th>Remarks</th>
+                    <th>Validity</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th class="td-middle">Total Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+                    <td>ProductPlus Busnines Software</td>
+                    <td>EETU-WUUE-WKD</td>
+                    <td></td>
+                    <td>1 Year</td>
+                    <td>10pcs</td>
+                    <td>340</td>
+                    <td class="td-middle">3400</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="7" class="txt-bold">Total Amount</td>
+                    <td class="td-middle">3400</td>
+                  </tr>
+                  <tr>
+                    <td colspan="7" class="txt-bold">Add Vat Amount(7.50%):</td>
+                    <td class="td-middle">100</td>
+                  </tr>
+                  <tr>
+                    <td colspan="7" class="txt-bold">Grand Total Amount</td>
+                    <td class="td-middle">3500</td>
+                  </tr>
+                  <tr>
+                    <td colspan="7" class="txt-bold">Add AIT Amount(3.50%)</td>
+                    <td class="td-middle">50</td>
+                  </tr>
+                  <tr>
+                    <td colspan="7" class="txt-bold">Net Recivable Amount</td>
+                    <td class="td-middle">3550</td>
+                  </tr>
+                  <tr>
+                    <td colspan="8" class="text-bold te-left">
+                      In Word:
+                      <span id="amount-in-word"
+                        >Three Thousand Five Hundred And Fifty USD Only</span
+                      >
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+              <div class="table-top-info">
+                <div class="info-wrapper d-block">
+                  <div class="info-key">End User Info:</div>
+                  <div class="mt-1">
+                    <div class="text-bold">bKash Limited</div>
+                    <div>
+                      Shadhinta Tower,1,Bir Shresta Shaheed Jahanngir Gate
+                      Cantonment,Dhaka 1206, Bangladesh
+                    </div>
+                    <div>
+                      Telephone: <span id="eu-telephone">88028333939</span>
+                    </div>
+                    <div>
+                      Contact Person: <span id="contact-person">Someone</span>
+                    </div>
+                    <div>Email: <span id="eu-email">someone@xyz.com</span></div>
+                  </div>
+                </div>
+                <div class="info-wrapper">
+                  <div class="info-key">Delivery To:</div>
+                  <div>
+                    <div>
+                      Head Office:
+                      <span id="head-office">Head Office Name Hare</span>
+                    </div>
+                    <div>
+                      <span id="dt-address"
+                        >House #9, Road #4, Block-D, Somewhere-2828,
+                        Bangladesh</span
+                      >
+                    </div>
+                    <div>Tel: <span id="dt-telephone">998585599</span></div>
+                    <div>Fax: <span id="dt-fax">99398449</span></div>
+                    <div>Email: <span id="dt-email">someone@xyz.com</span></div>
+                  </div>
+                </div>
+                <div class="info-wrapper">
+                  <div class="info-key">Ship To:</div>
+                  <div>
+                    <div><span id="st-address">Some Address</span></div>
+                  </div>
+                </div>
+                <div class="info-wrapper">
+                  <div class="info-key">Bill To:</div>
+                  <div>
+                    <div><span id="bt-address">Some Address</span></div>
+                  </div>
+                </div>
+                <div class="info-wrapper">
+                  <div class="info-key">Payment Method:</div>
+                  <div>
+                    <div><span id="pay-method">Cash</span></div>
+                  </div>
+                </div>
+                <div class="info-wrapper">
+                  <div class="info-key">Payment Terms:</div>
+                  <div>
+                    <div><span id="pay-terms">100% Cash On Delivery</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-bottom-bar">
+              <div>
+                On Behalf of <span id="group">LIRA Group</span>
+                <div>
+                  ......................................................<br />
+                  Signature & Sign
+                </div>
+              </div>
+              <div style="text-align: end">
+                On Behalf of
+                <span id="client">Some Company Name Pvt. Ltd.</span>
+                <div>
+                  ......................................................<br />
+                  Signature & Sign
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

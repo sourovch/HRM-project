@@ -4,14 +4,17 @@ customElements.define("main-sec", MainSec);
 
 window.openModule = (e, id) => {
   e.preventDefault();
+  document.documentElement.style.overflowY = 'hidden';
 
   const modal = document.getElementById(id);
 
-  modal.classList.toggle("active");
+  modal.classList.add("active");
 }
 
 window.closeModal = (e, id) => {
   e.preventDefault();
+
+  document.documentElement.style.overflowY = 'visible';
 
   const modal = document.getElementById(id);
 
