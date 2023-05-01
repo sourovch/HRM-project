@@ -663,8 +663,8 @@ body {
 }
 
 .table-wrapper {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: .5vw;
+  padding-right: .5vw;
   padding-bottom: 1em;
 }
 
