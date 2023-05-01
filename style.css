@@ -1281,7 +1281,7 @@ input[type="file"] {
 }
 
 .modal-wrapper .modal {
-  position: absolute;
+  position: fixed;
   width: 95%;
   max-width: 500px;
   padding: 1em;
@@ -1302,7 +1302,7 @@ input[type="file"] {
 
 .modal-wrapper::after {
   content: "";
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgb(var(--color-d), 0.3);
