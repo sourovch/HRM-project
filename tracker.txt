@@ -26,4 +26,9 @@ malti select fix(d)
 sub under parant form(d)
 employee: loan head mapping (slelect)(d)
 complete branches(d)
-new page(email)
+new page(email)(d)
+    /new/employee-leave.html
+    /new/employee-loan-status.html
+    /new/employee-profile.html
+    /new/payment-requisation.html
+    /new/po-details.html
