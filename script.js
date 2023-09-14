@@ -1,25 +1,24 @@
 import { MainSec } from "./components/mainSec.js";
 customElements.define("main-sec", MainSec);
 
-
 window.openModule = (e, id) => {
   e.preventDefault();
-  document.documentElement.style.overflowY = 'hidden';
+  document.documentElement.style.overflowY = "hidden";
 
   const modal = document.getElementById(id);
 
   modal.classList.add("active");
-}
+};
 
 window.closeModal = (e, id) => {
   e.preventDefault();
 
-  document.documentElement.style.overflowY = 'visible';
+  document.documentElement.style.overflowY = "visible";
 
   const modal = document.getElementById(id);
 
   modal.classList.remove("active");
-}
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   const dd = document.querySelectorAll(".dropdown");
@@ -29,6 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
   const fileSelector = document.querySelectorAll(
     ".form-wrapper input[type='file']"
+  );
+  const textInputs = document.querySelectorAll(
+    ".form-wrapper input[type='text']"
   );
   const addBtn = document.getElementById("add-btn");
   const addForm = document.getElementById("add-form");
@@ -92,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     populate(selectedCont, selectData.selected);
     populate(selectDD, selectData.notSelected);
 
-    multiSelect.onclick = () => {
+    multiSelect.onclick = (e) => {
       selectDD.classList.toggle("active");
     };
 
@@ -139,4 +141,76 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     }
   });
+
+  // text suggestions
+  textInputs.forEach((textInput) => {
+    const inputSagDD = textInput.parentElement.querySelector(
+      ".input-suggestions-dd"
+    );
+
+    if (!inputSagDD) return;
+
+    const inputSags = inputSagDD?.querySelectorAll(".input-suggestion");
+    const searchArr = [];
+
+    inputSags?.forEach((sag) => searchArr.push(sag.innerText));
+
+    setSuggestions(textInput, inputSagDD, searchArr);
+  });
+
+  function setSuggestions(inp, dd, arr) {
+    let activeSagIndex = -1;
+
+    inp.addEventListener("input", (e) => {
+      const inputText = inp.value;
+
+      dd.innerHTML = "";
+      const matches = getMatch(inputText, arr);
+
+      matches.forEach((match) => {
+        const div = document.createElement("div");
+        div.classList.add("input-suggestion");
+        div.innerText = match;
+
+        dd.appendChild(div);
+      });
+    });
+
+    inp.addEventListener("keydown", (e) => {
+      if (![40, 38, 13].includes(e.keyCode)) return;
+
+      const sagElms = dd.children;
+
+      if (e.keyCode === 40)
+        activeSagIndex = limitInc(-1, activeSagIndex + 1, sagElms.length - 1);
+      if (e.keyCode === 38)
+        activeSagIndex = limitInc(-1, activeSagIndex - 1, sagElms.length - 1);
+
+      const activeSagElm = sagElms[activeSagIndex];
+
+      if (e.keyCode === 13) {
+        e.preventDefault();
+        inp.value = activeSagElm.innerText;
+      }
+
+      for (let sagElm of sagElms) {
+        sagElm.classList.remove("active");
+      }
+      activeSagElm?.classList.add("active");
+    });
+  }
+
+  function getMatch(text, arr) {
+    const matchArr = [];
+    arr.forEach((item) => {
+      if (item.includes(text)) matchArr.push(item);
+    });
+    return matchArr;
+  }
+
+  function limitInc(min, value, max) {
+    if (value < min) return min;
+    if (value > max) return max;
+    return value;
+  }
 });

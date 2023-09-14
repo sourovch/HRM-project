@@ -1,20 +1,21 @@
 print info:
-    - Add print() in any button to print page.
-    - Add print id to the section element you want to change.
+    - Add onClick='print(event)' in any button to print page.
+    - Add id="print" to the section element you want to print.
 
 about changing id and class:
     - you can change any id inside form-wrapper class.
-    - changing any class will cause unexpectd style.
+    - changing any class will cause unexpectd stylings.
 
 about adding options in select element and row in tables:
     - All demos are given as refarance.
 
-about changing hrefs of navbar(changing to slugs from html file links):
+about changing hrefs of navbar items(changing to slugs from html file links):
     - you can find all code of navbar in components/mainSec.js.
     - change hrefs of a tags under lists.
 
 other:
-    - "info-cont" can be used as Error message container or success massage container 
+    - "info-cont"(type of the container can be change to error or info by adding an extra class of 'info' or 'error') can be used as Error message container or success massage container 
       it will only show if it has "active" class(ref: pages/user.html)
     - a div with page-indicator class will make a page indicator you can add any amount
-      of a tag or buttons inside this div corrasponding to how many pages of datayou have.(ref: pages/user.html)
+      of a tag or buttons inside this div corrasponding to how many pages of data you have.(ref: pages/user.html)
+    - you can add text suggestions with text type textboxs(ref: new/finish-product-list.html line: 47-53)

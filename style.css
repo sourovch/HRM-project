@@ -663,8 +663,8 @@ body {
 }
 
 .table-wrapper {
-  padding-left: .5vw;
-  padding-right: .5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
   padding-bottom: 1em;
 }
 
@@ -731,6 +731,14 @@ body {
   text-align: center;
 }
 
+.table-wrapper .td-right {
+  text-align: right;
+}
+
+.table-wrapper .td-left {
+  text-align: left;
+}
+
 .table-wrapper .td-options-group {
   display: flex;
   gap: 0.2em;
@@ -792,10 +800,10 @@ body {
 }
 
 .table-wrapper .fancy-heading {
-  font-size: calc(var(--fs-p) + .7em);
+  font-size: calc(var(--fs-p) + 0.7em);
   background-color: rgb(var(--color-p-s));
   color: rgb(var(--color-contrast));
-  padding: 0.3em .5em;
+  padding: 0.3em 0.5em;
   margin-bottom: 0.3em;
 }
 
@@ -830,6 +838,12 @@ body {
   justify-content: center;
   text-align: center;
   gap: 5px;
+}
+
+.table-wrapper .table-top-bar.h-group .lim-w {
+  white-space: normal;
+  max-width: 400px;
+  margin: auto;
 }
 
 .table-wrapper .table-top-bar .color-marks {
@@ -916,6 +930,10 @@ body {
   width: 100%;
 }
 
+.form-wrapper .input-wrapper {
+  position: relative;
+}
+
 .form-wrapper select {
   appearance: none;
   background-color: transparent;
@@ -978,7 +996,8 @@ body {
   color: gray;
 }
 
-.select-dropdown {
+.select-dropdown,
+.input-suggestions-dd {
   display: none;
   background-color: rgb(var(--color-contrast));
   box-shadow: 0 1px 5px 1px lightgrey;
@@ -988,8 +1007,27 @@ body {
   z-index: 1;
 }
 
+.input-suggestions-dd {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
 .select-dropdown.active {
   display: block;
+}
+
+input[type="text"]:focus ~ .input-suggestions-dd {
+  display: block;
+}
+
+.input-suggestion {
+  padding: 0.3em 0.5em;
+}
+
+.input-suggestion:hover,
+.input-suggestion.active {
+  background-color: rgb(var(--color-p));
+  color: rgb(var(--color-contrast));
 }
 
 .select-dropdown > div {
@@ -1375,9 +1413,9 @@ input[type="file"] {
 
 .image-link {
   display: inline-block;
-  margin: .5em;
+  margin: 0.5em;
   max-width: 100%;
-  transition: .2s all ease;
+  transition: 0.2s all ease;
 }
 
 .image-link:hover {
@@ -1412,6 +1450,11 @@ input[type="file"] {
 
 .d-flex-nw {
   display: flex;
+}
+
+.table-link {
+  color: rgb(var(--color-r));
+  font-weight: bold;
 }
 
 @media screen and (max-width: 980px) {
