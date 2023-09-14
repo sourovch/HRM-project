@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batch Product</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Batch Product</h1>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Batch Product
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="input-wrapper">
+                <label for="bp-from"><span class="required">*</span>From</label>
+                <input type="date" name="bp-from" id="bp-from" />
+              </div>
+              <div class="input-wrapper">
+                <label for="bp-to"><span class="required">*</span>To</label>
+                <input type="date" name="bp-to" id="bp-to" />
+              </div>
+              <div class="select-wrapper">
+                <label for="machine"
+                  ><span class="required">*</span>machine</label
+                >
+                <div class="select">
+                  <select name="machine" id="machine">
+                    <option value="select machine" hidden>
+                      Select machine
+                    </option>
+                    <option value="machine-1">machine-1</option>
+                    <option value="machine-2">machine-2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="product-list">
+                  <span class="required">*</span>Product
+                </label>
+                <input
+                  type="text"
+                  name="product-list"
+                  id="product-list"
+                  placeholder="Product"
+                />
+                <div class="input-suggestions-dd active">
+                  <!-- add all the product list -->
+                  <div class="input-suggestion">have to find</div>
+                  <div class="input-suggestion">taddakdd</div>
+                  <div class="input-suggestion">hello, world</div>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="in-store"
+                  ><span class="required">*</span>In Store</label
+                >
+                <div class="select">
+                  <select name="in-store" id="in-store">
+                    <option value="select-in-store" hidden>
+                      Select In Store
+                    </option>
+                    <option value="option-1">Option 1</option>
+                    <option value="option-2">Option 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="shift"><span class="required">*</span>Shift</label>
+                <div class="select">
+                  <select name="shift" id="shift">
+                    <option value="select-shift" hidden>Select Shift</option>
+                    <option value="day">Day</option>
+                    <option value="morning">Morning</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Batch Production
+          </h3>
+          <div class="table-top-bar h-group">
+            <h1 id="branch-name">(P)</h1>
+            <h4>Head Office: <span>somthing, somthing, somthing</span></h4>
+            <h4>
+              House: <span> #23, somthing, somthing, somthing, somthing</span>
+            </h4>
+            <h4>
+              Tel: <span>585499388948, 848439398993</span> Fax:
+              <span>7574758484757, 84588993</span>
+            </h4>
+            <h4>
+              Email: <span>somthing@some.com</span> Web:
+              <span>somthing.com</span>
+            </h4>
+            <h4>From: <span>DD-MM-YYYY</span> To: <span>DD-MM-YYYY</span></h4>
+
+            <!-- OR -->
+
+            <!-- <div class="lim-w">
+              full address
+            </div> -->
+          </div>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="12" class="td-middle">Production List</th>
+                </tr>
+                <tr>
+                  <th>SL</th>
+                  <th>Production ID</th>
+                  <th>Machine No</th>
+                  <th>Shift</th>
+                  <th>Factory Name</th>
+                  <th>Date</th>
+                  <th>In Store</th>
+                  <th class="td-right">Target Qty</th>
+                  <th class="td-right">Production Qty</th>
+                  <th class="td-right">Status</th>
+                  <th class="td-right">Entry By</th>
+                  <th class="td-right">Option</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- all rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

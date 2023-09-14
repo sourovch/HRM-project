@@ -143,6 +143,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // text suggestions
+  const allInputSagDD = document.querySelectorAll(".input-suggestions-dd");
+
+  function removeAllSagDD() {
+    for (let inputSagDD of allInputSagDD) {
+      inputSagDD.style.display = "none";
+    }
+  }
+  document.addEventListener("click", removeAllSagDD);
+
   textInputs.forEach((textInput) => {
     const inputSagDD = textInput.parentElement.querySelector(
       ".input-suggestions-dd"
@@ -154,6 +163,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchArr = [];
 
     inputSags?.forEach((sag) => searchArr.push(sag.innerText));
+
+    textInput.addEventListener("click", (e) => e.stopPropagation());
+
+    textInput.addEventListener("focus", (e) => {
+      removeAllSagDD();
+      inputSagDD.style.display = "block";
+    });
+
+    inputSagDD.addEventListener("click", (e) => {
+      const clickedElm = e.target;
+
+      if (!Array.from(clickedElm.classList).includes("input-suggestion"))
+        return;
+
+      textInput.value = clickedElm.innerText;
+    });
 
     setSuggestions(textInput, inputSagDD, searchArr);
   });
@@ -203,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function getMatch(text, arr) {
     const matchArr = [];
     arr.forEach((item) => {
-      if (item.includes(text)) matchArr.push(item);
+      if (item.toLowerCase().includes(text.toLowerCase())) matchArr.push(item);
     });
     return matchArr;
   }

@@ -1016,10 +1016,6 @@ body {
   display: block;
 }
 
-input[type="text"]:focus ~ .input-suggestions-dd {
-  display: block;
-}
-
 .input-suggestion {
   padding: 0.3em 0.5em;
 }
