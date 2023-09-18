@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Information</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">
+          Machine Information<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Add Machine Information
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="input-wrapper">
+                <label for="machine-name"> Machine Name </label>
+                <input
+                  type="text"
+                  name="machine-name"
+                  id="machine-name"
+                  placeholder="Machine Name"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="m/c-model"> M/C Model </label>
+                <input
+                  type="text"
+                  model="m/c-model"
+                  id="m/c-model"
+                  placeholder="M/c Model"
+                />
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="design-capacity"> Design Capacity(Kg/Hr) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="design-capacity"
+                    id="design-capacity"
+                    placeholder="Design Capacity"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="actual-capacity"> Actual Capacity(Kg/Hr) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="actual-capacity"
+                    id="actual-capacity"
+                    placeholder="Actual Capacity"
+                  />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="production-capacity-day">
+                  Production Capacity(Kg/Day)
+                </label>
+                <input
+                  type="number"
+                  min="0"
+                  name="production-capacity-day"
+                  id="production-capacity-day"
+                  placeholder="Production Capacity"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="production-capacity-month">
+                  Production Capacity(Kg/Month)
+                </label>
+                <input
+                  type="number"
+                  min="0"
+                  name="production-capacity-month"
+                  id="production-capacity-month"
+                  placeholder="Production Capacity"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="remarks"> Remarks </label>
+                <input
+                  type="text"
+                  name="remarks"
+                  id="remarks"
+                  placeholder="Remarks"
+                />
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Machine Information
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="input-wrapper">
+                <label for="machine-information-search">Search</label>
+                <input
+                  type="text"
+                  name="machine-information-search"
+                  id="machine-information-search"
+                  placeholder="Search"
+                />
+                <div class="input-suggestions-dd">
+                  <!-- Add Suggtions If Needed -->
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading"><i class="fas fa-list"></i> Products</h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <!-- add table info like this -->
+              <div class="table-info">1 of 555</div>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th>Model Name</th>
+                  <th>M//C Model</th>
+                  <th>Design Capacity(Kg/Hr)</th>
+                  <th>Actual Capacity(Kg/Hr)</th>
+                  <th>Daily Capacity(Kg)</th>
+                  <th>Monthly Capacity(Kg)</th>
+                  <th>Remarks</th>
+                  <th class="td-option">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>PVC-Extruder ( 01 )</td>
+                  <td>80/156</td>
+                  <td>400</td>
+                  <td>350</td>
+                  <td>8400</td>
+                  <td>252000</td>
+                  <td></td>
+                  <td>
+                    <div class="td-options-group">
+                      <a href="#" class="btn btn-p td-option">
+                        <i class="fas fa-pen-square"></i>
+                      </a>
+                      <a href="#" class="btn btn-d td-option">
+                        <i class="fas fa-trash"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

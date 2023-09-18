@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batch Setup</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">
+          Batch Setup<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Add Batch
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="input-wrapper">
+                <label for="batch-name">Batch Name</label>
+                <input
+                  type="text"
+                  name="batch-name"
+                  id="batch-name"
+                  placeholder="Batch Name"
+                />
+                <div class="input-suggestions-dd">
+                  <div class="input-suggestion">batch name</div>
+                  <!-- all bacth name -->
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="finish-goods">Finish Goods</label>
+                <div class="select">
+                  <select name="finish-goods" id="sel-finish-goods">
+                    <option value="Select Finish Goods" hidden>
+                      Select Finish Goods
+                    </option>
+                    <option value="goods-1">Goods-1</option>
+                    <option value="goods-2">Goods-2</option>
+                    <option value="goods-3">Goods-3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="currency">Currency</label>
+                <div class="select">
+                  <select name="currency" id="sel-currency">
+                    <option value="Select Currency" hidden>
+                      Select Currency
+                    </option>
+                    <option value="currency-1">Bangladeshi Taka</option>
+                    <option value="currency-2">Currency-2</option>
+                    <option value="currency-3">Currency-3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="materials-out-stock">Materials Out-stock</label>
+                <div class="select">
+                  <select
+                    name="materials-out-stock"
+                    id="sel-materials-out-stock"
+                  >
+                    <option value="Select Materials Out Stock" hidden>
+                      Select Materials Out Stock
+                    </option>
+                    <option value="material-1">material-1</option>
+                    <option value="material-2">material-2</option>
+                    <option value="material-3">material-3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Raw Materials</h3>
+              <div class="form-content-wrapper-grid">
+                <div class="select-wrapper">
+                  <label for="material-name">Material Name</label>
+                  <div class="select">
+                    <select name="material-name" id="material-name">
+                      <option value="Select Material" hidden>
+                        Select Material Name
+                      </option>
+                      <option value="material-name-1">Material 1</option>
+                      <option value="material-name-2">Material 2</option>
+                      <option value="material-name-3">Material 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="day-qty"> Day Qty(gram per pcs) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="day-qty"
+                    id="day-qty"
+                    placeholder="Day Qty"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="day-wastage"> Day Wastage(%) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    name="day-wastage"
+                    id="day-wastage"
+                    placeholder="Day Wastage"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="night-qty"> Night Qty(gram per pcs) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="night-qty"
+                    id="night-qty"
+                    placeholder="Night Qty"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="night-wastage"> Night Wastage(%) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    name="night-wastage"
+                    id="night-wastage"
+                    placeholder="Night Wastage"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="total-day-qty"> Total Day Qty(kg) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="total-day-qty"
+                    id="total-day-qty"
+                    placeholder="Total Day Qty"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="total-night-qty"> Total Night Qty(kg) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="total-night-qty"
+                    id="total-night-qty"
+                    placeholder="Total Night Qty"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading"><i class="fas fa-list"></i> Batch</h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL.</th>
+                  <th>Product Name</th>
+                  <th>Day Qty(gram)</th>
+                  <th>Day Wastage(%)</th>
+                  <th>Night Qty(gram)</th>
+                  <th>Night Wastage(%)</th>
+                  <th>Total Day Qty(gram)</th>
+                  <th>Total Night Qty(gram)</th>
+                  <th class="td-option">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Resin S-60 (Taman)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <div class="td-options-group">
+                      <a href="#" class="btn btn-p td-option">
+                        <i class="fas fa-pen-square"></i>
+                      </a>
+                      <a href="#" class="btn btn-d td-option">
+                        <i class="fas fa-trash"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="6">Total</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

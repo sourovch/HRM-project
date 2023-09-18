@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batch Wise Production</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">
+          Batch Wise Production<button class="btn add-btn" id="add-btn">
+            +
+          </button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Add Batch
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="production-factory">Production Factory</label>
+                <div class="select">
+                  <select name="production-factory" id="sel-production-factory">
+                    <option value="Select Production Factory" hidden>
+                      Select Production Factory
+                    </option>
+                    <option value="factory-1">Factory-1</option>
+                    <option value="factory-2">Factory-2</option>
+                    <option value="factory-3">Factory-3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="production-date">Production Date</label>
+                <input
+                  type="date"
+                  name="production-date"
+                  id="production-date"
+                />
+              </div>
+              <div class="select-wrapper">
+                <label for="production-shift">Production Shift</label>
+                <div class="select">
+                  <select name="production-shift" id="sel-production-shift">
+                    <option value="Select Production Shift" hidden>
+                      Select Production Shift
+                    </option>
+                    <option value="day">Day</option>
+                    <option value="night">Night</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="production-machine">Production Machine</label>
+                <div class="select">
+                  <select name="production-machine" id="sel-production-machine">
+                    <option value="Select Production Machine" hidden>
+                      Select Production Machine
+                    </option>
+                    <option value="machine-1">Machine 1</option>
+                    <option value="machine-2">Machine 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="finish-goods-in-stock">Finish Goods In Stock</label>
+                <div class="select">
+                  <select
+                    name="finish-goods-in-stock"
+                    id="sel-finish-goods-in-stock"
+                  >
+                    <option value="Select Finish Goods In Stock" hidden>
+                      Select Finish Goods In Stock
+                    </option>
+                    <option value="goods-1">Goods 1</option>
+                    <option value="goods-2">Goods 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="materials-out-stock">Materials Out-stock</label>
+                <div class="select">
+                  <select
+                    name="materials-out-stock"
+                    id="sel-materials-out-stock"
+                  >
+                    <option value="Select Materials Out Stock" hidden>
+                      Select Materials Out Stock
+                    </option>
+                    <option value="material-1">material-1</option>
+                    <option value="material-2">material-2</option>
+                    <option value="material-3">material-3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Product Details</h3>
+              <div class="form-content-wrapper-grid">
+                <div class="select-wrapper">
+                  <label for="finish-goods-name">Finish Goods Name</label>
+                  <div class="select">
+                    <select name="finish-goods-name" id="finish-goods-name">
+                      <option value="Select Material" hidden>
+                        Select Finish Goods Name
+                      </option>
+                      <option value="goods-name-1">Goods Name 1</option>
+                      <option value="goods-name-2">Goods Name 2</option>
+                      <option value="goods-name-3">Goods Name 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="batch-no">Batch No</label>
+                  <div class="select">
+                    <select no="batch-no" id="batch-no">
+                      <option value="Batch No" hidden>
+                        Select Production Batch
+                      </option>
+                      <option value="batch-no-1">Batch No 1</option>
+                      <option value="batch-no-2">Batch No 2</option>
+                      <option value="batch-no-3">Batch No 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="used-qty"> Used Qty(gram per pcs) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="used-qty"
+                    id="used-qty"
+                    placeholder="Used Qty"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="wastage"> Wastage(%) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    name="wastage"
+                    id="wastage"
+                    placeholder="Wastage"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="production-qty">
+                    Production Qty(gram per pcs)
+                  </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="production-qty"
+                    id="production-qty"
+                    placeholder="Production Qty"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="total-used-qty"> Total Used Qty(kg/day) </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="total-used-qty"
+                    id="total-used-qty"
+                    placeholder="Total Used Qty"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading"><i class="fas fa-list"></i> Batch</h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL.</th>
+                  <th>Product Name</th>
+                  <th>Machine Name</th>
+                  <th>Shift</th>
+                  <th>Used Qty(gram/pcs)</th>
+                  <th>Wastage(%)</th>
+                  <th class="td-right">Production Qty(pcs/day)</th>
+                  <th class="td-right">Total Used Qty(kg/day)</th>
+                  <th class="td-option">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="td-right"></td>
+                  <td class="td-right"></td>
+                  <td>
+                    <div class="td-options-group">
+                      <a href="#" class="btn btn-p td-option">
+                        <i class="fas fa-pen-square"></i>
+                      </a>
+                      <a href="#" class="btn btn-d td-option">
+                        <i class="fas fa-trash"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="7">Total</td>
+                  <td>0</td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

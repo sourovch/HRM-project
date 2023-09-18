@@ -247,6 +247,18 @@ function getTemplet(path) {
             </a>
           </li>
           <li>
+            <a href="${path}pages/production/batch-setup.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Batch Setup</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/batch-wise-production.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Batch Wise Production</span>
+            </a>
+          </li>
+          <li>
             <a href="${path}pages/production/cogs.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>COGS</span>
@@ -256,6 +268,24 @@ function getTemplet(path) {
             <a href="${path}pages/production/finish-product-list.html">
               <div class="menu-icon"><i class="far fa-circle"></i></div>
               <span>Finish Product List</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/item-receive.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Item Received</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/machine-setup.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Machine Setup</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/product-setup.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Product Setup</span>
             </a>
           </li>
           <li>

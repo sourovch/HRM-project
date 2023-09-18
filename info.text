@@ -13,6 +13,9 @@ about changing hrefs of navbar items(changing to slugs from html file links):
     - you can find all code of navbar in components/mainSec.js.
     - change hrefs of a tags under lists.
 
+about adding role based options: 
+    - button raw: add a div with class of "td-options-group" inside td & add all necessary buttons inside this div.(ref: /pages/settings/branch);
+
 other:
     - "info-cont"(type of the container can be change to error or info by adding an extra class of 'info' or 'error') can be used as Error message container or success massage container 
       it will only show if it has "active" class(ref: pages/user.html)

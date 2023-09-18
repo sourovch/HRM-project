@@ -906,6 +906,11 @@ body {
   background-color: rgb(var(--color-d), 0.1);
 }
 
+.table-info {
+  padding: 0.5em 0.2em;
+  font-weight: bold;
+}
+
 .form-wrapper form {
   padding: 1em;
 }

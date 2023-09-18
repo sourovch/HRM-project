@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Setup</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">
+          Product Setup<button class="btn add-btn" id="add-btn">+</button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Add Product
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="product-catagory"
+                  ><span class="required">*</span>Catagory</label
+                >
+                <div class="select">
+                  <select name="product-catagory" id="product-catagory">
+                    <option value="Select Catagory" hidden>
+                      Select Catagory
+                    </option>
+                    <option value="catagory-1">Catagory 1</option>
+                    <option value="catagory-2">Catagory 2</option>
+                    <option value="catagory-3">Catagory 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="sub-catagory"
+                  ><span class="required">*</span>Sub Catagory</label
+                >
+                <div class="select">
+                  <select name="sub-catagory" id="sub-catagory">
+                    <option value="select sub catagory" hidden>
+                      Select Sub Catagory
+                    </option>
+                    <option value="sub-catagory-1">Sub Catagory-1</option>
+                    <option value="sub-catagory-2">Sub Catagory-2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="product-class"
+                  ><span class="required">*</span>Class</label
+                >
+                <div class="select">
+                  <select name="product-class" id="sel-product-class">
+                    <option value="Select Item Product-class" hidden>
+                      Select Class
+                    </option>
+                    <option value="product-class-1">Class 1</option>
+                    <option value="product-class-2">Class 2</option>
+                    <option value="product-class-3">Class 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="product-brand-name"
+                  ><span class="required">*</span>Brand Name</label
+                >
+                <div class="select">
+                  <select name="product-brand-name" id="sel-product-brand-name">
+                    <option value="Select product Brand Name" hidden>
+                      Select Brand Name
+                    </option>
+                    <option value="brand-name-1">Brand Name 1</option>
+                    <option value="brand-name-2">Brand Name 2</option>
+                    <option value="brand-name-3">Brand Name 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="product-name">
+                  <span class="required">*</span>Product Name
+                </label>
+                <input
+                  type="text"
+                  name="product-name"
+                  id="product-name"
+                  placeholder="Product Name"
+                />
+                <div class="input-suggestions-dd">
+                  <!-- add all the product list -->
+                  <div class="input-suggestion">have to find</div>
+                  <div class="input-suggestion">taddakdd</div>
+                  <div class="input-suggestion">hello, world</div>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="product-type">Product Type</label>
+                <div class="select">
+                  <select name="product-type" id="sel-product-type">
+                    <option value="Select Item Product Type" hidden>
+                      Select Product Type
+                    </option>
+                    <option value="product-type-1">Product Type 1</option>
+                    <option value="product-type-2">Product Type 2</option>
+                    <option value="product-type-3">Product Type 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="form-content-wrapper">
+                <div class="select-wrapper">
+                  <label for="unit">Unit</label>
+                  <div class="select">
+                    <select name="unit" id="sel-unit">
+                      <option value="Select Item Unit" hidden>
+                        Select Unit
+                      </option>
+                      <option value="unit-1">Unit 1</option>
+                      <option value="unit-2">Unit 2</option>
+                      <option value="unit-3">Unit 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="serial-product">Serial Product</label>
+                  <div class="select">
+                    <select name="serial-product" id="sel-serial-product">
+                      <option value="Select Item Serial Product" hidden>
+                        Select Serial Product
+                      </option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="sales-price"> Sales Price </label>
+                <input
+                  type="number"
+                  min="0"
+                  name="sales-price"
+                  id="sales-price"
+                  placeholder="Sales Price"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="product-details">Product Details </label>
+                <textarea
+                  name="product-details"
+                  id="product-details"
+                  placeholder="Product Details"
+                ></textarea>
+              </div>
+              <div class="input-wrapper">
+                <label for="re-order-level"> Re-Order Level </label>
+                <!-- change input type if needed -->
+                <input
+                  type="text"
+                  name="re-order-level"
+                  id="re-order-level"
+                  placeholder="Re-Order Level"
+                />
+              </div>
+              <div class="form-content-wrapper">
+                <div class="input-wrapper">
+                  <label for="purchase-price"> Purchase Price </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="purchase-price"
+                    id="purchase-price"
+                    placeholder="Purchase Price"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="product-weight"> Product Weight</label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="product-weight"
+                    id="product-weight"
+                    placeholder="Product Weight"
+                  />
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="product-status"
+                  ><span class="required">*</span>Product Status</label
+                >
+                <div class="select">
+                  <select name="product-status" id="product-status">
+                    <option value="select product-status" hidden>
+                      Select Product Status
+                    </option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Product
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="product-catagory">Catagory</label>
+                <div class="select">
+                  <select name="product-catagory" id="product-catagory">
+                    <option value="Select Catagory" hidden>
+                      Select Catagory
+                    </option>
+                    <option value="catagory-1">Catagory 1</option>
+                    <option value="catagory-2">Catagory 2</option>
+                    <option value="catagory-3">Catagory 3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="sub-catagory">Sub Catagory</label>
+                <div class="select">
+                  <select name="sub-catagory" id="sub-catagory">
+                    <option value="select sub catagory" hidden>
+                      Select Sub Catagory
+                    </option>
+                    <option value="sub-catagory-1">Sub Catagory-1</option>
+                    <option value="sub-catagory-2">Sub Catagory-2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="input-wrapper">
+                <label for="product-search">Search</label>
+                <input
+                  type="text"
+                  name="product-search"
+                  id="product-search"
+                  placeholder="Search"
+                />
+                <div class="input-suggestions-dd">
+                  <!-- Add Suggtions If Needed -->
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading"><i class="fas fa-list"></i> Products</h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <!-- add table info like this -->
+              <div class="table-info">1 of 555</div>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th>Product ID</th>
+                  <th style="width: 40%">Product Description</th>
+                  <th>Costing Price</th>
+                  <th>Salse Price</th>
+                  <th>Product Type</th>
+                  <th>Status</th>
+                  <th class="td-option">Options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>P000480</td>
+                  <td>Thread Brush, weight: 1</td>
+                  <td>27.00</td>
+                  <td>27.00</td>
+                  <td>Raw Materials</td>
+                  <td>Active</td>
+                  <td>
+                    <div class="td-options-group">
+                      <a href="#" class="btn btn-p td-option">
+                        <i class="fas fa-pen-square"></i>
+                      </a>
+                      <a href="#" class="btn btn-d td-option">
+                        <i class="fas fa-trash"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Received</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">
+          Purchased Item Received<button class="btn add-btn" id="add-btn">
+            +
+          </button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Add Item Received
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="supplier-name">Supplier Name</label>
+                <div class="select">
+                  <select name="supplier-name" id="sel-supplier-name">
+                    <option value="Select Supplier Name" hidden>
+                      Select Supplier Name
+                    </option>
+                    <option value="supplier-1">some name</option>
+                    <option value="supplier-2">some name</option>
+                    <option value="supplier-3">some name</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="store-name"> Store Name </label>
+                <input
+                  type="text"
+                  name="store-name"
+                  id="store-name"
+                  placeholder="Store Name"
+                />
+                <div class="input-suggestions-dd active">
+                  <!-- add all the store list -->
+                  <div class="input-suggestion">have to find</div>
+                  <div class="input-suggestion">taddakdd</div>
+                  <div class="input-suggestion">hello, world</div>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="order-list">Order List</label>
+                <div class="select">
+                  <select name="order-list" id="sel-order-list">
+                    <option value="Select Order List" hidden>
+                      Select Order List
+                    </option>
+                    <option value="list-1">List-1</option>
+                    <option value="list-2">List-2</option>
+                    <option value="list-3">List-3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="bill-no"> Bill No </label>
+                <input
+                  type="text"
+                  no="bill-no"
+                  id="bill-no"
+                  placeholder="Bill No"
+                />
+                <div class="input-suggestions-dd active">
+                  <!-- add bill list if needed -->
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="received-date">Received Date</label>
+                <input type="date" name="received-date" id="received-date" />
+              </div>
+              <div class="input-wrapper">
+                <label for="truck/van-name"> Truck/Van No </label>
+                <input
+                  type="text"
+                  no="truck/van-no"
+                  id="truck/van-no"
+                  placeholder="Truck/Van No"
+                />
+                <div class="input-suggestions-dd active">
+                  <!-- add truck/van list if needed -->
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Item Details</h3>
+              <div class="form-content-wrapper-grid">
+                <div class="select-wrapper">
+                  <label for="product-catagory">Catagory</label>
+                  <div class="select">
+                    <select name="product-catagory" id="product-catagory">
+                      <option value="Select Catagory" hidden>
+                        Select Catagory
+                      </option>
+                      <option value="catagory-1">Catagory 1</option>
+                      <option value="catagory-2">Catagory 2</option>
+                      <option value="catagory-3">Catagory 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="item-brand">Brand</label>
+                  <div class="select">
+                    <select name="item-brand" id="sel-item-brand">
+                      <option value="Select Item Brand" hidden>
+                        Select Brand
+                      </option>
+                      <option value="brand-1">Brand 1</option>
+                      <option value="brand-2">Brand 2</option>
+                      <option value="brand-3">Brand 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="product-list"> Product </label>
+                  <input
+                    type="text"
+                    name="product-list"
+                    id="product-list"
+                    placeholder="Product"
+                  />
+                  <div class="input-suggestions-dd active">
+                    <!-- add all the product list -->
+                    <div class="input-suggestion">have to find</div>
+                    <div class="input-suggestion">taddakdd</div>
+                    <div class="input-suggestion">hello, world</div>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="serial-no"> Serial No. </label>
+                  <input
+                    type="text"
+                    name="serial-no"
+                    id="serial-no"
+                    placeholder="Serial No."
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="warranty"> Warranty(month). </label>
+                  <input
+                    type="text"
+                    name="warranty"
+                    id="warranty"
+                    placeholder="Warranty"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="quantity"> Quantity. </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="quantity"
+                    id="quantity"
+                    placeholder="Quantity"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="unit-price"> Unit Price. </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="unit-price"
+                    id="unit-price"
+                    placeholder="Unit Price"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="total-value"> Total Value. </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="total-value"
+                    id="total-value"
+                    placeholder="Total Value"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper no-sl">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Purchased Item Received
+          </h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Catagory</th>
+                  <th>Brand</th>
+                  <th>Product</th>
+                  <th>Serial No.</th>
+                  <th>Warranty</th>
+                  <th>Quantity</th>
+                  <th>Unit Price</th>
+                  <th>Total Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>somthing</td>
+                  <td>somthing</td>
+                  <td>somthing</td>
+                  <td>somthing</td>
+                  <td>somthing</td>
+                  <td>somthing</td>
+                  <td>somthing</td>
+                  <td>somthing</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="7">Total Out Qty</td>
+                  <td class="td-left">somthing</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>
