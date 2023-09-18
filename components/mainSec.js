@@ -233,13 +233,56 @@ function getTemplet(path) {
           <span>Notice</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item dropdown">
         <a href="#">
-          <div class="menu-icon">
-            <i class="fa fa-cog" aria-hidden="true"></i>
-          </div>
+         <div class="dd-icon"><i class="fas fa-chevron-down"></i></div>
+          <div class="menu-icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
           <span>Production</span>
         </a>
+        <ul>
+          <li>
+            <a href="${path}pages/production/batch-list.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Batch List</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/cogs.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>COGS</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/finish-product-list.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Finish Product List</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/raw-materials.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Raw Materials</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/require-production-list.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Require Production List</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/search-batch-production.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Search Batch Production</span>
+            </a>
+          </li>
+          <li>
+            <a href="${path}pages/production/stock-list.html">
+              <div class="menu-icon"><i class="far fa-circle"></i></div>
+              <span>Stock List</span>
+            </a>
+          </li>
+        </ul>
       </li>
       <li class="nav-item dropdown">
         <a href="#">

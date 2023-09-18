@@ -709,7 +709,7 @@ body {
   height: 40px;
 }
 
-.table-wrapper tr:first-child th:first-child {
+.table-wrapper:not(.no-sl) tr:first-child th:first-child {
   width: 5%;
 }
 
@@ -1101,7 +1101,8 @@ input[type="tel"],
 input[type="email"],
 input[type="url"],
 input[type="time"],
-input[type="password"] {
+input[type="password"],
+input[type="number"] {
   padding: 0.58em 0.5em;
 }
 
@@ -1451,6 +1452,12 @@ input[type="file"] {
 .table-link {
   color: rgb(var(--color-r));
   font-weight: bold;
+}
+
+.extra-table-data {
+  margin-top: 1em;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 980px) {

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Production Raw Materials</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">
+          Production Raw Materials<button class="btn add-btn" id="add-btn">
+            +
+          </button>
+        </h1>
+        <div class="form-wrapper add-form" id="add-form">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Add Raw Materials
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="shift-number"
+                  ><span class="required">*</span>Shift Number</label
+                >
+                <div class="select">
+                  <select name="shift-number" id="sel-shift-number">
+                    <option value="Select Shift Number" hidden>
+                      Select Shift Number
+                    </option>
+                    <option value="shift-1">some number</option>
+                    <option value="shift-2">some number</option>
+                    <option value="shift-3">some number</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="batch-number">
+                  <span class="required">*</span>Batch Number
+                </label>
+                <input
+                  type="text"
+                  name="batch-number"
+                  id="batch-number"
+                  placeholder="Batch Number"
+                />
+                <div class="input-suggestions-dd active">
+                  <!-- add all the batch list -->
+                  <div class="input-suggestion">have to find</div>
+                  <div class="input-suggestion">taddakdd</div>
+                  <div class="input-suggestion">hello, world</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-content-wrapper">
+              <div class="select-wrapper">
+                <label for="production-factory"
+                  ><span class="required">*</span>Production Factory</label
+                >
+                <div class="select">
+                  <select name="production-factory" id="sel-production-factory">
+                    <option value="Select Production Factory" hidden>
+                      Select Production Factory
+                    </option>
+                    <option value="factory-1">Factory-1</option>
+                    <option value="factory-2">Factory-2</option>
+                    <option value="factory-3">Factory-3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="rmos"
+                  ><span class="required">*</span>Row Materials Out Store</label
+                >
+                <div class="select">
+                  <select name="rmos" id="sel-rmos">
+                    <option value="Select Row Materials Out Store" hidden>
+                      Select Row Materials Out Store
+                    </option>
+                    <option value="materials-1">Materials-1</option>
+                    <option value="materials-2">Materials-2</option>
+                    <option value="materials-3">Materials-3</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-sec">
+              <h3>Used Raw Materials</h3>
+              <div class="form-content-wrapper-grid">
+                <div class="select-wrapper">
+                  <label for="item-name"
+                    ><span class="required">*</span>Item Name</label
+                  >
+                  <div class="select">
+                    <select name="item-name" id="sel-item-name">
+                      <option value="Select Item Name" hidden>
+                        Select Item Name
+                      </option>
+                      <option value="item-1">Item 1</option>
+                      <option value="item-2">Item 2</option>
+                      <option value="item-3">Item 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="item-catagory"
+                    ><span class="required">*</span>Catagory</label
+                  >
+                  <div class="select">
+                    <select name="item-catagory" id="sel-item-catagory">
+                      <option value="Select Item Catagory" hidden>
+                        Select Catagory
+                      </option>
+                      <option value="catagory-1">Catagory 1</option>
+                      <option value="catagory-2">Catagory 2</option>
+                      <option value="catagory-3">Catagory 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="select-wrapper">
+                  <label for="item-brand"
+                    ><span class="required">*</span>Brand</label
+                  >
+                  <div class="select">
+                    <select name="item-brand" id="sel-item-brand">
+                      <option value="Select Item Brand" hidden>
+                        Select Brand
+                      </option>
+                      <option value="brand-1">Brand 1</option>
+                      <option value="brand-2">Brand 2</option>
+                      <option value="brand-3">Brand 3</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+                </div>
+                <div class="form-content-wrapper">
+                  <div class="select-wrapper">
+                    <label for="unit"
+                      ><span class="required">*</span>Unit</label
+                    >
+                    <div class="select">
+                      <select name="unit" id="sel-unit">
+                        <option value="Select Item Unit" hidden>
+                          Select Unit
+                        </option>
+                        <option value="unit-1">Unit 1</option>
+                        <option value="unit-2">Unit 2</option>
+                        <option value="unit-3">Unit 3</option>
+                      </select>
+                      <span class="focus"></span>
+                    </div>
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="stock-qty">
+                      <span class="required">*</span>Stock QTY(kg)
+                    </label>
+                    <input
+                      type="number"
+                      name="stock-qty"
+                      id="stock-qty"
+                      placeholder="Stock QTY"
+                    />
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="out-qty">
+                    <span class="required">*</span>Out QTY(gram per pcs)
+                  </label>
+                  <input
+                    type="number"
+                    name="out-qty"
+                    id="out-qty"
+                    placeholder="Out QTY"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="total-qty">
+                    <span class="required">*</span>Total QTY(kg)
+                  </label>
+                  <input
+                    type="number"
+                    name="total-qty"
+                    id="total-qty"
+                    placeholder="Total QTY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-plus"></i> Add
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+              <button class="btn btn-d" id="add-form-close">
+                <i class="fas fa-window-close"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Raw Materials
+          </h3>
+          <form>
+            <div class="form-content-wrapper">
+              <div class="input-wrapper">
+                <label for="production-date"
+                  ><span class="required">*</span>Production Date</label
+                >
+                <input
+                  type="date"
+                  name="production-date"
+                  id="production-date"
+                />
+              </div>
+              <button type="submit" class="btn btn-p">Search</button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper no-sl">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Production Raw Materials
+          </h3>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Catagory</th>
+                  <th>Brand</th>
+                  <th>Item Name</th>
+                  <th>Measurment Unit</th>
+                  <th>Out Qty</th>
+                  <th>Currency</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Raw Materials</td>
+                  <td>undefined</td>
+                  <td>0005 - ISO White Compound (Wastage)</td>
+                  <td>kg</td>
+                  <td>1 kg</td>
+                  <td>bdt</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4">Total Out Qty</td>
+                  <td colspan="2" class="td-left">1</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>

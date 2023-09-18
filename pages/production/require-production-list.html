@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stock List</title>
+    <title>Required Production Order</title>
     <link rel="stylesheet" href="../../style.css" />
     <link
       rel="stylesheet"
@@ -17,24 +17,34 @@
   <body>
     <main-sec path="../../">
       <div class="content-container">
-        <h1 class="main-heading">Stock List</h1>
+        <h1 class="main-heading">Required Production Order</h1>
         <div class="form-wrapper">
           <h3 class="form-heading">
-            <i class="fas fa-pen-square"></i> Search Stock
+            <i class="fas fa-pen-square"></i> Search Required Production Order
           </h3>
           <form>
             <div class="form-content-wrapper-grid">
+              <div class="input-wrapper">
+                <label for="rpo-from"
+                  ><span class="required">*</span>From</label
+                >
+                <input type="date" name="rpo-from" id="rpo-from" />
+              </div>
+              <div class="input-wrapper">
+                <label for="rpo-to"><span class="required">*</span>To</label>
+                <input type="date" name="rpo-to" id="rpo-to" />
+              </div>
               <div class="select-wrapper">
                 <label for="category"
                   ><span class="required">*</span>Category</label
                 >
                 <div class="select">
                   <select name="category" id="category">
-                    <option value="select-category" hidden>
+                    <option value="select category" hidden>
                       Select Category
                     </option>
-                    <option value="category-1">category-1</option>
-                    <option value="category-2">category-2</option>
+                    <option value="category-1">Category-1</option>
+                    <option value="category-2">Category-2</option>
                   </select>
                   <span class="focus"></span>
                 </div>
@@ -50,6 +60,21 @@
                     </option>
                     <option value="sub-category-1">sub category-1</option>
                     <option value="sub-category-2">sub category-2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="depo-name"
+                  ><span class="required">*</span>Depo Name</label
+                >
+                <div class="select">
+                  <select name="depo-name" id="depo-name">
+                    <option value="select-depo-name" hidden>
+                      Select Depo Name
+                    </option>
+                    <option value="depo-name-1">Depo Name-1</option>
+                    <option value="depo-name-2">Depo Name-2</option>
                   </select>
                   <span class="focus"></span>
                 </div>
@@ -71,32 +96,6 @@
                   <div class="input-suggestion">hello, world</div>
                 </div>
               </div>
-              <div class="select-wrapper">
-                <label for="type"><span class="required">*</span>Type</label>
-                <div class="select">
-                  <select name="type" id="type">
-                    <option value="select-type" hidden>Select Type</option>
-                    <option value="option-1">Option 1</option>
-                    <option value="option-2">Option 2</option>
-                  </select>
-                  <span class="focus"></span>
-                </div>
-              </div>
-              <div class="select-wrapper">
-                <label for="store-name"
-                  ><span class="required">*</span>Store Name</label
-                >
-                <div class="select">
-                  <select name="store-name" id="store-name">
-                    <option value="select-store-name" hidden>
-                      Select Store Name
-                    </option>
-                    <option value="option-1">Option 1</option>
-                    <option value="option-2">Option 2</option>
-                  </select>
-                  <span class="focus"></span>
-                </div>
-              </div>
             </div>
             <div class="form-bottom-sec">
               <button type="submit" class="btn btn-p">
@@ -110,7 +109,8 @@
         </div>
         <div class="table-wrapper">
           <h3 class="table-heading">
-            <i class="fas fa-list"></i> Product Wise Stock List
+            <i class="fas fa-list"></i> Product Wise Stock Status And Required
+            production list
           </h3>
           <div class="table-top-bar h-group">
             <h1 id="branch-name">(P)</h1>
@@ -126,7 +126,9 @@
               Email: <span>somthing@some.com</span> Web:
               <span>somthing.com</span>
             </h4>
-            <h4>From: <span>DD-MM-YYYY</span> To: <span>DD-MM-YYYY</span></h4>
+            <h4 class="extra-table-data">
+              Date: <span>01 Jan 2022</span> to: <span>20 feb 2023</span>
+            </h4>
 
             <!-- OR -->
 
@@ -138,23 +140,28 @@
             <table>
               <thead>
                 <tr>
-                  <th colspan="9" class="td-middle">Company Name</th>
-                </tr>
-                <tr>
-                  <th>SL</th>
-                  <th>Store Name</th>
+                  <th>SL.</th>
                   <th>Product Name</th>
-                  <th class="td-right">Opening Qty</th>
-                  <th class="td-right">Inwards Qty</th>
-                  <th class="td-right">Outwards Qty</th>
-                  <th class="td-right">Balance Qty</th>
-                  <th class="td-right">Product Rate</th>
-                  <th class="td-right">Balance Amount</th>
+                  <th class="td-right">Order Qty</th>
+                  <th class="td-right">Central(Dhaka Warehouse)</th>
+                  <th class="td-right">Pruduction Need</th>
                 </tr>
               </thead>
               <tbody>
-                <!-- all rows -->
+                <td>1</td>
+                <td>somthing</td>
+                <td class="td-right">00.00</td>
+                <td class="td-right">00.00</td>
+                <td class="td-right">00.00</td>
               </tbody>
+              <tfoot>
+                <tr>
+                  <td class="td-right" colspan="2">Total</td>
+                  <td class="td-right">00.00</td>
+                  <td class="td-right">00.00</td>
+                  <td class="td-right">00.00</td>
+                </tr>
+              </tfoot>
             </table>
           </div>
         </div>

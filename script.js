@@ -1,6 +1,7 @@
 import { MainSec } from "./components/mainSec.js";
 customElements.define("main-sec", MainSec);
 
+// modal code
 window.openModule = (e, id) => {
   e.preventDefault();
   document.documentElement.style.overflowY = "hidden";
@@ -216,6 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.keyCode === 13) {
         e.preventDefault();
         inp.value = activeSagElm.innerText;
+        
       }
 
       for (let sagElm of sagElms) {

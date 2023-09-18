@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock List</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="../../script.js" type="module"></script>
+  </head>
+  <body>
+    <main-sec path="../../">
+      <div class="content-container">
+        <h1 class="main-heading">Stock List</h1>
+        <div class="form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-pen-square"></i> Search Stock
+          </h3>
+          <form>
+            <div class="form-content-wrapper-grid">
+              <div class="select-wrapper">
+                <label for="category"
+                  ><span class="required">*</span>Category</label
+                >
+                <div class="select">
+                  <select name="category" id="category">
+                    <option value="select-category" hidden>
+                      Select Category
+                    </option>
+                    <option value="category-1">category-1</option>
+                    <option value="category-2">category-2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="sub-category"
+                  ><span class="required">*</span>Sub Category</label
+                >
+                <div class="select">
+                  <select name="sub-category" id="sub-category">
+                    <option value="select-sub-category" hidden>
+                      Select Sub Category
+                    </option>
+                    <option value="sub-category-1">sub category-1</option>
+                    <option value="sub-category-2">sub category-2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="product-list">
+                  <span class="required">*</span>Product
+                </label>
+                <input
+                  type="text"
+                  name="product-list"
+                  id="product-list"
+                  placeholder="Product"
+                />
+                <div class="input-suggestions-dd active">
+                  <!-- add all the product list -->
+                  <div class="input-suggestion">have to find</div>
+                  <div class="input-suggestion">taddakdd</div>
+                  <div class="input-suggestion">hello, world</div>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="type"><span class="required">*</span>Type</label>
+                <div class="select">
+                  <select name="type" id="type">
+                    <option value="select-type" hidden>Select Type</option>
+                    <option value="option-1">Option 1</option>
+                    <option value="option-2">Option 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="select-wrapper">
+                <label for="store-name"
+                  ><span class="required">*</span>Store Name</label
+                >
+                <div class="select">
+                  <select name="store-name" id="store-name">
+                    <option value="select-store-name" hidden>
+                      Select Store Name
+                    </option>
+                    <option value="option-1">Option 1</option>
+                    <option value="option-2">Option 2</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-bottom-sec">
+              <button type="submit" class="btn btn-p">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button type="reset" class="btn btn-y">
+                <i class="fas fa-broom"></i> Clear
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="table-wrapper">
+          <h3 class="table-heading">
+            <i class="fas fa-list"></i> Product Wise Stock List
+          </h3>
+          <div class="table-top-bar h-group">
+            <h1 id="branch-name">(P)</h1>
+            <h4>Head Office: <span>somthing, somthing, somthing</span></h4>
+            <h4>
+              House: <span> #23, somthing, somthing, somthing, somthing</span>
+            </h4>
+            <h4>
+              Tel: <span>585499388948, 848439398993</span> Fax:
+              <span>7574758484757, 84588993</span>
+            </h4>
+            <h4>
+              Email: <span>somthing@some.com</span> Web:
+              <span>somthing.com</span>
+            </h4>
+            <h4>From: <span>DD-MM-YYYY</span> To: <span>DD-MM-YYYY</span></h4>
+            <h4 class="extra-table-data">Company Name</h4>
+
+            <!-- OR -->
+
+            <!-- <div class="lim-w">
+              full address
+            </div> -->
+          </div>
+          <div class="table-resp-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th>Store Name</th>
+                  <th>Product Name</th>
+                  <th class="td-right">Opening Qty</th>
+                  <th class="td-right">Inwards Qty</th>
+                  <th class="td-right">Outwards Qty</th>
+                  <th class="td-right">Balance Qty</th>
+                  <th class="td-right">Product Rate</th>
+                  <th class="td-right">Balance Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- all rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main-sec>
+  </body>
+</html>
